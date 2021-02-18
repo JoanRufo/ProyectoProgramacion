@@ -24,10 +24,10 @@
     <ClCompile Include="Sonido.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Controles.cpp">
+    <ClCompile Include="ResourceManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ResourceManager.cpp">
+    <ClCompile Include="Controles.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -38,10 +38,10 @@
     <ClInclude Include="Sonido.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Controles.h">
+    <ClInclude Include="ResourceManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="ResourceManager.h">
+    <ClInclude Include="Controles.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
