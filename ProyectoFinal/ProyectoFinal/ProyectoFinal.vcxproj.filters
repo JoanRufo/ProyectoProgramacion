@@ -24,12 +24,24 @@
     <ClCompile Include="Sonido.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Controles.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Video.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Sonido.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Controles.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
