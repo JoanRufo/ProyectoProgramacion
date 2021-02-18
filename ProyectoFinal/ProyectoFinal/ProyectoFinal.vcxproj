@@ -70,8 +70,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>H:\Programacion 2n\SDLFinal\include;$(IncludePath)</IncludePath>
-    <LibraryPath>H:\Programacion 2n\SDLFinal\lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>D:\Proyecto\ProyectoProgramacion\SDLFinal\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\Proyecto\ProyectoProgramacion\SDLFinal\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
