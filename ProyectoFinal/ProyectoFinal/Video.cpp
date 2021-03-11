@@ -1,5 +1,11 @@
 #include "Video.h"
 #include "SDL.h"
+#include "ResourceManager.h"
+
+
+#define SCREEN_WIDTH = 1240;
+#define SCREEN_HEIGHT = 720;
+
 
 
 
