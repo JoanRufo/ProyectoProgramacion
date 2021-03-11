@@ -28,7 +28,8 @@ void Video::renderGraphic(int img, int posX, int posY, int width, int height)
 	rectAux.x = 0;
 	rectAux.y = 0;
 	SDL_Surface *origin = ResourceManager::getInstance()->getGraphicByID(img);
-	SDL_BlitSurface(origin, &rectAux, gScreenSurface, &r);
+	SDL_BlitSurface(origin, &rectAux, gScreenSurface, &r);
+
 }
 
 void Video::clearScreen(unsigned int color_key)
