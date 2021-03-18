@@ -26,9 +26,8 @@ ResourceManager::~ResourceManager()
 {
 }
 
-<<<<<<< HEAD
 
-=======
+
 void ResourceManager::removeGraphic(const char * file)
 {
 }
@@ -74,4 +73,4 @@ Sint32 ResourceManager::createGraphic(const char * name, Uint16 width, Uint16 he
 {
 	return Sint32();
 }
->>>>>>> 83c6efc1781d3c787ec900c36d220b9ee268379a
+
