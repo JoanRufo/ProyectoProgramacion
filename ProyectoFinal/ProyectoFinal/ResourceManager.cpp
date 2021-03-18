@@ -73,4 +73,3 @@ Sint32 ResourceManager::createGraphic(const char * name, Uint16 width, Uint16 he
 {
 	return Sint32();
 }
-
