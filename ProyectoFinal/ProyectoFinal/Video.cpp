@@ -4,8 +4,8 @@
 #include "ResourceManager.h"
 
 
-#define SCREEN_WIDTH = 1240;
-#define SCREEN_HEIGHT = 720;
+#define SCREEN_WIDTH 1240
+#define SCREEN_HEIGHT 720
 
 
 
