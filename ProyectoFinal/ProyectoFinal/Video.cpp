@@ -56,6 +56,7 @@ void Video::waitTime(int ms)
 
 void Video::close()
 {
+	SDL_Quit();
 }
 
 
