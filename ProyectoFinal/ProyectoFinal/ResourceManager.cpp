@@ -4,7 +4,7 @@ ResourceManager* ResourceManager::pInstance = NULL;
 
 ResourceManager * ResourceManager::getInstance()
 {
-	if (pInstance = NULL) {
+	if (pInstance == NULL) {
 		pInstance = new ResourceManager();
 	}
 	return pInstance;
@@ -75,7 +75,17 @@ Sint32 ResourceManager::loadAndGetGraphicID(const char * file)
 	else {
 		id = mIDMap.find(file)->second;
 	}
-	return Sint32();
+	if (id != -1) {
+		return id;
+	}
+	else {
+		if (addGraphic(file) != -1) {
+			return mIDMap.find(file)->second;
+		}
+		else {
+			return -1;
+		}
+	}
 }
 
 std::string ResourceManager::getGraphicPathByID(Sint32 ID)
@@ -99,7 +109,7 @@ Uint16 ResourceManager::getGraphicHeight(Sint32 img)
 
 SDL_Texture * ResourceManager::getGraphicByID(Sint32 ID)
 {
-	return nullptr;
+	return mGraphicsVector.at(ID);
 }
 
 void ResourceManager::setAlphaGraphic(Sint32 ID, Uint8 alpha_value)

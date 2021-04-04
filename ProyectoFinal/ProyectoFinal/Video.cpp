@@ -39,6 +39,8 @@ void Video::renderGraphic(int img, int posX, int posY, int width, int height)
 	SDL_Rect r, rectAux;
 	r.x = posX;
 	r.y = posY;
+	r.w = width;
+	r.h = height;
 	rectAux.h = height;
 	rectAux.w = width;
 	rectAux.x = 0;
