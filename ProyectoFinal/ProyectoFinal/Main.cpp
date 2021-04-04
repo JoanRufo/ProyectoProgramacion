@@ -8,41 +8,33 @@
 
 int main(int argc, char* args[]) {
 
-
-	//INIT
-
-	
-	
-
-	
+	ResourceManager* mResourceManager = ResourceManager::getInstance();
+	Video* mVideo = Video::getInstance();
 
 
 
+	int idDelGrafico = mResourceManager->loadAndGetGraphicID("Imagenes/Room1.png");
+	if (idDelGrafico == -1) {
+		return 0;
+	}
+
+	while (1) {
+
+		//UPDATE
 
 
+		//RENDER
+		mVideo->renderGraphic(idDelGrafico, 100, 100,1024,720);
 
-
-
-	//UPDATE
-
-
-
-
-
-
+		mVideo->updateScreen();
+		mVideo->clearScreen(0);
 
 
 
 
 
 
-
-
-
-	//RENDER
-
-
-
-	return 0;
+	}
+		return 0;
 	
 }

@@ -6,6 +6,7 @@
 #include <map>
 #include <vector>
 #include "SDL.h"
+#include "SDL_image.h"
 
 class ResourceManager
 {
@@ -64,7 +65,7 @@ public:
 		\param ID ID of the graphic
 		\return SDL_Surface
 	*/
-	SDL_Surface* getGraphicByID(Sint32 ID);
+	SDL_Texture* getGraphicByID(Sint32 ID);
 
 	//! Change general Alpha value to paint a concrete surface
 	/*!
@@ -90,12 +91,14 @@ public:
 		\return Instance of ResourceManager (Singleton).
 	*/
 	static ResourceManager* getInstance();
+	void SetRenderer(SDL_Renderer * mRenderer) { renderer = mRenderer; }
 
 protected:
 	//! Constructor of an empty ResourceManager.
 	ResourceManager();
 
 private:
+	SDL_Renderer * renderer;
 
 	//! Loads from disc and adds a graphic to the ResourceManager 
 	/*!
@@ -110,7 +113,7 @@ private:
 	*/
 	Uint32 updateFirstFreeSlotGraphic();
 
-	std::vector<SDL_Surface*>	mGraphicsVector;	/*!<  Vector that stores Surfaces. Useful in render methods and sequential access*/
+	std::vector<SDL_Texture*>	mGraphicsVector;	/*!<  Vector that stores Surfaces. Useful in render methods and sequential access*/
 	std::map<std::string, Sint32>	mIDMap;			/*!<  Map that stores ID. Links strings to ID, Useful for check if graphic is has been loaded previously*/
 	Uint32				mFirstFreeSlot;		/*!<  First free slot in the mGraphicsVector*/
 	static ResourceManager*		pInstance;		/*!<  Singleton instance*/
