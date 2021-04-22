@@ -3,9 +3,12 @@
 #include <iostream>
 class Controles
 {
+	bool endgame = false;
 public:
 	Controles();
 	~Controles();
-	void capturaTeclas(bool *endgame);
+	void capturaTeclas();
+	void lecturaTeclas(int a);
+
 };
 
