@@ -1,6 +1,5 @@
 #pragma once
 #include "SDL.h"
-#include "SDL.h"
 #include "ResourceManager.h"
 #include <iostream>
 
