@@ -2,14 +2,25 @@
 #include <stdio.h>
 #include "Video.h"
 #include "ResourceManager.h"
+#include "SceneManager.h"
+
 
 
 
 
 int main(int argc, char* args[]) {
 
+
+	SceneManager *sceneManager = new SceneManager();
+	sceneManager->changeScene(0);
+	
+	
+
+
 	ResourceManager* mResourceManager = ResourceManager::getInstance();
 	Video* mVideo = Video::getInstance();
+
+	bool endgame = false;
 
 
 
@@ -33,7 +44,7 @@ int main(int argc, char* args[]) {
 	if (idPuertaArriba == -1) {
 		return 0;
 	}
-	while (1) {
+	while (endgame == false) {
 
 		//UPDATE
 
@@ -54,6 +65,8 @@ int main(int argc, char* args[]) {
 
 
 	}
+
+		delete sceneManager;
 		return 0;
 	
 }
