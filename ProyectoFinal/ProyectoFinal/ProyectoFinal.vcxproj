@@ -70,8 +70,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>D:\Proyecto\ProyectoProgramacion\SDLFinal\include;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\Proyecto\ProyectoProgramacion\SDLFinal\lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>C:\Users\juancarlos.rufo\Desktop\ProyectoProgramacion\SDL\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\juancarlos.rufo\Desktop\ProyectoProgramacion\SDL\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <IncludePath>D:\clase\programacion\ProyectoProgramacion\SDL\include;$(IncludePath)</IncludePath>
@@ -86,6 +86,9 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_mixer.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
