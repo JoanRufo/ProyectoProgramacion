@@ -11,6 +11,8 @@ GameScene::~GameScene()
 {
 }
 
-void GameScene::start(SceneManager * sceneManager)
+void GameScene::init()
 {
 }
+
+

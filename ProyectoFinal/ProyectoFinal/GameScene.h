@@ -7,6 +7,6 @@ public:
 	GameScene();
 	~GameScene();
 
-	void start(SceneManager *sceneManager);
+	void init();
 };
 

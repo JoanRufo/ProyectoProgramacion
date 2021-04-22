@@ -1,8 +1,15 @@
 #include "SceneManager.h"
 
+#include "MenuScene.h"
+#include "GameScene.h"
+
+
+SceneManager* SceneManager::pInstance = NULL;
+
 
 SceneManager::SceneManager()
 {
+	init();
 }
 
 
@@ -10,33 +17,40 @@ SceneManager::~SceneManager()
 {
 }
 
-void SceneManager::changeScene(short id)
+void SceneManager::init()
 {
+	mVectorScenes.resize(NUM_SCENES);
 
-
-		if (scene != NULL) {
-			delete scene;
-		}
-
-		if (id == 0) {
-			scene = new MenuScene();
-		}
-		else if (id == 1) {
-			scene = new GameScene();
-		}
-
-		if (scene) {
-			scene->start(this);
-		}
+	MenuScene	*menu = new MenuScene();
 	
+	GameScene	*game = new GameScene();
+
+	mVectorScenes[MENU] = menu;
+	mVectorScenes[GAME] = game;
+
+
+	menu->init();
+	game->init();
+
+
+	mCurrScene = MENU;
 }
 
-void SceneManager::start(SceneManager * sceneManager)
+void SceneManager::changeScene(SceneEnum next_scene, bool reinit)
 {
-
-
-
+	mVectorScenes[next_scene]->setReInit(reinit);
+	mCurrScene = next_scene;
 }
+
+SceneManager * SceneManager::getInstance()
+{
+	if (!pInstance) {
+		pInstance = new SceneManager();
+	}
+	return pInstance;
+}
+
+
 
 
 

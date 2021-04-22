@@ -11,6 +11,8 @@ MenuScene::~MenuScene()
 {
 }
 
-void MenuScene::start(SceneManager * sceneManager)
+void MenuScene::init()
 {
 }
+
+
