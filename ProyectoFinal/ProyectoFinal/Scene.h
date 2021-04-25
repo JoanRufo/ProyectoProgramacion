@@ -17,10 +17,10 @@ public:
 	virtual void reinit();
 
 	//! Handles the drawing of the scene
-	virtual void render() = {};
+	virtual void render();
 
 	//! Handles the updating of the scene
-	virtual void update() = {};
+	virtual void update();
 
 	void setReInit(bool loaded = true) { mReinit = loaded; };
 	bool mustReInit() { return mReinit; };

@@ -25,8 +25,8 @@ void SceneManager::init()
 	
 	GameScene	*game = new GameScene();
 
-	mVectorScenes[MENU] = menu;
-	mVectorScenes[GAME] = game;
+	//mVectorScenes[MENU] = menu;
+	//mVectorScenes[GAME] = game;
 
 
 	menu->init();

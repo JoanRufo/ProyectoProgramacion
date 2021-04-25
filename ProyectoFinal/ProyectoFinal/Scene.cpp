@@ -21,3 +21,11 @@ void Scene::reinit()
 {
 	mReinit = false;
 }
+
+void Scene::render()
+{
+}
+
+void Scene::update()
+{
+}

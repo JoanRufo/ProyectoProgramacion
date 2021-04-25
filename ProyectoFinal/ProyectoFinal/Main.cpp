@@ -6,16 +6,20 @@
 #include "Controles.h"
 
 
+Uint32 		global_elapsed_time = 0;
+bool		gameOn = true;
+SceneManager	*sDirector = NULL;
+//InputControl	*sInputControl = NULL;
+
 
 
 
 int main(int argc, char* args[]) {
 
 
-	//SceneManager *sceneManager = new SceneManager();
-	//sceneManager->changeScene(0);
 	
-	
+	//sInputControl = ControlInput::getInstance();
+	sDirector = SceneManager::getInstance();
 
 
 	ResourceManager* mResourceManager = ResourceManager::getInstance();
@@ -45,7 +49,42 @@ int main(int argc, char* args[]) {
 	if (idPuertaArriba == -1) {
 		return 0;
 	}
+
+
+	/*// Init Time control
+	Timer* globalTimer = new Timer();
+	globalTimer->start();
+	Uint32 last_time = 0;*/
+
+
+
+
 	while (!endgame) {
+
+
+		/* SCENE DIRECTOR
+		//ReInit o no
+		if (sDirector->getCurrentScene()->mustReInit()) {
+			sDirector->getCurrentScene()->ReInit();
+		}
+		// Read controls
+		sInputControl->update();
+
+		//Update time
+		Uint32 actualtime = globalTimer->getTicks();
+		global_elapsed_time = actualtime - last_time;
+		last_time = actualtime;
+
+		// Updates scene
+		sDirector->getCurrentScene()->update();
+
+		if (!sDirector->getCurrentScene()->mustReInit()) {
+			sDirector->getCurrentScene()->render();
+		}
+
+
+		*/
+
 
 		//UPDATE
 
@@ -65,7 +104,7 @@ int main(int argc, char* args[]) {
 
 	}
 
-		//delete sceneManager;
+		
 		return 0;
 	
 }
