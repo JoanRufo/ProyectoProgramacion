@@ -4,11 +4,13 @@
 class Controles
 {
 	bool endgame = false;
+	enum teclas{W,A,S,D,Espacio,ESC};
+	bool teclasPulsadas[6];
 public:
 	Controles();
 	~Controles();
 	void capturaTeclas();
-	void lecturaTeclas(int a);
+	bool lecturaTeclas(int a);
 
 };
 

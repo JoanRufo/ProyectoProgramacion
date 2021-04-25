@@ -25,6 +25,8 @@ int main(int argc, char* args[]) {
 	ResourceManager* mResourceManager = ResourceManager::getInstance();
 	Video* mVideo = Video::getInstance();
 
+	Controles* controles = new Controles();
+
 	bool endgame = false;
 
 
@@ -87,7 +89,7 @@ int main(int argc, char* args[]) {
 
 
 		//UPDATE
-
+		controles->capturaTeclas();
 
 		//RENDER
 		mVideo->renderGraphic(idDelGrafico, 0, 0,1240,720);

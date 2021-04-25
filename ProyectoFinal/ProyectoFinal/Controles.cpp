@@ -22,6 +22,52 @@ void Controles::capturaTeclas()
 
 				SDL_Quit();
 			}
+			else if (Events.key.keysym.scancode == SDL_SCANCODE_W) {
+
+				teclasPulsadas[W] = true;
+			}
+			else if (Events.key.keysym.scancode == SDL_SCANCODE_A) {
+
+				teclasPulsadas[A] = true;
+			}
+			else if (Events.key.keysym.scancode == SDL_SCANCODE_S) {
+
+				teclasPulsadas[S] = true;
+			}
+			else if (Events.key.keysym.scancode == SDL_SCANCODE_D) {
+
+				teclasPulsadas[D] = true;
+			}
+			else if (Events.key.keysym.scancode == SDL_SCANCODE_SPACE) {
+
+				teclasPulsadas[Espacio] = true;
+			}
+			break;
+		case SDL_KEYUP:
+			if (Events.key.keysym.scancode == SDL_SCANCODE_ESCAPE) {
+
+				SDL_Quit();
+			}
+			else if (Events.key.keysym.scancode == SDL_SCANCODE_W) {
+
+				teclasPulsadas[W] = false;
+			}
+			else if (Events.key.keysym.scancode == SDL_SCANCODE_A) {
+
+				teclasPulsadas[A] = false;
+			}
+			else if (Events.key.keysym.scancode == SDL_SCANCODE_S) {
+
+				teclasPulsadas[S] = false;
+			}
+			else if (Events.key.keysym.scancode == SDL_SCANCODE_D) {
+
+				teclasPulsadas[D] = false;
+			}
+			else if (Events.key.keysym.scancode == SDL_SCANCODE_SPACE) {
+
+				teclasPulsadas[Espacio] = false;
+			}
 			break;
 
 		case SDL_QUIT:
@@ -32,10 +78,8 @@ void Controles::capturaTeclas()
 	}
 }
 
-void Controles::lecturaTeclas(int a)
+bool Controles::lecturaTeclas(int a)
 {
-	if (a == 1) {
-		endgame = true;
-	}
+	return teclasPulsadas[a];
 }
 
