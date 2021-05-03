@@ -4,12 +4,13 @@
 #include "ResourceManager.h"
 #include "SceneManager.h"
 #include "Controles.h"
+#include "Timer.h"
 
 
 Uint32 		global_elapsed_time = 0;
 bool		gameOn = true;
 SceneManager	*sDirector = NULL;
-//InputControl	*sInputControl = NULL;
+
 
 
 
@@ -18,7 +19,7 @@ int main(int argc, char* args[]) {
 
 
 	
-	//sInputControl = ControlInput::getInstance();
+	
 	sDirector = SceneManager::getInstance();
 
 
@@ -26,6 +27,8 @@ int main(int argc, char* args[]) {
 	Video* mVideo = Video::getInstance();
 
 	Controles* controles = new Controles();
+
+	
 
 	bool endgame = false;
 
@@ -53,10 +56,10 @@ int main(int argc, char* args[]) {
 	}
 
 
-	/*// Init Time control
+	// Init Time control
 	Timer* globalTimer = new Timer();
 	globalTimer->start();
-	Uint32 last_time = 0;*/
+	Uint32 last_time = 0;
 
 
 

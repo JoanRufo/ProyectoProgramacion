@@ -2,6 +2,7 @@
 
 #include "MenuScene.h"
 #include "GameScene.h"
+#include "Scene.h"
 
 
 SceneManager* SceneManager::pInstance = NULL;
