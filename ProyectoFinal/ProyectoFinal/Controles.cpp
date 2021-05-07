@@ -1,6 +1,6 @@
 #include "Controles.h"
 
-
+Controles* Controles::pInstance = NULL;
 
 Controles::Controles()
 {
@@ -18,11 +18,7 @@ void Controles::capturaTeclas()
 	while (SDL_PollEvent(&Events)) {
 		switch (Events.type) {
 		case SDL_KEYDOWN:
-			if (Events.key.keysym.scancode == SDL_SCANCODE_ESCAPE) {
-
-				SDL_Quit();
-			}
-			else if (Events.key.keysym.scancode == SDL_SCANCODE_W) {
+			if (Events.key.keysym.scancode == SDL_SCANCODE_W) {
 
 				teclasPulsadas[W] = true;
 			}
@@ -42,13 +38,13 @@ void Controles::capturaTeclas()
 
 				teclasPulsadas[Espacio] = true;
 			}
-			break;
-		case SDL_KEYUP:
-			if (Events.key.keysym.scancode == SDL_SCANCODE_ESCAPE) {
+			else if (Events.key.keysym.scancode == SDL_SCANCODE_ESCAPE) {
 
 				SDL_Quit();
 			}
-			else if (Events.key.keysym.scancode == SDL_SCANCODE_W) {
+			break;
+		case SDL_KEYUP:
+			if (Events.key.keysym.scancode == SDL_SCANCODE_W) {
 
 				teclasPulsadas[W] = false;
 			}
@@ -68,6 +64,10 @@ void Controles::capturaTeclas()
 
 				teclasPulsadas[Espacio] = false;
 			}
+			else if (Events.key.keysym.scancode == SDL_SCANCODE_ESCAPE) {
+
+				SDL_Quit();
+			}
 			break;
 
 		case SDL_QUIT:
@@ -81,5 +81,13 @@ void Controles::capturaTeclas()
 bool Controles::lecturaTeclas(int a)
 {
 	return teclasPulsadas[a];
+}
+
+Controles * Controles::getInstance()
+{
+	if (pInstance == NULL) {
+		pInstance = new Controles();
+	}
+	return pInstance;
 }
 

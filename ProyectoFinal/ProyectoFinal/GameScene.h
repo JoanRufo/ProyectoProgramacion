@@ -3,7 +3,7 @@
 #include "SceneManager.h"
 
 
-class GameScene : public Scene
+class GameScene //: public Scene
 {
 public:
 	GameScene();

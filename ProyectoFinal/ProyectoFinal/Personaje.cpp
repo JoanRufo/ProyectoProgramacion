@@ -6,8 +6,8 @@ void Personaje::init()
 {
 	idDelPersonaje = mResourceManager->loadAndGetGraphicID("Imagenes/Personaje.png");
 
-	Movx = 600;
-	Movy = 300;
+	Movx;
+	Movy;
 }
 
 void Personaje::update()
@@ -22,16 +22,16 @@ void Personaje::render()
 void Personaje::MovimientoPersonaje()
 {
 	
-		if (teclasPulsadas[W] == true) {
-			Movy++;
-		}
-		else if (teclasPulsadas[A] == true) {
-			Movx--;
-		}
-		else if (teclasPulsadas[S] == true) {
+		if (Controles::getInstance()->teclasPulsadas[0] == true) {
 			Movy--;
 		}
-		else if (teclasPulsadas[D] == true) {
+		else if (Controles::getInstance()->teclasPulsadas[1] == true) {
+			Movx--;
+		}
+		else if (Controles::getInstance()->teclasPulsadas[2] == true) {
+			Movy++;
+		}
+		else if (Controles::getInstance()->teclasPulsadas[3] == true) {
 			Movx++;
 		}
 	

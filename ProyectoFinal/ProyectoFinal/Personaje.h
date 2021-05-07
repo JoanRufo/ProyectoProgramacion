@@ -6,10 +6,10 @@
 #include "ResourceManager.h"
 #include "Video.h"
 
-class Personaje:public Controles
+class Personaje
 {
-	int Movx;
-	int Movy;
+	int Movx = 600;
+	int Movy = 300;
 	int idDelPersonaje;
 
 public:
