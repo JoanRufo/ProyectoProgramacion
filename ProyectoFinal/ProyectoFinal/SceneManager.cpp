@@ -1,8 +1,6 @@
 #include "SceneManager.h"
 
-#include "MenuScene.h"
-#include "GameScene.h"
-#include "Scene.h"
+
 
 
 SceneManager* SceneManager::pInstance = NULL;
@@ -25,9 +23,12 @@ void SceneManager::init()
 	MenuScene	*menu = new MenuScene();
 	
 	GameScene	*game = new GameScene();
+	
+	GameOverScene * gameover = new GameOverScene();
 
-	//mVectorScenes[MENU] = menu;
-	//mVectorScenes[GAME] = game;
+	mVectorScenes[MENU] = menu;
+	mVectorScenes[GAME] = game;
+	mVectorScenes[GAMEOVER] = gameover;
 
 
 	menu->init();

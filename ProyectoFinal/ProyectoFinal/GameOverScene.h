@@ -3,16 +3,13 @@
 #include "SceneManager.h"
 
 
-class MenuScene : public Scene
+class GameOverScene : public Scene
 {
 public:
-	MenuScene();
-	~MenuScene();
+	GameOverScene();
+	~GameOverScene();
 
 
 	void init();
-
-	
 };
-
 

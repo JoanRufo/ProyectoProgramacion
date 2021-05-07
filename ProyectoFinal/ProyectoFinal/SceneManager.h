@@ -6,11 +6,13 @@
 #include "SDL.h"
 #include "MenuScene.h"
 #include "GameScene.h"
+#include "GameOverScene.h"
 #include "Scene.h"
 
 
+
 enum SceneEnum {
-	MENU, GAME, 
+	MENU, GAME, GAMEOVER, 
 	_LASTSCENE
 };
 

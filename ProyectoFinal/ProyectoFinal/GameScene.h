@@ -1,7 +1,9 @@
 #pragma once
 
 #include "SceneManager.h"
-class GameScene
+
+
+class GameScene : public Scene
 {
 public:
 	GameScene();
