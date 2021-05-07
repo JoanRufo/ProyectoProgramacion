@@ -18,7 +18,7 @@ Video::Video()
 		std::cout << "Error init SDL_Image" << IMG_GetError();
 	}
 
-	gWindow = SDL_CreateWindow("Nombre Ventana",
+	gWindow = SDL_CreateWindow("Juego",
 		SDL_WINDOWPOS_UNDEFINED,
 		SDL_WINDOWPOS_UNDEFINED,
 		SCREEN_WIDTH, SCREEN_HEIGHT,
