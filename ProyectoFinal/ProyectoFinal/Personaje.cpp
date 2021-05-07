@@ -34,5 +34,19 @@ void Personaje::MovimientoPersonaje()
 		else if (Controles::getInstance()->teclasPulsadas[3] == true) {
 			Movx++;
 		}
+
+		if (Movx == 1240) {
+			Movx = 1240;
+		}
+		else if (Movx == 0) {
+			Movx = 0;
+		}
+
+		else if (Movy == 720) {
+			Movy = 720;
+		}
+		else if (Movy == 0) {
+			Movy = 0;
+		}
 	
 }
