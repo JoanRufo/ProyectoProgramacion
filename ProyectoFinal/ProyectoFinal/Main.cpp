@@ -29,7 +29,8 @@ int main(int argc, char* args[]) {
 	ResourceManager* mResourceManager = ResourceManager::getInstance();
 	Video* mVideo = Video::getInstance();
 
-	Controles* controles = new Controles();
+
+	Controles* controles = Controles::getInstance();
 	Personaje* personaje = new Personaje();
 	Enemigo1* mEnemigo1 = new Enemigo1();
 	Enemigo2* mEnemigo2 = new Enemigo2();

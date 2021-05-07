@@ -11,5 +11,7 @@ public:
 	bool teclasPulsadas[6];
 	enum teclas { W, A, S, D, Espacio, ESC };
 	bool endgame = false;
+	static Controles* getInstance();
+	static Controles*		pInstance;
 };
 
