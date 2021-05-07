@@ -3,7 +3,7 @@
 #include "SceneManager.h"
 
 
-class MenuScene : public Scene
+class MenuScene:public Scene
 {
 public:
 	MenuScene();

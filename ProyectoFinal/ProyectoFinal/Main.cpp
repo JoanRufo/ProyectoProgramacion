@@ -6,6 +6,8 @@
 #include "Controles.h"
 #include "Timer.h"
 #include "Personaje.h"
+#include "Enemigo1.h"
+#include "Enemigo2.h"
 
 
 Uint32 		global_elapsed_time = 0;
@@ -29,6 +31,8 @@ int main(int argc, char* args[]) {
 
 	Controles* controles = new Controles();
 	Personaje* personaje = new Personaje();
+	Enemigo1* mEnemigo1 = new Enemigo1();
+	Enemigo2* mEnemigo2 = new Enemigo2();
 
 	
 
@@ -38,14 +42,6 @@ int main(int argc, char* args[]) {
 
 	int idDelGrafico = mResourceManager->loadAndGetGraphicID("Imagenes/Room1.png");
 	if (idDelGrafico == -1) {
-		return 0;
-	}
-	int idDelEnemigo1 = mResourceManager->loadAndGetGraphicID("Imagenes/Enemigo1.png");
-	if (idDelEnemigo1 == -1) {
-		return 0;
-	}
-	int idDelEnemigo2 = mResourceManager->loadAndGetGraphicID("Imagenes/Enemigo2.png");
-	if (idDelEnemigo2 == -1) {
 		return 0;
 	}
 	int idPuertaArriba = mResourceManager->loadAndGetGraphicID("Imagenes/Puerta.png");
@@ -67,6 +63,8 @@ int main(int argc, char* args[]) {
 		//INIT
 
 		personaje->init();
+		mEnemigo1->init();
+		mEnemigo2->init();
 
 
 
@@ -102,11 +100,11 @@ int main(int argc, char* args[]) {
 
 		//RENDER
 		mVideo->renderGraphic(idDelGrafico, 0, 0,1240,720);
-		//mVideo->renderGraphic(idDelEnemigo1, 300, 300, 120, 100);
-		//mVideo->renderGraphic(idDelEnemigo2, 900, 300, 120, 100);
 		mVideo->renderGraphic(idPuertaArriba, 615, -20, 110, 100);
 
 		personaje->render();
+		mEnemigo1->render();
+
 
 		mVideo->updateScreen();
 		mVideo->clearScreen(0);
