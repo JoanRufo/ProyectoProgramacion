@@ -88,10 +88,10 @@ int main(int argc, char* args[]) {
 
 		if (!sDirector->getCurrentScene()->mustReInit()) {
 			sDirector->getCurrentScene()->render();
-		}
+		}*/
 
 
-		*/
+		
 
 
 		//UPDATE
