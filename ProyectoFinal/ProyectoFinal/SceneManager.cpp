@@ -26,9 +26,9 @@ void SceneManager::init()
 	
 	GameOverScene * gameover = new GameOverScene();
 
-	mVectorScenes[MENU] = menu;
+	/*mVectorScenes[MENU] = menu;
 	mVectorScenes[GAME] = game;
-	mVectorScenes[GAMEOVER] = gameover;
+	mVectorScenes[GAMEOVER] = gameover;*/
 
 
 	menu->init();
