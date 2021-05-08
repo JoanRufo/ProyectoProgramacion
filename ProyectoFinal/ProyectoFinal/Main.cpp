@@ -8,6 +8,7 @@
 #include "Personaje.h"
 #include "Enemigo1.h"
 #include "Enemigo2.h"
+#include "MenuScene.h"
 
 
 Uint32 		global_elapsed_time = 0;
@@ -34,6 +35,7 @@ int main(int argc, char* args[]) {
 	Personaje* personaje = new Personaje();
 	Enemigo1* mEnemigo1 = new Enemigo1();
 	Enemigo2* mEnemigo2 = new Enemigo2();
+	MenuScene* Menu = new MenuScene();
 
 	
 
@@ -62,20 +64,20 @@ int main(int argc, char* args[]) {
 	while (!endgame) {
 
 		//INIT
-
+		Menu->init();
 		personaje->init();
 		mEnemigo1->init();
 		mEnemigo2->init();
 
 
-
-		/* SCENE DIRECTOR
+		/*
+		//SCENE DIRECTOR
 		//ReInit o no
 		if (sDirector->getCurrentScene()->mustReInit()) {
-			sDirector->getCurrentScene()->ReInit();
+			sDirector->getCurrentScene()->reinit();
 		}
 		// Read controls
-		sInputControl->update();
+		controles->capturaTeclas();
 
 		//Update time
 		Uint32 actualtime = globalTimer->getTicks();
@@ -87,8 +89,8 @@ int main(int argc, char* args[]) {
 
 		if (!sDirector->getCurrentScene()->mustReInit()) {
 			sDirector->getCurrentScene()->render();
-		}*/
-
+		}
+		*/
 
 		
 
@@ -100,8 +102,10 @@ int main(int argc, char* args[]) {
 
 
 		//RENDER
+		
 		mVideo->renderGraphic(idDelGrafico, 0, 0,1240,720);
 		mVideo->renderGraphic(idPuertaArriba, 615, -20, 110, 100);
+
 
 		personaje->render();
 		mEnemigo1->render();
