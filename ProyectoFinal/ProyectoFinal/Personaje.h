@@ -10,6 +10,7 @@ class Personaje
 {
 	int Movx = 600;
 	int Movy = 300;
+	int velocidadPersonaje;
 	int idDelPersonaje;
 
 public:
