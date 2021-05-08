@@ -9,6 +9,7 @@
 #include "Enemigo1.h"
 #include "Enemigo2.h"
 #include "MenuScene.h"
+#include "puertas.h"
 
 
 Uint32 		global_elapsed_time = 0;
@@ -36,6 +37,7 @@ int main(int argc, char* args[]) {
 	Enemigo1* mEnemigo1 = new Enemigo1();
 	Enemigo2* mEnemigo2 = new Enemigo2();
 	MenuScene* Menu = new MenuScene();
+	puertas* puerta = new puertas();
 
 	
 
@@ -45,10 +47,6 @@ int main(int argc, char* args[]) {
 
 	int idDelGrafico = mResourceManager->loadAndGetGraphicID("Imagenes/Room1.png");
 	if (idDelGrafico == -1) {
-		return 0;
-	}
-	int idPuertaArriba = mResourceManager->loadAndGetGraphicID("Imagenes/Puerta.png");
-	if (idPuertaArriba == -1) {
 		return 0;
 	}
 
@@ -68,6 +66,7 @@ int main(int argc, char* args[]) {
 		personaje->init();
 		mEnemigo1->init();
 		mEnemigo2->init();
+		puerta->init();
 
 
 		/*
@@ -104,11 +103,11 @@ int main(int argc, char* args[]) {
 		//RENDER
 		
 		mVideo->renderGraphic(idDelGrafico, 0, 0,1240,720);
-		mVideo->renderGraphic(idPuertaArriba, 570, -20, 110, 100);
 
 
 		personaje->render();
 		mEnemigo1->render();
+		puerta->render();
 
 
 		mVideo->updateScreen();
