@@ -36,14 +36,14 @@ void Personaje::MovimientoPersonaje()
 		}
 
 		if (Movx >= 1180) {
-			Movx = 1180;
+			Movx = 1179;
 		}
 		else if (Movx <= 20) {
-			Movx = 20;
+			Movx = 21;
 		}
 
 		else if (Movy >= 630) {
-			Movy = 630;
+			Movy = 629;
 		}
 		else if (Movy <= 0) {
 			Movy = 0;

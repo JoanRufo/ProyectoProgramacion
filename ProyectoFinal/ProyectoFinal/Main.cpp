@@ -104,7 +104,7 @@ int main(int argc, char* args[]) {
 		//RENDER
 		
 		mVideo->renderGraphic(idDelGrafico, 0, 0,1240,720);
-		mVideo->renderGraphic(idPuertaArriba, 615, -20, 110, 100);
+		mVideo->renderGraphic(idPuertaArriba, 570, -20, 110, 100);
 
 
 		personaje->render();
