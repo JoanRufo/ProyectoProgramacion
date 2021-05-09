@@ -1,33 +1,27 @@
 #pragma once
+
 #include "SDL.h"
 #include <iostream>
 #include <stdio.h>
 #include "Controles.h"
 #include "ResourceManager.h"
 #include "Video.h"
-#include "Balas.h"
-
-class Personaje
+class Balas 
 {
-	int Movx = 600;
-	int Movy = 300;
-	int velocidadPersonaje;
-	int idDelPersonaje;
+
 	int bala;
 
-public:
+
 	void init();
 	void update();
 	void render();
-	void MovimientoPersonaje();
+	void dispararBalas();
 	ResourceManager* mResourceManager = ResourceManager::getInstance();
 	Video* mVideo = Video::getInstance();
-
-
-	//Balas* balas = new Balas();
-	
+	static Balas* getInstance();
+	static Balas*		pInstance;
 
 	
-
+	
 };
 

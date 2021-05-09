@@ -22,7 +22,6 @@
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{762598C0-D695-4FB4-8FB5-7072725C9810}</ProjectGuid>
     <RootNamespace>ProyectoFinal</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -132,6 +131,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Balas.cpp" />
     <ClCompile Include="Controles.cpp" />
     <ClCompile Include="Enemigo1.cpp" />
     <ClCompile Include="Enemigo2.cpp" />
@@ -150,6 +150,7 @@
     <ClCompile Include="Video.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Balas.h" />
     <ClInclude Include="Controles.h" />
     <ClInclude Include="Enemigo1.h" />
     <ClInclude Include="Enemigo2.h" />

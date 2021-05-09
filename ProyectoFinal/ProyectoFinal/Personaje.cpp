@@ -5,6 +5,7 @@
 void Personaje::init()
 {
 	idDelPersonaje = mResourceManager->loadAndGetGraphicID("Imagenes/Personaje.png");
+	bala = mResourceManager->loadAndGetGraphicID("Imagenes/Bala.png");
 
 	Movx;
 	Movy;
@@ -34,6 +35,12 @@ void Personaje::MovimientoPersonaje()
 		else if (Controles::getInstance()->teclasPulsadas[3] == true) {
 			Movx++;
 		}
+		else if (Controles::getInstance()->teclasPulsadas[4] == true) {
+			
+			mVideo->renderGraphic(bala, Movx, Movy, 20, 20);
+
+		}
+		
 
 		if (Movx >= 1180) {
 			Movx = 1179;

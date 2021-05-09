@@ -7,6 +7,7 @@
 #include "Timer.h"
 #include "Personaje.h"
 #include "Enemigo1.h"
+#include "Balas.h"
 #include "Enemigo2.h"
 #include "MenuScene.h"
 #include "puertas.h"
