@@ -13,6 +13,11 @@ void Personaje::init()
 
 void Personaje::update()
 {
+
+	
+
+
+
 }
 
 void Personaje::render()
@@ -38,7 +43,8 @@ void Personaje::MovimientoPersonaje()
 		else if (Controles::getInstance()->teclasPulsadas[4] == true) {
 			
 			mVideo->renderGraphic(bala, Movx, Movy, 20, 20);
-
+			Balas *vBalas = new Balas();
+			
 		}
 		
 
