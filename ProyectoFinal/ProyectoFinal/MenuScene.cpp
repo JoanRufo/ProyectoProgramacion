@@ -20,7 +20,9 @@ void MenuScene::init()
 
 void MenuScene::update()
 {
-	
+
+	// hacer ifs
+	SceneManager::getInstance()->changeScene(GAME);
 }
 
 void MenuScene::render()

@@ -59,15 +59,18 @@ int main(int argc, char* args[]) {
 
 
 
+	//INIT
+		//Menu->init();
+	personaje->init();					
+	mEnemigo1->init();
+	mEnemigo2->init();
+	puerta->init();
+
+
 
 	while (!endgame) {
 
-		//INIT
-		Menu->init();
-		personaje->init();
-		mEnemigo1->init();
-		mEnemigo2->init();
-		puerta->init();
+		
 
 
 		/*
@@ -87,6 +90,9 @@ int main(int argc, char* args[]) {
 		// Updates scene
 		sDirector->getCurrentScene()->update();
 
+
+		mVideo->clearScreen(0);
+
 		if (!sDirector->getCurrentScene()->mustReInit()) {
 			sDirector->getCurrentScene()->render();
 		}
@@ -102,6 +108,8 @@ int main(int argc, char* args[]) {
 
 
 		//RENDER
+
+
 		
 		mVideo->renderGraphic(idDelGrafico, 0, 0,1240,720);
 
@@ -110,9 +118,9 @@ int main(int argc, char* args[]) {
 		mEnemigo1->render();
 		puerta->render();
 
-
+		
 		mVideo->updateScreen();
-		mVideo->clearScreen(0);
+		
 
 		
 
