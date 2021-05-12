@@ -3,7 +3,7 @@
 #include "SceneManager.h"
 
 
-class GameOverScene//:public Scene
+class GameOverScene:public Scene
 {
 public:
 	GameOverScene();

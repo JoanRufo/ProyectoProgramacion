@@ -5,9 +5,10 @@
 #include "SceneManager.h"
 #include "ResourceManager.h"
 #include "Video.h"
+#include "Scene.h"
 
 
-class MenuScene//:public Scene
+class MenuScene:public Scene
 {
 	int x;
 	int y;

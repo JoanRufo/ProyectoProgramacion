@@ -22,14 +22,21 @@ void MenuScene::update()
 {
 
 	// hacer ifs
-	SceneManager::getInstance()->changeScene(GAME);
+	
+	/*if () 
+	{
+	
+		SceneManager::getInstance()->changeScene(GAME);
+	
+	}*/
+	
 }
 
 void MenuScene::render()
 {
 	mVideo->renderGraphic(Background, 0, 0, 1240, 720);
-	mVideo->renderGraphic(PlayButton, 600, 300, 400, 150);
-	mVideo->renderGraphic(Background, 600, 100, 200, 80);
+	mVideo->renderGraphic(PlayButton, 430, 200, 400, 150);
+	mVideo->renderGraphic(ExitButton, 530, 400, 200, 80);
 }
 
 

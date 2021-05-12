@@ -24,11 +24,11 @@ void SceneManager::init()
 	
 	GameScene	*game = new GameScene();
 	
-	GameOverScene * gameover = new GameOverScene();
+	GameOverScene *gameover = new GameOverScene();
 
-	//mVectorScenes[MENU] = menu;
-	/*mVectorScenes[GAME] = game;
-	mVectorScenes[GAMEOVER] = gameover;*/
+	mVectorScenes[MENU] = menu;
+	mVectorScenes[GAME] = game;
+	mVectorScenes[GAMEOVER] = gameover;
 
 
 	menu->init();
@@ -36,7 +36,7 @@ void SceneManager::init()
 
 
 	mCurrScene = MENU;
-}
+} 
 
 
 void SceneManager::changeScene(SceneEnum next_scene, bool reinit)

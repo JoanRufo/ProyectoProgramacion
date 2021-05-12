@@ -18,40 +18,17 @@ bool		gameOn = true;
 SceneManager	*sDirector = NULL;
 
 
-
-
-
 int main(int argc, char* args[]) {
 
 
-	
-	
+		
 	sDirector = SceneManager::getInstance();
-
-
-	ResourceManager* mResourceManager = ResourceManager::getInstance();
 	Video* mVideo = Video::getInstance();
-
-
 	Controles* controles = Controles::getInstance();
-	Personaje* personaje = new Personaje();
-	Enemigo1* mEnemigo1 = new Enemigo1();
-	Enemigo2* mEnemigo2 = new Enemigo2();
-	MenuScene* Menu = new MenuScene();
-	puertas* puerta = new puertas();
-
 	
-
+		
 	bool endgame = false;
-
-
-
-	int idDelGrafico = mResourceManager->loadAndGetGraphicID("Imagenes/Room1.png");
-	if (idDelGrafico == -1) {
-		return 0;
-	}
-
-
+	
 	// Init Time control
 	Timer* globalTimer = new Timer();
 	globalTimer->start();
@@ -60,20 +37,15 @@ int main(int argc, char* args[]) {
 
 
 	//INIT
-		//Menu->init();
-	personaje->init();					
-	mEnemigo1->init();
-	mEnemigo2->init();
-	puerta->init();
+
+					
+	
 
 
 
 	while (!endgame) {
 
-		
-
-
-		/*
+				
 		//SCENE DIRECTOR
 		//ReInit o no
 		if (sDirector->getCurrentScene()->mustReInit()) {
@@ -96,14 +68,13 @@ int main(int argc, char* args[]) {
 		if (!sDirector->getCurrentScene()->mustReInit()) {
 			sDirector->getCurrentScene()->render();
 		}
-		*/
+		
 
 		
 
 
 		//UPDATE
-		controles->capturaTeclas();
-		personaje->MovimientoPersonaje();
+		
 
 
 
@@ -111,21 +82,9 @@ int main(int argc, char* args[]) {
 
 
 		
-		mVideo->renderGraphic(idDelGrafico, 0, 0,1240,720);
-
-
-		personaje->render();
-		mEnemigo1->render();
-		puerta->render();
-
-		
+					
 		mVideo->updateScreen();
-		
-
-		
-
-
-
+			
 	}
 
 		
