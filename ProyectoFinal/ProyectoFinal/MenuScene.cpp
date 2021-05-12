@@ -21,9 +21,9 @@ void MenuScene::init()
 void MenuScene::update()
 {
 
-	// hacer ifs
 	
-	/*if () 
+	/* SDL_RECT DETECTAR CLICK LIMITES IMAGEN PLAY
+	if () 
 	{
 	
 		SceneManager::getInstance()->changeScene(GAME);
