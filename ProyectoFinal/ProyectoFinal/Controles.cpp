@@ -42,6 +42,10 @@ void Controles::capturaTeclas()
 
 				SDL_Quit();
 			}
+			else if (Events.key.keysym.scancode == SDL_SCANCODE_RETURN) {
+
+				teclasPulsadas[ENTER] = true;
+			}
 			break;
 		case SDL_KEYUP:
 			if (Events.key.keysym.scancode == SDL_SCANCODE_W) {
@@ -67,6 +71,10 @@ void Controles::capturaTeclas()
 			else if (Events.key.keysym.scancode == SDL_SCANCODE_ESCAPE) {
 
 				SDL_Quit();
+			}
+			else if (Events.key.keysym.scancode == SDL_SCANCODE_RETURN) {
+
+				teclasPulsadas[ENTER] = false;
 			}
 			break;
 

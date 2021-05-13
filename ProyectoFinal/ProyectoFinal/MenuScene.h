@@ -21,12 +21,6 @@ class MenuScene:public Scene
 	SDL_Rect rect;
 
 
-	int CheckClick(int x, int y, struct SDL_Rect *rect);
-	
-		
-
-	
-
 public:
 	MenuScene();
 	~MenuScene();
@@ -38,7 +32,7 @@ public:
 
 	ResourceManager* mResourceManager = ResourceManager::getInstance();
 	Video* mVideo = Video::getInstance();
-
+	
 	
 };
 
