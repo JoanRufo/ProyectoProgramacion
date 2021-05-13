@@ -7,6 +7,7 @@
 #include "puertas.h"
 #include "Scene.h"
 #include "Habitacion1.h"
+#include "Balas.h"
 
 class GameScene : public Scene
 {
@@ -29,6 +30,12 @@ public:
 	Enemigo1* mEnemigo1 = new Enemigo1();
 	Enemigo2* mEnemigo2 = new Enemigo2();
 	Habitacion1* mHabitacion1 = new Habitacion1();
+	Balas* balas = new Balas();
+
+	static GameScene* getInstance();
+	static GameScene*		pInstance;
+
+	
 
 	puertas* puerta = new puertas();
 };

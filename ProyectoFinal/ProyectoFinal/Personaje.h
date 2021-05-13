@@ -27,7 +27,7 @@ public:
 	Video* mVideo = Video::getInstance();
 
 
-	std::vector<Balas*>	vBalas;
+	//std::vector<Balas*>	vBalas;
 
 	
 	

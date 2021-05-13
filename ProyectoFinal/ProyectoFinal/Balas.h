@@ -13,19 +13,22 @@ class Balas
 	enum estadosBala { BalaInicio, BalaMovimiento, DestruirBala };
 	estadosBala estatActual;
 
-	int bala;
+	
+	
 
-
+public:
 	void init();
 	void update();
 	void render();
 	ResourceManager* mResourceManager = ResourceManager::getInstance();
 	Video* mVideo = Video::getInstance();
-	static Balas* getInstance();
-	static Balas*		pInstance;
-	Personaje* mPersonaje = new Personaje();
-
 	
+	
+
+	bool estoyViva = false;
+	int bala;
+	int balaX = 600;
+	int balaY = 300;
 	
 };
 

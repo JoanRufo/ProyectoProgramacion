@@ -1,5 +1,7 @@
 #include "GameScene.h"
 
+GameScene* GameScene::pInstance = NULL;
+
 
 
 GameScene::GameScene()
@@ -27,10 +29,16 @@ void GameScene::update()
 	personaje->MovimientoPersonaje();
 
 
+	if (balas->estoyViva == false) {
 
 
-	// HACER IF PARA GAMEOVER
-	//SceneManager::getInstance()->changeScene(GAMEOVER);
+		
+		
+	
+	
+	}
+
+	
 }
 
 void GameScene::render()
@@ -39,6 +47,14 @@ void GameScene::render()
 	personaje->render();
 	mEnemigo1->render();
 	puerta->render();
+}
+
+GameScene * GameScene::getInstance()
+{
+	if (pInstance == NULL) {
+		pInstance = new GameScene();
+	}
+	return pInstance;
 }
 
 
