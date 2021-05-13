@@ -17,6 +17,16 @@ class MenuScene:public Scene
 	int PlayButton;
 	int ExitButton;
 
+
+	SDL_Rect rect;
+
+
+	int CheckClick(int x, int y, struct SDL_Rect *rect);
+	
+		
+
+	
+
 public:
 	MenuScene();
 	~MenuScene();
