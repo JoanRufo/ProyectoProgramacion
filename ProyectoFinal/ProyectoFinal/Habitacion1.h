@@ -4,6 +4,7 @@
 class Habitacion1
 {
 	int idDeHabitacion1;
+	
 
 public:
 	Habitacion1();
