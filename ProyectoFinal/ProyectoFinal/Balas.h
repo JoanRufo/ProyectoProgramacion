@@ -6,8 +6,12 @@
 #include "Controles.h"
 #include "ResourceManager.h"
 #include "Video.h"
+#include "Personaje.h"
 class Balas 
 {
+
+	enum estadosBala { BalaInicio, BalaMovimiento, DestruirBala };
+	estadosBala estatActual;
 
 	int bala;
 
@@ -15,11 +19,11 @@ class Balas
 	void init();
 	void update();
 	void render();
-	void dispararBalas();
 	ResourceManager* mResourceManager = ResourceManager::getInstance();
 	Video* mVideo = Video::getInstance();
 	static Balas* getInstance();
 	static Balas*		pInstance;
+	Personaje* mPersonaje = new Personaje();
 
 	
 	

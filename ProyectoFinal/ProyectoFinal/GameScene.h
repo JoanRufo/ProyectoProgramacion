@@ -6,6 +6,7 @@
 #include "Enemigo2.h"
 #include "puertas.h"
 #include "Scene.h"
+#include "Habitacion1.h"
 
 class GameScene : public Scene
 {
@@ -27,6 +28,7 @@ public:
 	Personaje* personaje = new Personaje();
 	Enemigo1* mEnemigo1 = new Enemigo1();
 	Enemigo2* mEnemigo2 = new Enemigo2();
+	Habitacion1* mHabitacion1 = new Habitacion1();
 
 	puertas* puerta = new puertas();
 };

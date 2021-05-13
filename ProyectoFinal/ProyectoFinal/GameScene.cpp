@@ -15,9 +15,7 @@ GameScene::~GameScene()
 
 void GameScene::init()
 {
-	
-	idDelGrafico = mResourceManager->loadAndGetGraphicID("Imagenes/Room1.png");
-
+	mHabitacion1->init();
 	personaje->init();
 	mEnemigo1->init();
 	mEnemigo2->init();
@@ -37,7 +35,7 @@ void GameScene::update()
 
 void GameScene::render()
 {
-	mVideo->renderGraphic(idDelGrafico, 0, 0, 1240, 720);
+	mHabitacion1->render();
 	personaje->render();
 	mEnemigo1->render();
 	puerta->render();

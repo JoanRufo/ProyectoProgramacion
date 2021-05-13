@@ -5,7 +5,6 @@
 void Personaje::init()
 {
 	idDelPersonaje = mResourceManager->loadAndGetGraphicID("Imagenes/Personaje.png");
-	bala = mResourceManager->loadAndGetGraphicID("Imagenes/Bala.png");
 
 	Movx;
 	Movy;

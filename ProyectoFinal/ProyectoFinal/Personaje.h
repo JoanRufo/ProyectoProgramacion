@@ -6,16 +6,19 @@
 #include "ResourceManager.h"
 #include "Video.h"
 #include "Balas.h"
+#include <vector>
 
 class Personaje
 {
-	int Movx = 600;
-	int Movy = 300;
 	int velocidadPersonaje;
 	int idDelPersonaje;
 	int bala;
 
 public:
+
+	int Movx = 600;
+	int Movy = 300;
+
 	void init();
 	void update();
 	void render();
