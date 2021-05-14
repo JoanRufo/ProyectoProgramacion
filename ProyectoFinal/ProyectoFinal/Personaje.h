@@ -10,14 +10,16 @@
 
 class Personaje
 {
-	int velocidadPersonaje;
+	int velPersonaje;
 	int idDelPersonaje;
 	int bala;
+	int velx = 10;
+	int vely = 10;
 
 public:
 
-	int Movx = 600;
-	int Movy = 300;
+	int Posx = 600;
+	int Posy = 300;
 
 	void init();
 	void update();
