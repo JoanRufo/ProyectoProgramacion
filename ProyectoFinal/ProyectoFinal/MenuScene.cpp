@@ -37,7 +37,7 @@ void MenuScene::render()
 {
 	mVideo->renderGraphic(Background, 0, 0, 1240, 720);
 	mVideo->renderGraphic(Botones, 0, 0, 1240, 720);
-	mVideo->renderGraphic(Tip, 400,550, 430, 150);
+	//mVideo->renderGraphic(Tip, 400,550, 430, 150);
 	
 }
 

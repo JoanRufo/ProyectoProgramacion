@@ -37,10 +37,13 @@ void GameScene::update()
 	}
 
 
-	if (Controles::getInstance()->teclasPulsadas[8] == true) {
+
+
+	//PAUSA
+	/*if (Controles::getInstance()->teclasPulsadas[8] == true) {
 
 		SceneManager::getInstance()->changeScene(PAUSE);
-	}
+	}*/
 	
 
 

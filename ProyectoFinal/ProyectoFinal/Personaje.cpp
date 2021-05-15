@@ -18,10 +18,6 @@ void Personaje::init()
 void Personaje::update()
 {
 
-	
-
-
-
 }
 
 void Personaje::render()
@@ -32,6 +28,7 @@ void Personaje::render()
 void Personaje::MovimientoPersonaje()
 {
 	
+		//MOVIMIENTO
 		if (Controles::getInstance()->teclasPulsadas[0] == true) {
 			Posy--;
 		}
@@ -52,6 +49,8 @@ void Personaje::MovimientoPersonaje()
 		}
 		
 
+
+		//LIMITES 
 		if (Posx >= 1180) {
 			Posx = 1179;
 		}
@@ -65,5 +64,13 @@ void Personaje::MovimientoPersonaje()
 		else if (Posy <= 0) {
 			Posy = 0;
 		}
+
+
+
+
+
+		//CAMBIAR DE HABITACIONES
+
+	
 	
 }
