@@ -12,7 +12,7 @@
 class GameScene : public Scene
 {
 
-	int idDelGrafico;
+	
 
 
 public:
@@ -31,13 +31,14 @@ public:
 	Enemigo2* mEnemigo2 = new Enemigo2();
 	Habitacion1* mHabitacion1 = new Habitacion1();
 	Balas* balas = new Balas();
+	puertas* puerta = new puertas();
 
 	static GameScene* getInstance();
 	static GameScene*		pInstance;
 
 	
 
-	puertas* puerta = new puertas();
+	
 };
 
 

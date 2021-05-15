@@ -9,7 +9,7 @@ public:
 	void capturaTeclas();
 	bool lecturaTeclas(int a);
 	bool teclasPulsadas[6];
-	enum teclas { W, A, S, D, Espacio, ESC, ENTER };
+	enum teclas { W, A, S, D, Espacio, ESC, ENTER, R, Q };
 	bool endgame = false;
 	static Controles* getInstance();
 	static Controles*		pInstance;

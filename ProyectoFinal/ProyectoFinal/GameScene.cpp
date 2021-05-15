@@ -26,19 +26,24 @@ void GameScene::init()
 
 void GameScene::update()
 {
+	 
 	personaje->MovimientoPersonaje();
 
 
 	if (balas->estoyViva == false) {
 
 
-		
-		
-	
-	
+
 	}
 
+
+	if (Controles::getInstance()->teclasPulsadas[8] == true) {
+
+		SceneManager::getInstance()->changeScene(PAUSE);
+	}
 	
+
+
 }
 
 void GameScene::render()

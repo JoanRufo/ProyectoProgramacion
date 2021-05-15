@@ -23,11 +23,14 @@ void SceneManager::init()
 	MenuScene	*menu = new MenuScene();
 	
 	GameScene	*game = new GameScene();
+
+	PauseScene *pause = new PauseScene();
 	
 	GameOverScene *gameover = new GameOverScene();
 
 	mVectorScenes[MENU] = menu;
 	mVectorScenes[GAME] = game;
+	mVectorScenes[PAUSE] = pause;
 	mVectorScenes[GAMEOVER] = gameover;
 
 

@@ -46,6 +46,14 @@ void Controles::capturaTeclas()
 
 				teclasPulsadas[ENTER] = true;
 			}
+			else if (Events.key.keysym.scancode == SDL_SCANCODE_R) {
+
+				teclasPulsadas[R] = true;
+			}
+			else if (Events.key.keysym.scancode == SDL_SCANCODE_Q) {
+
+				teclasPulsadas[Q] = true;
+			}
 			break;
 		case SDL_KEYUP:
 			if (Events.key.keysym.scancode == SDL_SCANCODE_W) {
@@ -75,6 +83,14 @@ void Controles::capturaTeclas()
 			else if (Events.key.keysym.scancode == SDL_SCANCODE_RETURN) {
 
 				teclasPulsadas[ENTER] = false;
+			}
+			else if (Events.key.keysym.scancode == SDL_SCANCODE_R) {
+
+				teclasPulsadas[R] = false;
+			}
+			else if (Events.key.keysym.scancode == SDL_SCANCODE_Q) {
+
+				teclasPulsadas[Q] = false;
 			}
 			break;
 
