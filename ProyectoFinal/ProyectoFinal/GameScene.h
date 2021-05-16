@@ -7,6 +7,7 @@
 #include "puertas.h"
 #include "Scene.h"
 #include "Habitacion1.h"
+#include "Habitacion2.h"
 #include "Balas.h"
 
 class GameScene : public Scene

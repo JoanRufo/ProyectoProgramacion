@@ -21,6 +21,15 @@ void Enemigo1::init()
 
 void Enemigo1::update()
 {
+
+	//MOVIMIENTO ENEMIGO
+
+
+
+
+
+
+
 }
 
 void Enemigo1::render()

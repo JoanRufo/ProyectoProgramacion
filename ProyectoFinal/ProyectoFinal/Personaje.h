@@ -6,6 +6,7 @@
 #include "ResourceManager.h"
 #include "Video.h"
 #include "Balas.h"
+#include "Habitacion2.h"
 #include <vector>
 
 class Personaje
@@ -27,6 +28,9 @@ public:
 	void MovimientoPersonaje();
 	ResourceManager* mResourceManager = ResourceManager::getInstance();
 	Video* mVideo = Video::getInstance();
+
+	Habitacion2* hab2 = new Habitacion2();
+
 
 
 	//std::vector<Balas*>	vBalas;
