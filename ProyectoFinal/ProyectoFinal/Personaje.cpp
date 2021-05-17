@@ -70,12 +70,14 @@ void Personaje::MovimientoPersonaje()
 
 
 		//CAMBIAR DE HABITACIONES
-
-		/*if (Posx >= 20 && Posy >= 310 ) {
-
-			hab2->init();
-			hab2->render();
+		if (Posx >= 20 && Posx <= 40){
 			
-		}^*/
+			if (Posy >= 300 && Posy <= 400) {
+				
+				hab2->init();
+				hab2->render();
+			}
+			
+		}
 	
 }
