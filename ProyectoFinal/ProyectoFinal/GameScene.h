@@ -31,6 +31,7 @@ public:
 	Enemigo1* mEnemigo1 = new Enemigo1();
 	Enemigo2* mEnemigo2 = new Enemigo2();
 	Habitacion1* mHabitacion1 = new Habitacion1();
+	Habitacion2* mHabitacion2 = new Habitacion2();
 	Balas* balas = new Balas();
 	puertas* puerta = new puertas();
 

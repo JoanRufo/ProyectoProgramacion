@@ -22,7 +22,7 @@ void GameScene::init()
 	mEnemigo1->init();
 	mEnemigo2->init();
 	puerta->init();
-	hab2->init();
+	mHabitacion2->init();
 }
 
 void GameScene::update()
@@ -39,10 +39,10 @@ void GameScene::update()
 	//CAMBIAR DE HABITACIONES
 	if (personaje->Posx >= 20 && personaje->Posx <= 40) {
 
-		if (Posy >= 300 && Posy <= 400) {
+		if (personaje->Posy >= 300 && personaje->Posy <= 400) {
 
-			hab2->init();
-			hab2->render();
+			mHabitacion2->init();
+			mHabitacion2->render();
 		}
 
 	}
