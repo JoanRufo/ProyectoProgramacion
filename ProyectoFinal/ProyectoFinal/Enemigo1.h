@@ -7,6 +7,7 @@ class Enemigo1
 	int posX = 600;
 	int posY = 200;
 	int movX = 1;
+	float velx = 0.1f;
 public:
 	Enemigo1();
 	~Enemigo1();
