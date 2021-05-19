@@ -34,7 +34,7 @@ void Enemigo1::update()
 
 void Enemigo1::render()
 {
-	mVideo->renderGraphic(idDelEnemigo1, posX, posY, 120, 100);
+	//mVideo->renderGraphic(idDelEnemigo1, posX, posY, 120, 100);
 }
 
 void Enemigo1::movEnemigo()
