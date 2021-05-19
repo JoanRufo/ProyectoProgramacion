@@ -27,8 +27,9 @@ void GameScene::init()
 
 void GameScene::update()
 {
-	 
+	
 	personaje->MovimientoPersonaje();
+	mEnemigo1->movEnemigo();
 
 
 	if (balas->estoyViva == false) {
