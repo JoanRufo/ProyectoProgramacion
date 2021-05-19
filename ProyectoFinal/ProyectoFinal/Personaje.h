@@ -19,7 +19,7 @@ public:
 
 	float Posx = 600;
 	float Posy = 300;
-	float vel = 0.2;
+	float vel = 0.3;
 
 	void init();
 	void update();
