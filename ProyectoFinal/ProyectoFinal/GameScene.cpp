@@ -56,6 +56,24 @@ void GameScene::update()
 
 	}
 
+	else if (idHabitacion == 2) {
+		
+		if (personaje->Posx >= 1100 && personaje->Posx <= 1240)
+		{
+			if (personaje->Posy >= 300 && personaje->Posy <= 400) {
+			
+			
+				idHabitacion = 1;
+			
+			}
+
+
+		}
+	
+	
+	
+	}
+
 
 
 
