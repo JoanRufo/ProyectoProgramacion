@@ -6,8 +6,8 @@ void Personaje::init()
 {
 	idDelPersonaje = mResourceManager->loadAndGetGraphicID("Imagenes/Personaje.png");
 
-	Posx;
-	Posy;
+	Posx = 600;
+	Posy = 300;
 	vel;
 	
 }
@@ -58,23 +58,11 @@ void Personaje::MovimientoPersonaje()
 		else if (Posy >= 630) {
 			Posy = 629;
 		}
-		else if (Posy <= 0) {
+		else if (Posy <= 0){
 			Posy = 0;
 		}
 
-
-
-
-
-		//CAMBIAR DE HABITACIONES
-		if (Posx >= 20 && Posx <= 40){
-			
-			if (Posy >= 300 && Posy <= 400) {
-				
-				hab2->init();
-				hab2->render();
-			}
-			
-		}
-	
 }
+	
+
+

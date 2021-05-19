@@ -12,14 +12,14 @@
 class Personaje
 {
 	int velPersonaje;
-	int idDelPersonaje;
 	int bala;
 
 public:
 
-	float Posx = 600;
-	float Posy = 300;
+	float Posx;
+	float Posy;
 	float vel = 0.3;
+	int idDelPersonaje;
 
 	void init();
 	void update();
@@ -27,8 +27,6 @@ public:
 	void MovimientoPersonaje();
 	ResourceManager* mResourceManager = ResourceManager::getInstance();
 	Video* mVideo = Video::getInstance();
-
-	Habitacion2* hab2 = new Habitacion2();
 
 
 

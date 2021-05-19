@@ -25,4 +25,5 @@ void Habitacion1::update()
 void Habitacion1::render()
 {
 	mVideo->renderGraphic(idDeHabitacion1, 0, 0, 1240, 720);
+
 }

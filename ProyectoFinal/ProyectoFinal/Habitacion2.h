@@ -1,6 +1,7 @@
 #pragma once
 #include "ResourceManager.h"
 #include "Video.h"
+#include "Personaje.h"
 class Habitacion2
 {
 

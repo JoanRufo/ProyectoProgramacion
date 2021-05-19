@@ -48,7 +48,6 @@ public:
 	puertaIz* puertaIzquierda = new puertaIz();
 
 
-
 	static GameScene* getInstance();
 	static GameScene*		pInstance;
 
