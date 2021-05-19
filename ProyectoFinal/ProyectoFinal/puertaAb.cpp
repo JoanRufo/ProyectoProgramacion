@@ -11,5 +11,5 @@ void puertaAb::update()
 
 void puertaAb::render()
 {
-	mVideo->renderGraphic(idPuertaAbajo, 570, 650, 110, 100);
+	mVideo->renderGraphic(idPuertaAbajo, 570, 650, 110, 50);
 }

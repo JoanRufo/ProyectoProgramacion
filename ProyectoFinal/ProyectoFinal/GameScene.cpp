@@ -55,7 +55,7 @@ void GameScene::update()
 			if (personaje->Posy >= 250 && personaje->Posy <= 350) {
 
 				idHabitacion = 2;
-				personaje->Posx = 1000;
+				personaje->Posx = 1100;
 				personaje->Posy = 300;
 
 			}
@@ -69,7 +69,7 @@ void GameScene::update()
 
 				idHabitacion = 3;
 				personaje->Posx = 600;
-				personaje->Posy = 700;
+				personaje->Posy = 600;
 		
 
 			}
@@ -91,7 +91,7 @@ void GameScene::update()
 
 	else if (idHabitacion == 2) {
 		
-		if (personaje->Posx >= 1100 && personaje->Posx <= 1240)
+		if (personaje->Posx >= 1150 && personaje->Posx <= 1240)
 		{
 			if (personaje->Posy >= 300 && personaje->Posy <= 400) {
 			
@@ -107,6 +107,47 @@ void GameScene::update()
 	
 	
 	
+	}
+
+
+	else if (idHabitacion == 3) {
+
+		if (personaje->Posx >= 580  && personaje->Posx <= 620)
+		{
+			if (personaje->Posy >= 600  && personaje->Posy <= 640) {
+
+
+				idHabitacion = 1;
+				personaje->Posx = 600;
+				personaje->Posy = 50;
+
+			}
+
+
+		}
+
+
+
+	}
+
+
+
+	else if (idHabitacion == 4) {
+
+		if (personaje->Posx >= 20 && personaje->Posx <= 40) {
+
+			if (personaje->Posy >= 250 && personaje->Posy <= 350) {
+
+				idHabitacion = 1;
+				personaje->Posx = 1130;
+				personaje->Posy = 300;
+
+			}
+
+		}
+
+
+
 	}
 
 	
@@ -137,14 +178,14 @@ void GameScene::render()
 		puertaArriba->render();
 		puertaIzquierda->render();
 		puertaDerecha->render();
-		//personaje->Posx = 600;
-		//personaje->Posy = 300;
+		
 	}
 
 	else if (idHabitacion == 2) {
 	
 		mHabitacion2->render();
 		puertaDerecha->render();
+		mEnemigo1->render();
 	}
 
 	else if (idHabitacion == 3) {
@@ -161,7 +202,7 @@ void GameScene::render()
 	
 	
 	personaje->render();
-	mEnemigo1->render();
+	
 	
 }
 
