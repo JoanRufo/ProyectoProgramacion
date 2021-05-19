@@ -10,7 +10,6 @@
 #include "Balas.h"
 #include "Enemigo2.h"
 #include "MenuScene.h"
-#include "puertas.h"
 
 
 Uint32 		global_elapsed_time = 0;

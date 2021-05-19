@@ -8,10 +8,7 @@ void Personaje::init()
 
 	Posx;
 	Posy;
-
-	velx;
-	vely;
-
+	vel;
 	
 }
 
@@ -30,16 +27,16 @@ void Personaje::MovimientoPersonaje()
 	
 		//MOVIMIENTO
 		if (Controles::getInstance()->teclasPulsadas[0] == true) {
-			Posy--;
+			Posy-=1*vel;
 		}
 		else if (Controles::getInstance()->teclasPulsadas[1] == true) {
-			Posx--;
+			Posx-=1*vel;
 		}
 		else if (Controles::getInstance()->teclasPulsadas[2] == true) {
-			Posy++;
+			Posy+=1*vel;
 		}
 		else if (Controles::getInstance()->teclasPulsadas[3] == true) {
-			Posx++;
+			Posx+=1*vel;
 		}
 		else if (Controles::getInstance()->teclasPulsadas[4] == true) {
 			

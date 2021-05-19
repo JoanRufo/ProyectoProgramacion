@@ -14,13 +14,12 @@ class Personaje
 	int velPersonaje;
 	int idDelPersonaje;
 	int bala;
-	int velx = 10;
-	int vely = 10;
 
 public:
 
-	int Posx = 600;
-	int Posy = 300;
+	float Posx = 600;
+	float Posy = 300;
+	float vel = 0.2;
 
 	void init();
 	void update();
