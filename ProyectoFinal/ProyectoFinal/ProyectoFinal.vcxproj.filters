@@ -75,6 +75,18 @@
     <ClCompile Include="Habitacion2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="puertaArr.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="puertaIz.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="puertaAb.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="puertaDer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Video.h">
@@ -132,6 +144,18 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Habitacion2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="puertaArr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="puertaIz.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="puertaAb.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="puertaDer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
