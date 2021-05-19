@@ -38,6 +38,9 @@ public:
 	static GameScene* getInstance();
 	static GameScene*		pInstance;
 
+
+	int idHabitacion;
+
 	
 
 	

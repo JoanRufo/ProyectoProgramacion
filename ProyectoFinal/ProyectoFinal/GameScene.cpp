@@ -17,6 +17,9 @@ GameScene::~GameScene()
 
 void GameScene::init()
 {
+	idHabitacion = 1;
+
+
 	mHabitacion1->init();
 	personaje->init();
 	mEnemigo1->init();
@@ -37,13 +40,18 @@ void GameScene::update()
 
 
 	}
+
 	//CAMBIAR DE HABITACIONES
-	if (personaje->Posx >= 20 && personaje->Posx <= 40) {
 
-		if (personaje->Posy >= 300 && personaje->Posy <= 400) {
+	if (idHabitacion == 1) {
 
-			mHabitacion2->init();
-			mHabitacion2->render();
+		if (personaje->Posx >= 20 && personaje->Posx <= 40) {
+
+			if (personaje->Posy >= 300 && personaje->Posy <= 400) {
+
+				idHabitacion = 2;
+			}
+
 		}
 
 	}
@@ -53,10 +61,11 @@ void GameScene::update()
 
 
 	//PAUSA
-	/*if (Controles::getInstance()->teclasPulsadas[8] == true) {
+	
+	if (Controles::getInstance()->teclasPulsadas[8] == true) {
 
 		SceneManager::getInstance()->changeScene(PAUSE);
-	}*/
+	}
 	
 
 
@@ -64,7 +73,17 @@ void GameScene::update()
 
 void GameScene::render()
 {
-	mHabitacion1->render();
+	if (idHabitacion == 1) {
+	
+		mHabitacion1->render();
+	}
+
+	else if (idHabitacion == 2) {
+	
+		mHabitacion2->render();
+	}
+	
+	
 	personaje->render();
 	mEnemigo1->render();
 	puerta->render();
