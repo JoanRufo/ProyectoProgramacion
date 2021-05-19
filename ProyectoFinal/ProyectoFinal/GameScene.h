@@ -4,7 +4,10 @@
 #include "Personaje.h"
 #include "Enemigo1.h"
 #include "Enemigo2.h"
-#include "puertas.h"
+#include "puertaAb.h"
+#include "puertaArr.h"
+#include "puertaDer.h"
+#include "puertaIz.h"
 #include "Scene.h"
 #include "Habitacion1.h"
 #include "Habitacion2.h"
@@ -33,7 +36,14 @@ public:
 	Habitacion1* mHabitacion1 = new Habitacion1();
 	Habitacion2* mHabitacion2 = new Habitacion2();
 	Balas* balas = new Balas();
-	puertas* puerta = new puertas();
+
+
+	puertaAb* puertaAbajo = new puertaAb();
+	puertaArr* puertaArriba = new puertaArr();
+	puertaDer* puertaDerecha = new puertaDer();
+	puertaIz* puertaIzquierda = new puertaIz();
+
+
 
 	static GameScene* getInstance();
 	static GameScene*		pInstance;

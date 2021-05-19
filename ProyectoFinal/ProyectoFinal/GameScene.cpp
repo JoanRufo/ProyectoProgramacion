@@ -24,7 +24,10 @@ void GameScene::init()
 	personaje->init();
 	mEnemigo1->init();
 	mEnemigo2->init();
-	puerta->init();
+	puertaAbajo->init();
+	puertaArriba->init();
+	puertaIzquierda->init();
+	puertaDerecha->init();
 	mHabitacion2->init();
 }
 
@@ -94,17 +97,21 @@ void GameScene::render()
 	if (idHabitacion == 1) {
 	
 		mHabitacion1->render();
+		puertaArriba->render();
+		puertaIzquierda->render();
+		puertaDerecha->render();
 	}
 
 	else if (idHabitacion == 2) {
 	
 		mHabitacion2->render();
+		puertaDerecha->render();
 	}
 	
 	
 	personaje->render();
 	mEnemigo1->render();
-	puerta->render();
+	
 }
 
 GameScene * GameScene::getInstance()

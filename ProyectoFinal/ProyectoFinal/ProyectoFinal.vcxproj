@@ -148,7 +148,6 @@
     <ClCompile Include="puertaArr.cpp" />
     <ClCompile Include="puertaDer.cpp" />
     <ClCompile Include="puertaIz.cpp" />
-    <ClCompile Include="puertas.cpp" />
     <ClCompile Include="ResourceManager.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SceneManager.cpp" />
@@ -173,7 +172,6 @@
     <ClInclude Include="puertaArr.h" />
     <ClInclude Include="puertaDer.h" />
     <ClInclude Include="puertaIz.h" />
-    <ClInclude Include="puertas.h" />
     <ClInclude Include="ResourceManager.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneManager.h" />

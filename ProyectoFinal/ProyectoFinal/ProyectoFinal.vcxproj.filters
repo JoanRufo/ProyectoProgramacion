@@ -60,9 +60,6 @@
     <ClCompile Include="Enemigo2.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="puertas.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Balas.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -129,9 +126,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Enemigo2.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="puertas.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Balas.h">
