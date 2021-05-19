@@ -77,6 +77,23 @@ void GameScene::update()
 	
 	}
 
+	else if (idHabitacion == 3) {
+
+	
+
+
+
+	}
+
+
+	else if (idHabitacion == 4) {
+
+
+
+
+
+	}
+
 
 
 
@@ -106,6 +123,18 @@ void GameScene::render()
 	
 		mHabitacion2->render();
 		puertaDerecha->render();
+	}
+
+	else if (idHabitacion == 3) {
+
+		mHabitacion3->render();
+		puertaAbajo->render();
+	}
+
+	else if (idHabitacion == 4) {
+
+		mHabitacion4->render();
+		puertaIzquierda->render();
 	}
 	
 	

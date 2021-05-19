@@ -11,6 +11,8 @@
 #include "Scene.h"
 #include "Habitacion1.h"
 #include "Habitacion2.h"
+#include "Habitacion3.h"
+#include "Habitacion4.h"
 #include "Balas.h"
 
 class GameScene : public Scene
@@ -35,6 +37,8 @@ public:
 	Enemigo2* mEnemigo2 = new Enemigo2();
 	Habitacion1* mHabitacion1 = new Habitacion1();
 	Habitacion2* mHabitacion2 = new Habitacion2();
+	Habitacion3* mHabitacion3 = new Habitacion3();
+	Habitacion4* mHabitacion4 = new Habitacion4();
 	Balas* balas = new Balas();
 
 
