@@ -31,6 +31,8 @@ void GameScene::init()
 	mHabitacion2->init();
 	mHabitacion3->init();
 	mHabitacion4->init();
+	mHabitacionFinal->init();
+	mObjetoFinal->init();
 }
 
 void GameScene::update()
@@ -104,6 +106,9 @@ void GameScene::update()
 
 
 		}
+
+
+
 	
 	
 	
@@ -124,6 +129,19 @@ void GameScene::update()
 			}
 
 
+		}
+
+		else if (personaje->Posx >= 540 && personaje->Posx <= 640) {
+
+			if (personaje->Posy >= 0 && personaje->Posy <= 30) {
+
+
+				idHabitacion = 5;
+				personaje->Posx = 600;
+				personaje->Posy = 600;
+
+
+			}
 		}
 
 
@@ -148,6 +166,26 @@ void GameScene::update()
 
 
 
+	}
+
+
+	else if (idHabitacion == 5) {
+
+		if (personaje->Posx >= 580 && personaje->Posx <= 620)
+		{
+			if (personaje->Posy >= 600 && personaje->Posy <= 640) {
+
+
+				idHabitacion = 3;
+				personaje->Posx = 600;
+				personaje->Posy = 50;
+
+			}
+
+
+	}
+
+		
 	}
 
 	
@@ -192,6 +230,7 @@ void GameScene::render()
 
 		mHabitacion3->render();
 		puertaAbajo->render();
+		puertaArriba->render();
 	}
 
 	else if (idHabitacion == 4) {
@@ -199,6 +238,15 @@ void GameScene::render()
 		mHabitacion4->render();
 		puertaIzquierda->render();
 	}
+
+	else if (idHabitacion == 5) {
+
+		mHabitacionFinal->render();
+		puertaAbajo->render();
+		mObjetoFinal->render();
+	}
+
+
 	
 	
 	personaje->render();

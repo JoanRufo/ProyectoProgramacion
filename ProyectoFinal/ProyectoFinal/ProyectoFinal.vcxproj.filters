@@ -90,6 +90,12 @@
     <ClCompile Include="Habitacion4.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="HabitacionFinal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjetoFinal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Video.h">
@@ -162,6 +168,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Habitacion4.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HabitacionFinal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjetoFinal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

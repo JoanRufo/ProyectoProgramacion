@@ -13,7 +13,9 @@
 #include "Habitacion2.h"
 #include "Habitacion3.h"
 #include "Habitacion4.h"
+#include "HabitacionFinal.h"
 #include "Balas.h"
+#include "ObjetoFinal.h"
 
 class GameScene : public Scene
 {
@@ -39,7 +41,9 @@ public:
 	Habitacion2* mHabitacion2 = new Habitacion2();
 	Habitacion3* mHabitacion3 = new Habitacion3();
 	Habitacion4* mHabitacion4 = new Habitacion4();
+	HabitacionFinal* mHabitacionFinal = new HabitacionFinal();
 	Balas* balas = new Balas();
+	ObjetoFinal* mObjetoFinal = new ObjetoFinal();
 
 
 	puertaAb* puertaAbajo = new puertaAb();

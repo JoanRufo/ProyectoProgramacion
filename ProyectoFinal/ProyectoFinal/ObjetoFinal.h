@@ -1,18 +1,15 @@
 #pragma once
 #include "ResourceManager.h"
 #include "Video.h"
-class Habitacion2
+class ObjetoFinal
 {
-
-	int idDeHabitacion2;
 
 
 public:
-	Habitacion2();
-	~Habitacion2();
 	void init();
 	void update();
 	void render();
+	int mObjetoFinal;
 	ResourceManager* mResourceManager = ResourceManager::getInstance();
 	Video* mVideo = Video::getInstance();
 };

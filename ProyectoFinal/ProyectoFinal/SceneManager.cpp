@@ -37,6 +37,7 @@ void SceneManager::init()
 	menu->init();
 	game->init();
 	pause->init();
+	
 
 
 	mCurrScene = MENU;
