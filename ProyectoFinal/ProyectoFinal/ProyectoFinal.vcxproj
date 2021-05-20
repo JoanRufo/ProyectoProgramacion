@@ -159,6 +159,7 @@
     <ClCompile Include="SoundManager.cpp" />
     <ClCompile Include="Timer.cpp" />
     <ClCompile Include="Video.cpp" />
+    <ClCompile Include="WinScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Balas.h" />
@@ -187,6 +188,7 @@
     <ClInclude Include="SoundManager.h" />
     <ClInclude Include="Timer.h" />
     <ClInclude Include="Video.h" />
+    <ClInclude Include="WinScene.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

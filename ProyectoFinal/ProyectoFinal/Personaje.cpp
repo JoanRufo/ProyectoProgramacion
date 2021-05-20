@@ -40,8 +40,8 @@ void Personaje::MovimientoPersonaje()
 		}
 		else if (Controles::getInstance()->teclasPulsadas[4] == true) {
 			
-			mVideo->renderGraphic(bala, Posx, Posy, 20, 20);
-			Balas *vBalas = new Balas();
+			/*mVideo->renderGraphic(bala, Posx, Posy, 20, 20);
+			Balas *vBalas = new Balas();*/
 			
 		}
 		

@@ -1,5 +1,4 @@
 #pragma once
-
 #include "SDL.h"
 #include <iostream>
 #include "SceneManager.h"
@@ -7,16 +6,14 @@
 #include "Video.h"
 #include "Scene.h"
 
-
-class GameOverScene:public Scene
+class WinScene: public Scene
 {
 public:
-	GameOverScene();
-	~GameOverScene();
-
+	WinScene();
+	~WinScene();
 
 	void init();
-	void update();
+	void upadte();
 	void render();
 };
 

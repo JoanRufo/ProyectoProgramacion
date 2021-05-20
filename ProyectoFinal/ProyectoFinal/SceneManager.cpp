@@ -28,15 +28,23 @@ void SceneManager::init()
 	
 	GameOverScene *gameover = new GameOverScene();
 
+	WinScene *win = new WinScene();
+
+
+
 	mVectorScenes[MENU] = menu;
 	mVectorScenes[GAME] = game;
 	mVectorScenes[PAUSE] = pause;
 	mVectorScenes[GAMEOVER] = gameover;
+	mVectorScenes[WIN] = win;
 
 
 	menu->init();
 	game->init();
 	pause->init();
+
+	gameover->init();
+	win->init();
 	
 
 

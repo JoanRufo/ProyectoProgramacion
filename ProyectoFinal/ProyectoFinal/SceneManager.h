@@ -8,12 +8,13 @@
 #include "GameScene.h"
 #include "PauseScene.h"
 #include "GameOverScene.h"
+#include "WinScene.h"
 #include "Scene.h"
 
 
 
 enum SceneEnum {
-	MENU, GAME, PAUSE, GAMEOVER, 
+	MENU, GAME, PAUSE, WIN, GAMEOVER, 
 	_LASTSCENE
 };
 

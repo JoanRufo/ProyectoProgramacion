@@ -43,6 +43,9 @@ public:
 	Habitacion4* mHabitacion4 = new Habitacion4();
 	HabitacionFinal* mHabitacionFinal = new HabitacionFinal();
 	Balas* balas = new Balas();
+	std::vector<Balas*>	mVectorBalas;
+
+
 	ObjetoFinal* mObjetoFinal = new ObjetoFinal();
 
 

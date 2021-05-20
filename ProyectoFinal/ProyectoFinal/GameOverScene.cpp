@@ -14,3 +14,11 @@ GameOverScene::~GameOverScene()
 void GameOverScene::init()
 {
 }
+
+void GameOverScene::update()
+{
+}
+
+void GameOverScene::render()
+{
+}

@@ -5,9 +5,7 @@ GameScene* GameScene::pInstance = NULL;
 
 
 GameScene::GameScene()
-{
-
-	
+{	
 }
 
 
@@ -18,7 +16,6 @@ GameScene::~GameScene()
 void GameScene::init()
 {
 	idHabitacion = 1;
-
 
 	mHabitacion1->init();
 	personaje->init();
@@ -44,7 +41,7 @@ void GameScene::update()
 
 	if (balas->estoyViva == false) {
 
-
+		// ELIMINAR BALA?¿?¿?¿¿?¿?¿?¡
 
 	}
 
@@ -61,7 +58,6 @@ void GameScene::update()
 				personaje->Posy = 300;
 
 			}
-
 		}
 
 		else if (personaje->Posx >= 540 && personaje->Posx <= 640) {
@@ -73,7 +69,6 @@ void GameScene::update()
 				personaje->Posx = 600;
 				personaje->Posy = 600;
 		
-
 			}
 		}
 
@@ -103,15 +98,7 @@ void GameScene::update()
 				personaje->Posy = 300;
 			
 			}
-
-
 		}
-
-
-
-	
-	
-	
 	}
 
 
@@ -127,8 +114,6 @@ void GameScene::update()
 				personaje->Posy = 50;
 
 			}
-
-
 		}
 
 		else if (personaje->Posx >= 540 && personaje->Posx <= 640) {
@@ -140,12 +125,8 @@ void GameScene::update()
 				personaje->Posx = 600;
 				personaje->Posy = 600;
 
-
 			}
 		}
-
-
-
 	}
 
 
@@ -161,11 +142,7 @@ void GameScene::update()
 				personaje->Posy = 300;
 
 			}
-
 		}
-
-
-
 	}
 
 
@@ -175,27 +152,14 @@ void GameScene::update()
 		{
 			if (personaje->Posy >= 600 && personaje->Posy <= 640) {
 
-
 				idHabitacion = 3;
 				personaje->Posx = 600;
 				personaje->Posy = 50;
-
 			}
-
-
-	}
-
-		
+		}	
 	}
 
 	
-
-
-	
-
-
-
-
 
 	//PAUSA
 	
