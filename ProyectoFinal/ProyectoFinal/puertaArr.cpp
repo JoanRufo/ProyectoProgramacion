@@ -11,5 +11,5 @@ void puertaArr::update()
 
 void puertaArr::render()
 {
-	mVideo->renderGraphic(idPuertaArriba, 570, -40, 110, 100);
+	mVideo->renderGraphic(idPuertaArriba, 570, -30, 110, 100);
 }

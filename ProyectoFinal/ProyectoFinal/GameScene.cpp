@@ -133,7 +133,7 @@ void GameScene::update()
 
 		else if (personaje->Posx >= 540 && personaje->Posx <= 640) {
 
-			if (personaje->Posy >= 0 && personaje->Posy <= 30) {
+			if (personaje->Posy >= 10 && personaje->Posy <= 40) {
 
 
 				idHabitacion = 5;
