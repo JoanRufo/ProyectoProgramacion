@@ -2,7 +2,7 @@
 
 void puertaAb::init()
 {
-	idPuertaAbajo = mResourceManager->loadAndGetGraphicID("Imagenes/Puerta4.png");
+	idPuertaAbajo = mResourceManager->loadAndGetGraphicID("Imagenes/Puerta4MasGrande.png");
 }
 
 void puertaAb::update()
@@ -11,5 +11,5 @@ void puertaAb::update()
 
 void puertaAb::render()
 {
-	mVideo->renderGraphic(idPuertaAbajo, 570, 650, 110, 50);
+	mVideo->renderGraphic(idPuertaAbajo, 550, 640, 150, 150);
 }
