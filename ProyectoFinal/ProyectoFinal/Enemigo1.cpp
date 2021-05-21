@@ -2,6 +2,7 @@
 
 
 
+
 Enemigo1::Enemigo1()
 {
 }
@@ -15,8 +16,8 @@ Enemigo1::~Enemigo1()
 void Enemigo1::init()
 {
     idDelEnemigo1 = mResourceManager->loadAndGetGraphicID("Imagenes/Enemigo1.png");
-	posX;
-	posY;
+	posX = 600;
+	posY = 200;
 }
 
 void Enemigo1::update()
@@ -32,8 +33,37 @@ void Enemigo1::render()
 
 void Enemigo1::movEnemigo()
 {
-	posX = posX + movX;
-	if (posX == 21 || posX == 1100) {
-		movX *= -1;
+
+	
+	
+	if (posX <= mPersonaje->Posx) {
+
+		posX = posX + 2;
+		
 	}
+	
+	else if (posX >= mPersonaje->Posx) {
+
+		posX = posX - 2;
+	
+	}
+
+	if (posY <= mPersonaje->Posy) {
+	
+		posY = posY + 2;
+	
+	}
+
+	else if (posY >= mPersonaje->Posy) {
+	
+		posY = posY - 2;
+		
+	
+	}
+
+	
+	
+
+	
+
 }

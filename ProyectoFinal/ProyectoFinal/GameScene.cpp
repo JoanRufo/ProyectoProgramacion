@@ -30,13 +30,22 @@ void GameScene::init()
 	mHabitacion4->init();
 	mHabitacionFinal->init();
 	mObjetoFinal->init();
+
+
+	mEnemigo1->setPersonaje(personaje);
 }
 
 void GameScene::update()
 {
 	
 	personaje->MovimientoPersonaje();
-	mEnemigo1->movEnemigo();
+
+	if (idHabitacion == 2) {
+
+		mEnemigo1->movEnemigo();
+
+
+	}
 
 
 	if (balas->estoyViva == false) {
@@ -141,6 +150,7 @@ void GameScene::update()
 				personaje->Posx = 1130;
 				personaje->Posy = 300;
 
+			
 			}
 		}
 	}

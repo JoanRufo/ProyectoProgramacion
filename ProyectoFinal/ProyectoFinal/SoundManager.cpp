@@ -2,9 +2,9 @@
 
 
 
-SoundManager::SoundManager()
+/*SoundManager::SoundManager()
 {
-}
+}*/
 
 
 SoundManager::~SoundManager()
