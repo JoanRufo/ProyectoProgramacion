@@ -14,12 +14,14 @@ class Enemigo1
 	int idDelEnemigo1;
 
 
-	int posX;
-	int posY;
+	float posX;
+	float posY;
+
+	float vel =  0.5;
 	
 	
-	int movX = 1;
-	float velx = 0.1f;
+	/*int movX = 1;
+	float velx = 0.1f;*/
 
 
 	Personaje* mPersonaje;

@@ -32,5 +32,6 @@ public:
 	Video* mVideo = Video::getInstance();
 
 
+
 };
 

@@ -18,8 +18,16 @@ public:
 
 	float Posx;
 	float Posy;
-	float vel = 0.5;
+	float vel = 0.1;
 	int idDelPersonaje;
+
+
+	int PersonajeDerecha;
+	int PersonajeIzquierda;
+	int PersonajeAbajo;
+	int PersonajeArriba;
+
+	int idPersonaje;
 
 	void init();
 	void update();

@@ -40,6 +40,7 @@ void GameScene::update()
 	
 	personaje->MovimientoPersonaje();
 
+
 	if (idHabitacion == 2) {
 
 		mEnemigo1->movEnemigo();
