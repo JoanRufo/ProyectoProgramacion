@@ -13,14 +13,20 @@ GameOverScene::~GameOverScene()
 
 void GameOverScene::init()
 {
-	gameOver = mResourceManager->loadAndGetGraphicID("Imagenes/.png");
+	gameOver = mResourceManager->loadAndGetGraphicID("Imagenes/GameOver.png");
 }
 
 void GameOverScene::update()
 {
-	if (personaje->Posx && personaje->Posy == mEnemigo1->posX && mEnemigo1->posY) {
 
+	if (Controles::getInstance()->teclasPulsadas[7] == true)
+	{
+		SceneManager::getInstance()->changeScene(MENU);
 	}
+
+
+
+	
 }
 
 void GameOverScene::render()

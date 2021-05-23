@@ -47,6 +47,14 @@ void GameScene::update()
 
 
 	}
+	else if (idHabitacion == 4) {
+
+		mEnemigo1->movEnemigo();
+
+
+	}
+
+	
 
 
 	if (balas->estoyViva == false) {
@@ -178,6 +186,16 @@ void GameScene::update()
 
 		SceneManager::getInstance()->changeScene(PAUSE);
 	}
+
+
+
+	//GAMEOVER
+
+	if (personaje->Posx == mEnemigo1->posX && personaje->Posy == mEnemigo1->posY) {
+
+		SceneManager::getInstance()->changeScene(GAMEOVER);
+
+	}
 	
 
 
@@ -212,6 +230,8 @@ void GameScene::render()
 
 		mHabitacion4->render();
 		puertaIzquierda->render();
+		mEnemigo1->render();
+		
 	}
 
 	else if (idHabitacion == 5) {
