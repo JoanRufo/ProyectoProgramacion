@@ -13,11 +13,6 @@ class Enemigo1
 {
 	int idDelEnemigo1;
 
-
-	int posX;
-	int posY;
-	
-	
 	int movX = 1;
 	float velx = 0.1f;
 
@@ -35,7 +30,8 @@ public:
 	void movEnemigo();
 	ResourceManager* mResourceManager = ResourceManager::getInstance();
 	Video* mVideo = Video::getInstance();
-
+	int posX;
+	int posY;
 
 	void setPersonaje(Personaje *data) {
 		mPersonaje = data;

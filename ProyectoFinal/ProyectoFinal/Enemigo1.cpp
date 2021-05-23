@@ -38,25 +38,25 @@ void Enemigo1::movEnemigo()
 	
 	if (posX <= mPersonaje->Posx) {
 
-		posX = posX + 2;
+		posX = posX + 1;
 		
 	}
 	
 	else if (posX >= mPersonaje->Posx) {
 
-		posX = posX - 2;
+		posX = posX - 1;
 	
 	}
 
 	if (posY <= mPersonaje->Posy) {
 	
-		posY = posY + 2;
+		posY = posY + 1;
 	
 	}
 
 	else if (posY >= mPersonaje->Posy) {
 	
-		posY = posY - 2;
+		posY = posY - 1;
 		
 	
 	}
