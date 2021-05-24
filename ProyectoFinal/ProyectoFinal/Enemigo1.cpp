@@ -18,7 +18,7 @@ void Enemigo1::init()
     idDelEnemigo1 = mResourceManager->loadAndGetGraphicID("Imagenes/Enemigo1.png");
 	posX = 600;
 	posY = 200;
-	vel;
+	vel = 0.3;
 }
 
 void Enemigo1::update()

@@ -56,6 +56,9 @@ void SceneManager::changeScene(SceneEnum next_scene, bool reinit)
 {
 	mVectorScenes[next_scene]->setReInit(reinit);
 	mCurrScene = next_scene;
+
+	
+
 }
 
 SceneManager * SceneManager::getInstance()

@@ -8,6 +8,7 @@
 #include "Scene.h"
 #include "Personaje.h"
 #include "Enemigo1.h"
+#include "GameScene.h"
 
 
 class GameOverScene:public Scene
@@ -29,6 +30,9 @@ public:
 
 	ResourceManager* mResourceManager = ResourceManager::getInstance();
 	Video* mVideo = Video::getInstance();
+
+
+	
 
 	Personaje* personaje = new Personaje();
 	Enemigo1* mEnemigo1 = new Enemigo1();

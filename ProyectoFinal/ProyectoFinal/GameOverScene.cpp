@@ -21,7 +21,12 @@ void GameOverScene::update()
 
 	if (Controles::getInstance()->teclasPulsadas[7] == true)
 	{
+
+
 		SceneManager::getInstance()->changeScene(MENU);
+		
+
+		
 	}
 
 

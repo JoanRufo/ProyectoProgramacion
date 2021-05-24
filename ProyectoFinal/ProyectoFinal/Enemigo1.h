@@ -14,7 +14,7 @@ class Enemigo1
 	int idDelEnemigo1;
 
 
-	float vel =  0.5;
+	float vel;
 	
 	
 	/*int movX = 1;
@@ -37,6 +37,9 @@ public:
 
 	float posX;
 	float posY;
+
+
+	int vidas = 5;
 
 
 	void setPersonaje(Personaje *data) {

@@ -43,16 +43,12 @@ void GameScene::update()
 
 	if (idHabitacion == 2) {
 
+		
 		mEnemigo1->movEnemigo();
 
 
 	}
-	else if (idHabitacion == 4) {
-
-		mEnemigo1->movEnemigo();
-
-
-	}
+	
 
 	
 
@@ -191,7 +187,21 @@ void GameScene::update()
 
 	//GAMEOVER
 
-	if (personaje->Posx == mEnemigo1->posX && personaje->Posy == mEnemigo1->posY) {
+	if (personaje->Posx <=  mEnemigo1->posX + 0.3 && personaje->Posx >= mEnemigo1->posX -0.3 && personaje->Posy <= mEnemigo1->posY + 0.3 && personaje->Posy >= mEnemigo1->posY -0.3 && idHabitacion != 1 ) {
+
+
+		personaje->Posx = 600;
+		personaje->Posy = 300;
+
+		
+		idHabitacion = 1;
+
+		
+	
+		mEnemigo1->posX = 600;
+		mEnemigo1->posY = 300;
+
+		
 
 		SceneManager::getInstance()->changeScene(GAMEOVER);
 
@@ -217,6 +227,7 @@ void GameScene::render()
 		mHabitacion2->render();
 		puertaDerecha->render();
 		mEnemigo1->render();
+	
 	}
 
 	else if (idHabitacion == 3) {
@@ -230,7 +241,8 @@ void GameScene::render()
 
 		mHabitacion4->render();
 		puertaIzquierda->render();
-		mEnemigo1->render();
+		
+		
 		
 	}
 
