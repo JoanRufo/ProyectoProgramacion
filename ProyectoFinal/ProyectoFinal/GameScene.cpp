@@ -187,7 +187,7 @@ void GameScene::update()
 
 	//GAMEOVER
 
-	if (personaje->Posx <=  mEnemigo1->posX + 0.3 && personaje->Posx >= mEnemigo1->posX -0.3 && personaje->Posy <= mEnemigo1->posY + 0.3 && personaje->Posy >= mEnemigo1->posY -0.3 && idHabitacion != 1 ) {
+	if (personaje->Posx <=  mEnemigo1->posX + 0.3 && personaje->Posx >= mEnemigo1->posX -0.3 && personaje->Posy <= mEnemigo1->posY + 0.3 && personaje->Posy >= mEnemigo1->posY -0.3 && idHabitacion == 2) {
 
 
 		personaje->Posx = 600;
