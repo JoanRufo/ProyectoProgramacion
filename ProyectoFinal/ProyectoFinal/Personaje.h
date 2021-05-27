@@ -38,8 +38,14 @@ public:
 
 
 
-	
+	std::vector<Balas>* pVectorBalas;
 
+
+
+	
+	void pVectorBalas(std::vector<Balas> a) {
+		pVectorBalas = a;
+	}
 	
 	
 

@@ -10,7 +10,7 @@
 class Balas 
 {
 
-	enum estadosBala { BalaInicio, BalaMovimiento, DestruirBala };
+	enum estadosBala { BalaGuardada, BalaInicio, BalaMovimiento, DestruirBala };
 	estadosBala estatActual;
 
 	
@@ -29,6 +29,9 @@ public:
 	int bala;
 	int balaX = 600;
 	int balaY = 300;
+	
+	int direccion;
+
 	
 };
 

@@ -50,8 +50,7 @@ void Personaje::MovimientoPersonaje()
 		}
 		else if (Controles::getInstance()->teclasPulsadas[4] == true) {
 			
-			/*mVideo->renderGraphic(bala, Posx, Posy, 20, 20);
-			*/
+			
 			
 		}
 		
@@ -71,6 +70,22 @@ void Personaje::MovimientoPersonaje()
 		else if (Posy <= 0){
 			Posy = 0;
 		}
+
+
+
+
+		for () {
+		
+			
+		
+		
+		
+		
+		
+		
+		
+		}
+
 
 }
 	

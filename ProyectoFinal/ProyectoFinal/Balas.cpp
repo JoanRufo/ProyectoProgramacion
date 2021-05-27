@@ -5,7 +5,7 @@ void Balas::init()
 {
 	bala = mResourceManager->loadAndGetGraphicID("Imagenes/Bala.png");
 
-	estatActual = BalaInicio;
+	estatActual = BalaGuardada;
 	balaX;
 	balaY;
 }
@@ -13,6 +13,15 @@ void Balas::init()
 void Balas::update()
 {
 	switch (estatActual) {
+
+	case BalaGuardada:
+
+
+
+
+		break;
+
+
 
 	case BalaInicio:
 		if (Controles::getInstance()->teclasPulsadas[4] == true) {
@@ -61,7 +70,11 @@ void Balas::update()
 
 void Balas::render()
 {
-	mVideo->renderGraphic(bala, balaX,balaY, 20, 20);
+
+	if (estatActual == BalaMovimiento) {
+		mVideo->renderGraphic(bala, balaX, balaY, 20, 20);
+
+	}
 }
 
 
