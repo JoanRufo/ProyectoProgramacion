@@ -13,10 +13,10 @@ EnemigoFinal::~EnemigoFinal()
 
 void EnemigoFinal::init()
 {
-	idDelEnemigoFinal = mResourceManager->loadAndGetGraphicID("Imagenes/Enemigo2.png");
+	idDelEnemigoFinal = mResourceManager->loadAndGetGraphicID("Imagenes/EnemigoFinal.png");
 	posX = 600;
 	posY = 200;
-	vel = 0.3;
+	vel = 0.1;
 }
 
 void EnemigoFinal::update()

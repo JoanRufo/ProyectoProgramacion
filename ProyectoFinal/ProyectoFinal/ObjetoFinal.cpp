@@ -12,5 +12,5 @@ void ObjetoFinal::update()
 
 void ObjetoFinal::render()
 {
-	mVideo->renderGraphic(mObjetoFinal, 600, 100, 50, 50);
+	mVideo->renderGraphic(mObjetoFinal, 600, 100, 80, 80);
 }
