@@ -34,7 +34,7 @@ void Balas::update()
 	case BalaMovimiento:
 		if (Controles::getInstance()->teclasPulsadas[4] == false) {
 
-			estatActual = BalaInicio;
+			//estatActual = BalaInicio;
 		}
 		break;
 

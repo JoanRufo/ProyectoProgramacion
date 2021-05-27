@@ -67,7 +67,7 @@ public:
 
 
 	static GameScene* getInstance();
-	static GameScene*		pInstance;
+	static GameScene* pInstance;
 
 
 	int idHabitacion;

@@ -37,15 +37,22 @@ public:
 	Video* mVideo = Video::getInstance();
 
 
+	
+
+
 
 	std::vector<Balas>* pVectorBalas;
 
+	void setpVectorBalas(std::vector<Balas> *a) {
+		pVectorBalas = a;
+	}
+
+	void setX(float valor) { Posx = valor; };
+	void setY(float valor) { Posy = valor; };
 
 
 	
-	void pVectorBalas(std::vector<Balas> a) {
-		pVectorBalas = a;
-	}
+
 	
 	
 

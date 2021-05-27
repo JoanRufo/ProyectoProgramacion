@@ -33,22 +33,34 @@ void Personaje::MovimientoPersonaje()
 	
 		//MOVIMIENTO
 		if (Controles::getInstance()->teclasPulsadas[0] == true) {
-			//idDelPersonaje = 1;
 			Posy-=1*vel;
 		}
 		else if (Controles::getInstance()->teclasPulsadas[1] == true) {
-			//idDelPersonaje = 4;
 			Posx-=1*vel;
 		}
 		else if (Controles::getInstance()->teclasPulsadas[2] == true) {
-			//idDelPersonaje = 2;
 			Posy+=1*vel;
 		}
 		else if (Controles::getInstance()->teclasPulsadas[3] == true) {
-			//idDelPersonaje = 3;
 			Posx+=1*vel;
 		}
 		else if (Controles::getInstance()->teclasPulsadas[4] == true) {
+
+
+			for (int i = 0; pVectorBalas->size(); i++) {
+			
+				pVectorBalas->at(i).estoyViva = true;
+
+				
+				
+			
+			
+			
+			
+			
+			
+			
+			}
 			
 			
 			
@@ -74,17 +86,7 @@ void Personaje::MovimientoPersonaje()
 
 
 
-		for () {
-		
-			
-		
-		
-		
-		
-		
-		
-		
-		}
+	
 
 
 }
