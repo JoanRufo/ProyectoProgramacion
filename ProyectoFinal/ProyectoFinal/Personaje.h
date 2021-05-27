@@ -29,6 +29,9 @@ public:
 
 	int idPersonaje;
 
+
+	int idDireccion;
+
 	void init();
 	void update();
 	void render();
@@ -49,6 +52,9 @@ public:
 
 	void setX(float valor) { Posx = valor; };
 	void setY(float valor) { Posy = valor; };
+
+	void setDireccion(int valor) { idDireccion = valor; };
+	void setEstado() { ; };
 
 
 	
