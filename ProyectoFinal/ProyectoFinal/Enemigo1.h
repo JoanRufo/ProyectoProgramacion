@@ -12,9 +12,15 @@ using namespace std;
 class Enemigo1
 {
 	int idDelEnemigo1;
+	int idDelEnemigo2;
+	int idDelEnemigo3;
+	int idDelEnemigo4;
 
 
-	float vel;
+	float vel1;
+	float vel2;
+	float vel3;
+	float vel4;
 	
 	
 	/*int movX = 1;
@@ -35,8 +41,15 @@ public:
 	ResourceManager* mResourceManager = ResourceManager::getInstance();
 	Video* mVideo = Video::getInstance();
 
-	float posX;
-	float posY;
+	float posX1;
+	float posY1;
+	float posX2;
+	float posY2;
+	float posX3;
+	float posY3;
+	float posX4;
+	float posY4;
+
 
 
 	int vidas = 5;

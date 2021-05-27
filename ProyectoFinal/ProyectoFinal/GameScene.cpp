@@ -214,7 +214,7 @@ void GameScene::update()
 
 	//GAMEOVER
 
-	if (personaje->Posx <=  mEnemigo1->posX + 0.3 && personaje->Posx >= mEnemigo1->posX -0.3 && personaje->Posy <= mEnemigo1->posY + 0.3 && personaje->Posy >= mEnemigo1->posY -0.3 && idHabitacion == 2) {
+	if (personaje->Posx <=  mEnemigo1->posX1 + 0.3 && personaje->Posx >= mEnemigo1->posX1 -0.3 && personaje->Posy <= mEnemigo1->posY1 + 0.3 && personaje->Posy >= mEnemigo1->posY1 -0.3 && idHabitacion == 2) {
 
 
 		personaje->Posx = 600;
@@ -225,10 +225,67 @@ void GameScene::update()
 
 		
 	
-		mEnemigo1->posX = 600;
-		mEnemigo1->posY = 300;
+		mEnemigo1->posX1 = 600;
+		mEnemigo1->posY1 = 300;
 
 		
+
+		SceneManager::getInstance()->changeScene(GAMEOVER);
+
+	}
+	if (personaje->Posx <= mEnemigo1->posX2 + 0.3 && personaje->Posx >= mEnemigo1->posX2 - 0.3 && personaje->Posy <= mEnemigo1->posY2 + 0.3 && personaje->Posy >= mEnemigo1->posY2 - 0.3 && idHabitacion == 2) {
+
+
+		personaje->Posx = 600;
+		personaje->Posy = 300;
+
+
+		idHabitacion = 1;
+
+
+
+		mEnemigo1->posX2 = 500;
+		mEnemigo1->posY2 = 300;
+
+
+
+		SceneManager::getInstance()->changeScene(GAMEOVER);
+
+	}
+	if (personaje->Posx <= mEnemigo1->posX3 + 0.3 && personaje->Posx >= mEnemigo1->posX3 - 0.3 && personaje->Posy <= mEnemigo1->posY3 + 0.3 && personaje->Posy >= mEnemigo1->posY3 - 0.3 && idHabitacion == 2) {
+
+
+		personaje->Posx = 600;
+		personaje->Posy = 300;
+
+
+		idHabitacion = 1;
+
+
+
+		mEnemigo1->posX3 = 400;
+		mEnemigo1->posY3 = 200;
+
+
+
+		SceneManager::getInstance()->changeScene(GAMEOVER);
+
+	}
+	if (personaje->Posx <= mEnemigo1->posX4 + 0.3 && personaje->Posx >= mEnemigo1->posX4 - 0.3 && personaje->Posy <= mEnemigo1->posY4 + 0.3 && personaje->Posy >= mEnemigo1->posY4 - 0.3 && idHabitacion == 2) {
+
+
+		personaje->Posx = 600;
+		personaje->Posy = 300;
+
+
+		idHabitacion = 1;
+
+
+
+		mEnemigo1->posX4 = 200;
+		mEnemigo1->posY4 = 550;
+
+
 
 		SceneManager::getInstance()->changeScene(GAMEOVER);
 
