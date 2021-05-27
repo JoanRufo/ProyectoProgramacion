@@ -4,6 +4,7 @@
 #include "Personaje.h"
 #include "Enemigo1.h"
 #include "Enemigo2.h"
+#include "Enemigo3.h"
 #include "puertaAb.h"
 #include "puertaArr.h"
 #include "puertaDer.h"
@@ -37,6 +38,7 @@ public:
 	Personaje* personaje = new Personaje();
 	Enemigo1* mEnemigo1 = new Enemigo1();
 	Enemigo2* mEnemigo2 = new Enemigo2();
+	Enemigo3* mEnemigo3 = new Enemigo3();
 	Habitacion1* mHabitacion1 = new Habitacion1();
 	Habitacion2* mHabitacion2 = new Habitacion2();
 	Habitacion3* mHabitacion3 = new Habitacion3();

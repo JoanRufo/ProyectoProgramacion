@@ -21,6 +21,7 @@ void GameScene::init()
 	personaje->init();
 	mEnemigo1->init();
 	mEnemigo2->init();
+	mEnemigo3->init();
 	puertaAbajo->init();
 	puertaArriba->init();
 	puertaIzquierda->init();
@@ -34,6 +35,8 @@ void GameScene::init()
 
 	mEnemigo1->setPersonaje(personaje);
 	mEnemigo2->setPersonaje(personaje);
+	mEnemigo3->setPersonaje(personaje);
+
 }
 
 void GameScene::update()
@@ -59,6 +62,14 @@ void GameScene::update()
 	
 	}
 	
+	else if (idHabitacion == 3) {
+
+
+		mEnemigo3->movEnemigo();
+
+
+
+	}
 
 	
 
@@ -84,7 +95,7 @@ void GameScene::update()
 			}
 		}
 
-		else if (personaje->Posx >= 540 && personaje->Posx <= 640) {
+		 if (personaje->Posx >= 540 && personaje->Posx <= 640) {
 
 			if (personaje->Posy >= 0 && personaje->Posy <= 30) {
 
@@ -96,7 +107,7 @@ void GameScene::update()
 			}
 		}
 
-		else if (personaje->Posx >= 1140 && personaje->Posx <= 1240) {
+		 if (personaje->Posx >= 1140 && personaje->Posx <= 1240) {
 
 			if (personaje->Posy >= 280 && personaje->Posy <= 400) {
 
@@ -140,7 +151,7 @@ void GameScene::update()
 			}
 		}
 
-		else if (personaje->Posx >= 540 && personaje->Posx <= 640) {
+		 if (personaje->Posx >= 540 && personaje->Posx <= 640) {
 
 			if (personaje->Posy >= 0 && personaje->Posy <= 40) {
 
@@ -236,6 +247,26 @@ void GameScene::update()
 		SceneManager::getInstance()->changeScene(GAMEOVER);
 
 	}
+
+	else if (personaje->Posx <= mEnemigo3->posX + 0.3 && personaje->Posx >= mEnemigo3->posX - 0.3 && personaje->Posy <= mEnemigo3->posY + 0.3 && personaje->Posy >= mEnemigo3->posY - 0.3 && idHabitacion == 3) {
+
+
+		personaje->Posx = 600;
+		personaje->Posy = 300;
+
+
+		idHabitacion = 1;
+
+
+
+		mEnemigo3->posX = 600;
+		mEnemigo3->posY = 300;
+
+
+
+		SceneManager::getInstance()->changeScene(GAMEOVER);
+
+	}
 	
 
 
@@ -265,6 +296,7 @@ void GameScene::render()
 		mHabitacion3->render();
 		puertaAbajo->render();
 		puertaArriba->render();
+		mEnemigo3->render();
 	}
 
 	else if (idHabitacion == 4) {

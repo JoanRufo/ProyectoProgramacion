@@ -136,6 +136,7 @@
     <ClCompile Include="Controles.cpp" />
     <ClCompile Include="Enemigo1.cpp" />
     <ClCompile Include="Enemigo2.cpp" />
+    <ClCompile Include="Enemigo3.cpp" />
     <ClCompile Include="GameOverScene.cpp" />
     <ClCompile Include="GameScene.cpp" />
     <ClCompile Include="Habitacion1.cpp" />
@@ -166,6 +167,7 @@
     <ClInclude Include="Controles.h" />
     <ClInclude Include="Enemigo1.h" />
     <ClInclude Include="Enemigo2.h" />
+    <ClInclude Include="Enemigo3.h" />
     <ClInclude Include="GameOverScene.h" />
     <ClInclude Include="GameScene.h" />
     <ClInclude Include="Habitacion1.h" />
