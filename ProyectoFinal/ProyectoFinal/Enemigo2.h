@@ -10,10 +10,12 @@
 class Enemigo2
 {
 	int idDelEnemigo2;
+	int idDelEnemigo22;
 	
 
 
 	float vel;
+	float vel2;
 
 
 
@@ -32,9 +34,12 @@ public:
 
 	float posX;
 	float posY;
+	float posX2;
+	float posY2;
 
 
-	int vidas = 5;
+	int vidas1 = 5;
+	int vidas2 = 5;
 
 
 	void setPersonaje(Personaje *data) {

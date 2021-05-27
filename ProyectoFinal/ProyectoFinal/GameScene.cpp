@@ -39,6 +39,8 @@ void GameScene::init()
 	mEnemigo3->setPersonaje(personaje);
 	mEnemigoFinal->setPersonaje(personaje);
 
+	personaje->setpVectorBalas(&mVectorBalas);
+
 }
 
 void GameScene::update()
@@ -80,11 +82,11 @@ void GameScene::update()
 	
 
 
-	if (balas->estoyViva == false) {
+	/*if (balas->estoyViva == false) {
 
 		// ELIMINAR BALA?¿?¿?¿¿?¿?¿?¡
 
-	}
+	}*/
 
 	//CAMBIAR DE HABITACIONES
 
@@ -304,6 +306,26 @@ void GameScene::update()
 
 		mEnemigo2->posX = 600;
 		mEnemigo2->posY = 300;
+
+
+
+		SceneManager::getInstance()->changeScene(GAMEOVER);
+
+	}
+
+	else if (personaje->Posx <= mEnemigo2->posX2 + 0.3 && personaje->Posx >= mEnemigo2->posX2 - 0.3 && personaje->Posy <= mEnemigo2->posY2 + 0.3 && personaje->Posy >= mEnemigo2->posY2 - 0.3 && idHabitacion == 4) {
+
+
+		personaje->Posx = 600;
+		personaje->Posy = 300;
+
+
+		idHabitacion = 1;
+
+
+
+		mEnemigo2->posX2 = 400;
+		mEnemigo2->posY2 = 500;
 
 
 
