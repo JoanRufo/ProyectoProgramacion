@@ -22,6 +22,7 @@ void GameScene::init()
 	mEnemigo1->init();
 	mEnemigo2->init();
 	mEnemigo3->init();
+	mEnemigoFinal->init();
 	puertaAbajo->init();
 	puertaArriba->init();
 	puertaIzquierda->init();
@@ -36,6 +37,7 @@ void GameScene::init()
 	mEnemigo1->setPersonaje(personaje);
 	mEnemigo2->setPersonaje(personaje);
 	mEnemigo3->setPersonaje(personaje);
+	mEnemigoFinal->setPersonaje(personaje);
 
 }
 
@@ -69,6 +71,10 @@ void GameScene::update()
 
 
 
+	}
+	else if (idHabitacion == 5) {
+
+		mEnemigoFinal->movEnemigo();
 	}
 
 	
@@ -267,6 +273,26 @@ void GameScene::update()
 		SceneManager::getInstance()->changeScene(GAMEOVER);
 
 	}
+
+	else if (personaje->Posx <= mEnemigoFinal->posX + 0.3 && personaje->Posx >= mEnemigoFinal->posX - 0.3 && personaje->Posy <= mEnemigoFinal->posY + 0.3 && personaje->Posy >= mEnemigoFinal->posY - 0.3 && idHabitacion == 5) {
+
+
+		personaje->Posx = 600;
+		personaje->Posy = 300;
+
+
+		idHabitacion = 1;
+
+
+
+		mEnemigoFinal->posX = 600;
+		mEnemigoFinal->posY = 300;
+
+
+
+		SceneManager::getInstance()->changeScene(GAMEOVER);
+
+	}
 	
 
 
@@ -314,6 +340,7 @@ void GameScene::render()
 		mHabitacionFinal->render();
 		puertaAbajo->render();
 		mObjetoFinal->render();
+		mEnemigoFinal->render();
 	}
 
 

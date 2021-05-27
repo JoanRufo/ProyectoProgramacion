@@ -17,6 +17,7 @@
 #include "HabitacionFinal.h"
 #include "Balas.h"
 #include "ObjetoFinal.h"
+#include "EnemigoFinal.h"
 
 class GameScene : public Scene
 {
@@ -39,6 +40,7 @@ public:
 	Enemigo1* mEnemigo1 = new Enemigo1();
 	Enemigo2* mEnemigo2 = new Enemigo2();
 	Enemigo3* mEnemigo3 = new Enemigo3();
+	EnemigoFinal* mEnemigoFinal = new EnemigoFinal();
 	Habitacion1* mHabitacion1 = new Habitacion1();
 	Habitacion2* mHabitacion2 = new Habitacion2();
 	Habitacion3* mHabitacion3 = new Habitacion3();
