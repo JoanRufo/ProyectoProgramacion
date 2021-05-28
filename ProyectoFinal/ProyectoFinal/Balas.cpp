@@ -50,6 +50,14 @@ void Balas::update()
 	case BalaMovimiento:
 		
 
+		/*if () {
+		
+			direccion = balaX++;
+		
+		}*/
+
+
+
 			
 		
 		break;

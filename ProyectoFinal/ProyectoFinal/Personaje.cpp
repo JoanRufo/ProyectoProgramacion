@@ -12,6 +12,8 @@ void Personaje::init()
 	Posy = 300;
 	vel;
 
+	a = false;
+
 
 	
 	
@@ -55,35 +57,40 @@ void Personaje::MovimientoPersonaje()
 		}
 		if (Controles::getInstance()->teclasPulsadas[4] == true) {
 
-			
-
-
-
-			for (int i = 0; i < pVectorBalas->size(); i++) {
-			
-				
-				if (pVectorBalas->at(i).estoyViva == false) {
-
-					pVectorBalas->at(i).setX(Posx);
-					pVectorBalas->at(i).setY(Posy);
-
-					pVectorBalas->at(i).setDireccion(idDireccion);
-
-					pVectorBalas->at(i).setEstado(Balas::BalaInicio);
-
-					break;
-				} 
-			
-			
-			
-			
-			}
-			
-			
+			a = true;
 			
 		}
+
+			if (a == true) {
+
+				
+
+				for (int i = 0; i < pVectorBalas->size(); i++) {
+
+
+					if (pVectorBalas->at(i).estoyViva == false) {
+
+						pVectorBalas->at(i).setX(Posx);
+						pVectorBalas->at(i).setY(Posy);
+
+						pVectorBalas->at(i).setDireccion(idDireccion);
+
+						pVectorBalas->at(i).setEstado(Balas::BalaInicio);
+						
+						break;
+					}
+
+					
+
+
+				}
+
+				
+				
 		
 
+			}
+			
 
 		//LIMITES 
 		if (Posx >= 1180) {

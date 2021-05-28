@@ -14,6 +14,8 @@ class Personaje
 	int velPersonaje;
 	int bala;
 
+	bool a;
+
 public:
 
 	float Posx;
