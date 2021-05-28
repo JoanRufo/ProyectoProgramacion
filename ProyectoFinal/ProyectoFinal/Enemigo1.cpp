@@ -58,7 +58,7 @@ void Enemigo1::movEnemigo()
 		
 	}
 	
-	else if (posX1 >= mPersonaje->Posx) {
+	 if (posX1 >= mPersonaje->Posx) {
 
 		posX1 = posX1 - 0.5 * vel1;
 	
@@ -70,7 +70,7 @@ void Enemigo1::movEnemigo()
 	
 	}
 
-	else if (posY1 >= mPersonaje->Posy) {
+	 if (posY1 >= mPersonaje->Posy) {
 	
 		posY1 = posY1 - 0.5 * vel1;
 		
@@ -83,7 +83,7 @@ void Enemigo1::movEnemigo()
 
 	}
 
-	else if (posX2 >= mPersonaje->Posx) {
+	 if (posX2 >= mPersonaje->Posx) {
 
 		posX2 = posX2 - 0.5 * vel2;
 
@@ -95,7 +95,7 @@ void Enemigo1::movEnemigo()
 
 	}
 
-	else if (posY2 >= mPersonaje->Posy) {
+	 if (posY2 >= mPersonaje->Posy) {
 
 		posY2 = posY2 - 0.5 * vel2;
 
@@ -108,7 +108,7 @@ void Enemigo1::movEnemigo()
 
 	}
 
-	else if (posX3 >= mPersonaje->Posx) {
+	 if (posX3 >= mPersonaje->Posx) {
 
 		posX3 = posX3 - 0.5 * vel3;
 
@@ -120,7 +120,7 @@ void Enemigo1::movEnemigo()
 
 	}
 
-	else if (posY3 >= mPersonaje->Posy) {
+	 if (posY3 >= mPersonaje->Posy) {
 
 		posY3 = posY3 - 0.5 * vel3;
 
@@ -133,7 +133,7 @@ void Enemigo1::movEnemigo()
 
 	}
 
-	else if (posX4 >= mPersonaje->Posx) {
+	 if (posX4 >= mPersonaje->Posx) {
 
 		posX4 = posX4 - 0.5 * vel4;
 
@@ -145,7 +145,7 @@ void Enemigo1::movEnemigo()
 
 	}
 
-	else if (posY4 >= mPersonaje->Posy) {
+	 if (posY4 >= mPersonaje->Posy) {
 
 		posY4 = posY4 - 0.5 * vel4;
 

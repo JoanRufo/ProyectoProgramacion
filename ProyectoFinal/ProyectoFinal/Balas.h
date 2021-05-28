@@ -6,17 +6,23 @@
 #include "Controles.h"
 #include "ResourceManager.h"
 #include "Video.h"
-#include "Personaje.h"
+
 class Balas 
 {
 
+
+public:
 	enum estadosBala { BalaGuardada, BalaInicio, BalaMovimiento, DestruirBala };
+
+private:	
 	estadosBala estatActual;
 
 	
 	
 
 public:
+	Balas();
+	~Balas();
 	void init();
 	void update();
 	void render();
@@ -31,6 +37,19 @@ public:
 	int balaY = 300;
 	
 	int direccion;
+
+
+	
+	
+
+	void setX(float valor) { balaX = valor; };
+	void setY(float valor) { balaY = valor; };
+
+	void setDireccion(int valor) { direccion = valor; };
+
+
+	void setEstado(estadosBala valor) {estatActual = valor ; };
+
 
 	
 };

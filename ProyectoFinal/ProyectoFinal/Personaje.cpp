@@ -13,7 +13,7 @@ void Personaje::init()
 	vel;
 
 
-	//idDelPersonaje = 1;
+	
 	
 }
 
@@ -35,35 +35,44 @@ void Personaje::MovimientoPersonaje()
 		if (Controles::getInstance()->teclasPulsadas[0] == true) {
 			Posy-=1*vel;
 
-			idDelPersonaje = 1;
+		
+			idDireccion = 1;
 		}
-		else if (Controles::getInstance()->teclasPulsadas[1] == true) {
+		if (Controles::getInstance()->teclasPulsadas[1] == true) {
 			Posx-=1*vel;
 
 			idDireccion = 2;
 		}
-		else if (Controles::getInstance()->teclasPulsadas[2] == true) {
+		if (Controles::getInstance()->teclasPulsadas[2] == true) {
 			Posy+=1*vel;
 
 			idDireccion = 3;
 		}
-		else if (Controles::getInstance()->teclasPulsadas[3] == true) {
+		if (Controles::getInstance()->teclasPulsadas[3] == true) {
 			Posx+=1*vel;
 
 			idDireccion = 4;
 		}
-		else if (Controles::getInstance()->teclasPulsadas[4] == true) {
+		if (Controles::getInstance()->teclasPulsadas[4] == true) {
 
-
-			for (int i = 0; pVectorBalas->size(); i++) {
 			
-				pVectorBalas->at(i).estoyViva = true;
 
-				pVectorBalas->
+
+
+			for (int i = 0; i < pVectorBalas->size(); i++) {
+			
 				
-			
-			
-			
+				if (pVectorBalas->at(i).estoyViva == false) {
+
+					pVectorBalas->at(i).setX(Posx);
+					pVectorBalas->at(i).setY(Posy);
+
+					pVectorBalas->at(i).setDireccion(idDireccion);
+
+					pVectorBalas->at(i).setEstado(Balas::BalaInicio);
+
+					break;
+				} 
 			
 			
 			

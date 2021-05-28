@@ -1,13 +1,29 @@
 #include "Balas.h"
 
 
+Balas::Balas()
+{
+	estatActual = BalaGuardada;
+	balaX = 0;
+	balaY = 0;
+
+	estoyViva = false;
+
+	direccion = 0;
+
+
+}
+
+Balas::~Balas()
+{
+}
+
 void Balas::init()
 {
 	bala = mResourceManager->loadAndGetGraphicID("Imagenes/Bala.png");
 
 	estatActual = BalaGuardada;
-	balaX;
-	balaY;
+	
 }
 
 void Balas::update()
@@ -24,18 +40,18 @@ void Balas::update()
 
 
 	case BalaInicio:
-		if (Controles::getInstance()->teclasPulsadas[4] == true) {
+		
 			estoyViva = true;
 			
 			estatActual = BalaMovimiento;
-		}
+		
 		break;
 
 	case BalaMovimiento:
-		if (Controles::getInstance()->teclasPulsadas[4] == false) {
+		
 
-			//estatActual = BalaInicio;
-		}
+			
+		
 		break;
 
 	case DestruirBala:
@@ -72,7 +88,7 @@ void Balas::render()
 {
 
 	if (estatActual == BalaMovimiento) {
-		mVideo->renderGraphic(bala, balaX, balaY, 20, 20);
+		mVideo->renderGraphic(bala, balaX, balaY, 42, 42);
 
 	}
 }

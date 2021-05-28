@@ -23,6 +23,7 @@ void GameScene::init()
 	mEnemigo2->init();
 	mEnemigo3->init();
 	mEnemigoFinal->init();
+	
 	puertaAbajo->init();
 	puertaArriba->init();
 	puertaIzquierda->init();
@@ -39,7 +40,18 @@ void GameScene::init()
 	mEnemigo3->setPersonaje(personaje);
 	mEnemigoFinal->setPersonaje(personaje);
 
-	//personaje->setpVectorBalas(&mVectorBalas);
+
+
+
+
+	mVectorBalas.resize(10);
+
+	for (size_t i = 0; i < mVectorBalas.size(); i++)
+	{
+		mVectorBalas.at(i).init();
+	}
+
+	personaje->setpVectorBalas(&mVectorBalas);
 
 }
 
@@ -79,6 +91,13 @@ void GameScene::update()
 		mEnemigoFinal->movEnemigo();
 	}
 
+
+
+	for (size_t i = 0; i < mVectorBalas.size(); i++)
+	{
+		mVectorBalas.at(i).update();
+
+	}
 	
 
 
@@ -578,6 +597,8 @@ void GameScene::update()
 
 void GameScene::render()
 {
+	
+
 	if (idHabitacion == 1) {
 	
 		mHabitacion1->render();
@@ -622,7 +643,11 @@ void GameScene::render()
 	}
 
 
-	
+	for (size_t i = 0; i < mVectorBalas.size(); i++)
+	{
+		mVectorBalas.at(i).render();
+
+	}
 	
 	personaje->render();
 	

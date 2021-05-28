@@ -46,17 +46,10 @@ public:
 
 	std::vector<Balas>* pVectorBalas;
 
+	
 	void setpVectorBalas(std::vector<Balas> *a) {
 		pVectorBalas = a;
 	}
-
-	void setX(float valor) { Posx = valor; };
-	void setY(float valor) { Posy = valor; };
-
-	void setDireccion(int valor) { idDireccion = valor; };
-	void setEstado() { ; };
-
-
 	
 
 	
