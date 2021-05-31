@@ -55,28 +55,48 @@ void Balas::update()
 
 		
 
-		if ( == 1) {
+		if (direccion == 1) {
 		
-			setDireccion(balaY--);
+			balaY--;
 		
 		}
 
-		if ( == 2) {
+		if (direccion == 2) {
 
-			setDireccion(balaX--);
+			balaX--;
 
 		}
 
-		if ( == 3) {
+		if (direccion == 3) {
 
 
-			setDireccion(balaY++);
+			balaY++;
 		}
 
-		if ( == 4) {
+		if (direccion == 4) {
 
-			setDireccion(balaX++);
+			balaX++;
 
+		}
+
+		if (direccion == 5) {
+			balaX--;
+			balaY--;
+		}
+
+		if (direccion == 6) {
+			balaX++;
+			balaY--;
+		}
+
+		if (direccion == 7) {
+			balaX--;
+			balaY++;
+		}
+
+		if (direccion == 8) {
+			balaX++;
+			balaY++;
 		}
 
 

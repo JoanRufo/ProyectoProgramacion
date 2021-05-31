@@ -44,7 +44,7 @@ void GameScene::init()
 
 
 
-	mVectorBalas.resize(100);
+	mVectorBalas.resize(5);
 
 	for (size_t i = 0; i < mVectorBalas.size(); i++)
 	{

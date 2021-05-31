@@ -54,6 +54,30 @@ void Personaje::MovimientoPersonaje()
 
 			idDireccion = 4;
 		}
+		if (Controles::getInstance()->teclasPulsadas[0] == true && Controles::getInstance()->teclasPulsadas[1] == true) {
+
+			idDireccion = 5;
+
+		}
+
+		if (Controles::getInstance()->teclasPulsadas[0] == true && Controles::getInstance()->teclasPulsadas[3] == true) {
+
+			idDireccion = 6;
+
+		}
+
+		if (Controles::getInstance()->teclasPulsadas[2] == true && Controles::getInstance()->teclasPulsadas[1] == true) {
+
+			idDireccion = 7;
+
+		}
+
+		if (Controles::getInstance()->teclasPulsadas[2] == true && Controles::getInstance()->teclasPulsadas[3] == true) {
+
+			idDireccion = 8;
+
+		}
+
 		if (Controles::getInstance()->teclasPulsadas[4] == true) {
 
 			a = true;
@@ -124,14 +148,6 @@ void Personaje::MovimientoPersonaje()
 	
 
 
-}
-
-Personaje * Personaje::getInstance()
-{
-	if (pInstance == NULL) {
-		pInstance = new Personaje();
-	}
-	return pInstance;
 }
 	
 
