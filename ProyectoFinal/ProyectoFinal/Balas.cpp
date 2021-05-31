@@ -55,25 +55,25 @@ void Balas::update()
 
 		
 
-		if (Personaje::getInstance()->idDireccion == 1) {
+		if ( == 1) {
 		
 			setDireccion(balaY--);
 		
 		}
 
-		if (Personaje::getInstance()->idDireccion == 2) {
+		if ( == 2) {
 
 			setDireccion(balaX--);
 
 		}
 
-		if (Personaje::getInstance()->idDireccion == 3) {
+		if ( == 3) {
 
 
 			setDireccion(balaY++);
 		}
 
-		if (Personaje::getInstance()->idDireccion == 4) {
+		if ( == 4) {
 
 			setDireccion(balaX++);
 

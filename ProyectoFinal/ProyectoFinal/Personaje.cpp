@@ -33,28 +33,28 @@ void Personaje::MovimientoPersonaje()
 {
 	
 		//MOVIMIENTO
-		if ( == true) {
+		if (Controles::getInstance()->teclasPulsadas[0] == true) {
 			Posy-=1*vel;
 
 		
 			idDireccion = 1;
 		}
-		if ( == true) {
+		if (Controles::getInstance()->teclasPulsadas[1] == true) {
 			Posx-=1*vel;
 
 			idDireccion = 2;
 		}
-		if (== true) {
+		if (Controles::getInstance()->teclasPulsadas[2] == true) {
 			Posy+=1*vel;
 
 			idDireccion = 3;
 		}
-		if (== true) {
+		if (Controles::getInstance()->teclasPulsadas[3] == true) {
 			Posx+=1*vel;
 
 			idDireccion = 4;
 		}
-		if (== true) {
+		if (Controles::getInstance()->teclasPulsadas[4] == true) {
 
 			a = true;
 			
