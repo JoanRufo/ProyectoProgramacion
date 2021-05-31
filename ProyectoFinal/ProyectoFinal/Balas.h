@@ -51,6 +51,11 @@ public:
 	void setEstado(estadosBala valor) {estatActual = valor ; };
 
 
+
+
+	
+
+
 	
 };
 

@@ -2,6 +2,7 @@
 
 
 
+
 void Personaje::init()
 {
 	idDelPersonaje = mResourceManager->loadAndGetGraphicID("Imagenes/Personaje.png");
@@ -15,8 +16,6 @@ void Personaje::init()
 	a = false;
 
 
-	
-	
 }
 
 void Personaje::update()
@@ -34,36 +33,37 @@ void Personaje::MovimientoPersonaje()
 {
 	
 		//MOVIMIENTO
-		if (Controles::getInstance()->teclasPulsadas[0] == true) {
+		if ( == true) {
 			Posy-=1*vel;
 
 		
 			idDireccion = 1;
 		}
-		if (Controles::getInstance()->teclasPulsadas[1] == true) {
+		if ( == true) {
 			Posx-=1*vel;
 
 			idDireccion = 2;
 		}
-		if (Controles::getInstance()->teclasPulsadas[2] == true) {
+		if (== true) {
 			Posy+=1*vel;
 
 			idDireccion = 3;
 		}
-		if (Controles::getInstance()->teclasPulsadas[3] == true) {
+		if (== true) {
 			Posx+=1*vel;
 
 			idDireccion = 4;
 		}
-		if (Controles::getInstance()->teclasPulsadas[4] == true) {
+		if (== true) {
 
 			a = true;
 			
+			
 		}
 
-			if (a == true) {
+			if (a == true && b == false) {
 
-				
+				b = true;
 
 				for (int i = 0; i < pVectorBalas->size(); i++) {
 
@@ -85,11 +85,22 @@ void Personaje::MovimientoPersonaje()
 
 				}
 
-				
-				
-		
+					
+			}
+
+			if (Controles::getInstance()->teclasPulsadas[4] == false) {
+
+				a = false;
+				b = false;
+
 
 			}
+
+
+
+
+
+			
 			
 
 		//LIMITES 
@@ -113,6 +124,14 @@ void Personaje::MovimientoPersonaje()
 	
 
 
+}
+
+Personaje * Personaje::getInstance()
+{
+	if (pInstance == NULL) {
+		pInstance = new Personaje();
+	}
+	return pInstance;
 }
 	
 

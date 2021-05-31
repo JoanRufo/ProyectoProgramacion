@@ -15,12 +15,13 @@ class Personaje
 	int bala;
 
 	bool a;
+	bool b;
 
 public:
 
 	float Posx;
 	float Posy;
-	float vel = 0.5;
+	float vel = 0.2;
 	int idDelPersonaje;
 
 
@@ -56,7 +57,7 @@ public:
 
 	
 	
-
+	
 	
 
 };

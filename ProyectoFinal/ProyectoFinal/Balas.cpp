@@ -1,6 +1,8 @@
 #include "Balas.h"
 
 
+
+
 Balas::Balas()
 {
 	estatActual = BalaGuardada;
@@ -50,11 +52,32 @@ void Balas::update()
 	case BalaMovimiento:
 		
 
-		/*if () {
+
 		
-			direccion = balaX++;
+
+		if (Personaje::getInstance()->idDireccion == 1) {
 		
-		}*/
+			setDireccion(balaY--);
+		
+		}
+
+		if (Personaje::getInstance()->idDireccion == 2) {
+
+			setDireccion(balaX--);
+
+		}
+
+		if (Personaje::getInstance()->idDireccion == 3) {
+
+
+			setDireccion(balaY++);
+		}
+
+		if (Personaje::getInstance()->idDireccion == 4) {
+
+			setDireccion(balaX++);
+
+		}
 
 
 
@@ -103,12 +126,6 @@ void Balas::render()
 
 
 
-/*Hacer maquina de estados
 
-->Estado1 = BalaInicio
-
-->Estado2 = BalaMovimiento
-
-->Estado3 = DestruirBala*/
 
 
