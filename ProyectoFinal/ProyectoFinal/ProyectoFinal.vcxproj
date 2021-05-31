@@ -158,7 +158,6 @@
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SceneManager.cpp" />
     <ClCompile Include="Sonido.cpp" />
-    <ClCompile Include="SoundManager.cpp" />
     <ClCompile Include="Timer.cpp" />
     <ClCompile Include="Video.cpp" />
     <ClCompile Include="WinScene.cpp" />
@@ -189,7 +188,6 @@
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneManager.h" />
     <ClInclude Include="Sonido.h" />
-    <ClInclude Include="SoundManager.h" />
     <ClInclude Include="Timer.h" />
     <ClInclude Include="Video.h" />
     <ClInclude Include="WinScene.h" />
