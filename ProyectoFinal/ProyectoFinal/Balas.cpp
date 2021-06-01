@@ -139,7 +139,7 @@ void Balas::render()
 {
 
 	if (estatActual == BalaMovimiento) {
-		mVideo->renderGraphic(bala, balaX, balaY, 42, 42);
+		mVideo->renderGraphic(bala, balaX, balaY, 30, 30);
 
 	}
 }
