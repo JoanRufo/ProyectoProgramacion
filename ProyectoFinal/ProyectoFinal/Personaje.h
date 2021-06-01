@@ -21,7 +21,7 @@ public:
 
 	float Posx;
 	float Posy;
-	float vel = 0.2;
+	float vel = 0.4;
 	int idDelPersonaje;
 
 
