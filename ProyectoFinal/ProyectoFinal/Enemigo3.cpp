@@ -14,9 +14,9 @@ Enemigo3::~Enemigo3()
 void Enemigo3::init()
 {
 	idDelEnemigo3 = mResourceManager->loadAndGetGraphicID("Imagenes/Enemigo1.png");
-	posX = 800;
-	posY = 300;
-	vel = 0.2;
+	posX = 1000;
+	posY = 200;
+	vel = 0.1;
 
 	width = 120;
 	height = 100;

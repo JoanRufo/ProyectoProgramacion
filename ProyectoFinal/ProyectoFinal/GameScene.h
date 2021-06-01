@@ -39,8 +39,12 @@ public:
 	Video* mVideo = Video::getInstance();
 
 	Personaje* personaje = new Personaje();
-	Enemigo1* mEnemigo1 = new Enemigo1();
-	Enemigo2* mEnemigo2 = new Enemigo2();
+	Enemigo1* mEnemigo1A = new Enemigo1();
+	Enemigo1* mEnemigo1B = new Enemigo1();
+	Enemigo1* mEnemigo1C = new Enemigo1();
+	Enemigo1* mEnemigo1D = new Enemigo1();
+	Enemigo2* mEnemigo2A = new Enemigo2();
+	Enemigo2* mEnemigo2B = new Enemigo2();
 	Enemigo3* mEnemigo3 = new Enemigo3();
 	EnemigoFinal* mEnemigoFinal = new EnemigoFinal();
 	Habitacion1* mHabitacion1 = new Habitacion1();

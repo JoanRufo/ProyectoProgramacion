@@ -23,7 +23,7 @@ public:
 	float Posy;
 	float width;
 	float height;
-	float vel = 0.2;
+	float vel = 0.35;
 	int idDelPersonaje;
 
 
