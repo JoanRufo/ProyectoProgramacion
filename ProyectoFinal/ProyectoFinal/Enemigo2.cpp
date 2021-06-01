@@ -14,13 +14,15 @@ Enemigo2::~Enemigo2()
 
 void Enemigo2::init()
 {
-	idDelEnemigo2 = mResourceManager->loadAndGetGraphicID("Imagenes/Enemigo2.png");
+	
+	idDelEnemigo2 = mResourceManager->loadAndGetGraphicID("Imagenes/Enemigo2.png");	
 	idDelEnemigo22 = mResourceManager->loadAndGetGraphicID("Imagenes/Enemigo2.png");
+	
 	posX = 800;
 	posY = 300;
 	posX2 = 700;
 	posY2 = 500;
-	vel = 0.3;
+	vel = 0.2;
 	vel2 = 0.1;
 
 	estoyVivo = true;
@@ -30,6 +32,14 @@ void Enemigo2::init()
 
 void Enemigo2::update()
 {
+	if (vidas1 == 0) {
+		estoyVivo = false;
+	}
+
+	if (vidas2 == 0) {
+		estoyVivo2 = false;
+	}
+
 }
 
 void Enemigo2::render()
@@ -42,6 +52,8 @@ void Enemigo2::render()
 	if (estoyVivo2 == true) {
 		mVideo->renderGraphic(idDelEnemigo22, posX2, posY2, 200, 150);
 	}
+
+	
 }
 
 void Enemigo2::movEnemigo()
