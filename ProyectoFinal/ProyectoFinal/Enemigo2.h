@@ -38,8 +38,12 @@ public:
 	float posY2;
 
 
-	int vidas1 = 5;
-	int vidas2 = 5;
+	bool estoyVivo;
+	bool estoyVivo2;
+
+
+	int vidas1 = 1;
+	int vidas2 = 1;
 
 
 	void setPersonaje(Personaje *data) {

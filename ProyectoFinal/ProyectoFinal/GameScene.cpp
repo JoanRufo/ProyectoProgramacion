@@ -593,8 +593,34 @@ void GameScene::update()
 	}
 
 	if (mBala->balaX <= mEnemigo1->posX1 + 0.3 && mBala->balaX >= mEnemigo1->posX1 - 0.3 && mBala->balaY <= mEnemigo1->posY1 + 0.3 && mBala->balaY >= mEnemigo1->posY1 - 0.3) {
+
 		mEnemigo1->vidas--;
+
 		if (mEnemigo1->vidas == 0) {
+
+			mEnemigo1->estoyVivo = false;
+
+		}
+	}
+
+	if (mBala->balaX <= mEnemigo2->posX + 0.3 && mBala->balaX >= mEnemigo2->posX - 0.3 && mBala->balaY <= mEnemigo2->posY + 0.3 && mBala->balaY >= mEnemigo2->posY - 0.3) {
+
+		mEnemigo2->vidas1--;
+
+		if (mEnemigo2->vidas1 == 0) {
+
+			mEnemigo2->estoyVivo = false;
+
+		}
+	}
+
+	if (mBala->balaX <= mEnemigo2->posX2 + 0.3 && mBala->balaX >= mEnemigo2->posX2 - 0.3 && mBala->balaY <= mEnemigo2->posY2 + 0.3 && mBala->balaY >= mEnemigo2->posY2 - 0.3) {
+
+		mEnemigo2->vidas2--;
+
+		if (mEnemigo2->vidas2 == 0) {
+
+			mEnemigo2->estoyVivo2 = false;
 
 		}
 	}

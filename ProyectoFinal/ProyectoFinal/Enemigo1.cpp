@@ -31,6 +31,9 @@ void Enemigo1::init()
 	vel2 = 0.2;
 	vel3 = 0.1;
 	vel4 = 0.4;
+
+
+	estoyVivo = true;
 }
 
 void Enemigo1::update()
@@ -41,10 +44,17 @@ void Enemigo1::update()
 
 void Enemigo1::render()
 {
-	mVideo->renderGraphic(idDelEnemigo1, posX1, posY1, 70, 60);
-	mVideo->renderGraphic(idDelEnemigo2, posX2, posY2, 70, 60);
-	mVideo->renderGraphic(idDelEnemigo3, posX3, posY3, 70, 60);
-	mVideo->renderGraphic(idDelEnemigo4, posX4, posY4, 70, 60);
+
+	if (estoyVivo == true) {
+
+
+		mVideo->renderGraphic(idDelEnemigo1, posX1, posY1, 70, 60);
+		mVideo->renderGraphic(idDelEnemigo2, posX2, posY2, 70, 60);
+		mVideo->renderGraphic(idDelEnemigo3, posX3, posY3, 70, 60);
+		mVideo->renderGraphic(idDelEnemigo4, posX4, posY4, 70, 60);
+
+
+	}
 }
 
 void Enemigo1::movEnemigo()
