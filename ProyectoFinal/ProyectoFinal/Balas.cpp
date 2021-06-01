@@ -8,6 +8,7 @@ Balas::Balas()
 	estatActual = BalaGuardada;
 	balaX = 0;
 	balaY = 0;
+	vel;
 
 	estoyViva = false;
 
@@ -57,46 +58,46 @@ void Balas::update()
 
 		if (direccion == 1) {
 		
-			balaY--;
+			balaY -= 1 * vel;
 		
 		}
 
 		if (direccion == 2) {
 
-			balaX--;
+			balaX-=1*vel;
 
 		}
 
 		if (direccion == 3) {
 
 
-			balaY++;
+			balaY+= 1 * vel;
 		}
 
 		if (direccion == 4) {
 
-			balaX++;
+			balaX+= 1 * vel;
 
 		}
 
 		if (direccion == 5) {
-			balaX--;
-			balaY--;
+			balaX-= 1 * vel;
+			balaY-= 1 * vel;
 		}
 
 		if (direccion == 6) {
-			balaX++;
-			balaY--;
+			balaX+= 1 * vel;
+			balaY-= 1 * vel;
 		}
 
 		if (direccion == 7) {
-			balaX--;
-			balaY++;
+			balaX-= 1 * vel;
+			balaY+= 1 * vel;
 		}
 
 		if (direccion == 8) {
-			balaX++;
-			balaY++;
+			balaX+= 1 * vel;
+			balaY+= 1 * vel;
 		}
 
 

@@ -33,12 +33,12 @@ public:
 
 	bool estoyViva = false;
 	int bala;
-	int balaX = 600;
-	int balaY = 300;
+	float balaX = 600;
+	float balaY = 300;
 	
 	int direccion;
 
-
+	float vel = 0.35;
 	
 	
 
