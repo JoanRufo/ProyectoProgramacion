@@ -668,7 +668,7 @@ void GameScene::render()
 
 		mHabitacion4->render();
 		puertaIzquierda->render();
-		if (mEnemigo2->estoyVivo == true) {
+		if (mEnemigo2->vidas1 >= 0 && mEnemigo2->vidas2 >= 0) {
 			mEnemigo2->render();
 		}
 		
