@@ -592,6 +592,13 @@ void GameScene::update()
 
 	}
 
+	if (mBala->balaX <= mEnemigo1->posX1 + 0.3 && mBala->balaX >= mEnemigo1->posX1 - 0.3 && mBala->balaY <= mEnemigo1->posY1 + 0.3 && mBala->balaY >= mEnemigo1->posY1 - 0.3) {
+		mEnemigo1->vidas--;
+		if (mEnemigo1->vidas == 0) {
+
+		}
+	}
+
 
 }
 

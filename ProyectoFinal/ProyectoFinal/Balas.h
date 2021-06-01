@@ -38,7 +38,7 @@ public:
 	
 	int direccion;
 
-	float vel = 0.35;
+	float vel = 0.5;
 	
 	
 

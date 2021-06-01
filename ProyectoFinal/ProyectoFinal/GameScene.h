@@ -46,6 +46,7 @@ public:
 	Habitacion3* mHabitacion3 = new Habitacion3();
 	Habitacion4* mHabitacion4 = new Habitacion4();
 	HabitacionFinal* mHabitacionFinal = new HabitacionFinal();
+	Balas* mBala = new Balas();
 	
 	//Balas* balas = new Balas();
 
