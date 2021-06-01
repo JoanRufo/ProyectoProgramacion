@@ -236,7 +236,7 @@ void GameScene::update()
 
 	//GAMEOVER
 
-	if (mEnemigo1->vidas != 0 && mEnemigo2->vidas1 != 0 && mEnemigo2->vidas2 != 0 && mEnemigo3->vidas != 0 && mEnemigoFinal->vidas != 0) {
+	if (mEnemigo1->vidas >= 0 && mEnemigo2->vidas1 >= 0 && mEnemigo2->vidas2 >= 0 && mEnemigo3->vidas >= 0 && mEnemigoFinal->vidas >= 0) {
 
 		if (personaje->Posx <= mEnemigo1->posX1 + 0.3 && personaje->Posx >= mEnemigo1->posX1 - 0.3 && personaje->Posy <= mEnemigo1->posY1 + 0.3 && personaje->Posy >= mEnemigo1->posY1 - 0.3 && idHabitacion == 2) {
 

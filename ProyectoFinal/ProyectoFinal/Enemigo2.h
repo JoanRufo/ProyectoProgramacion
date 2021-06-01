@@ -43,7 +43,7 @@ public:
 
 
 	int vidas1 = 1;
-	int vidas2 = 0;
+	int vidas2 = 1;
 
 
 	void setPersonaje(Personaje *data) {
