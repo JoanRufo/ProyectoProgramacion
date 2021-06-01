@@ -22,8 +22,15 @@ void Enemigo2::init()
 	posY = 300;
 	posX2 = 700;
 	posY2 = 500;
-	vel = 0.2;
-	vel2 = 0.1;
+	vel = 0.1;
+	vel2 = 0.05;
+
+	width = 120;
+	height =  100;
+
+
+	width2 = 200;
+	height2 = 150;
 
 	estoyVivo = true;
 
@@ -45,12 +52,12 @@ void Enemigo2::update()
 void Enemigo2::render()
 {
 	if (estoyVivo == true) {
-		mVideo->renderGraphic(idDelEnemigo2, posX, posY, 120, 100);
+		mVideo->renderGraphic(idDelEnemigo2, posX, posY, width, height);
 
 	}
 
 	if (estoyVivo2 == true) {
-		mVideo->renderGraphic(idDelEnemigo22, posX2, posY2, 200, 150);
+		mVideo->renderGraphic(idDelEnemigo22, posX2, posY2, width2, height2);
 	}
 
 	

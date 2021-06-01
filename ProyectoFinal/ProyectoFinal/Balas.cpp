@@ -25,6 +25,9 @@ void Balas::init()
 {
 	bala = mResourceManager->loadAndGetGraphicID("Imagenes/Bala.png");
 
+	width = 30;
+	height = 30;
+
 	estatActual = BalaGuardada;
 	
 }
@@ -140,7 +143,7 @@ void Balas::render()
 {
 
 	if (estatActual == BalaMovimiento) {
-		mVideo->renderGraphic(bala, balaX, balaY, 30, 30);
+		mVideo->renderGraphic(bala, balaX, balaY, width, height);
 
 	}
 }

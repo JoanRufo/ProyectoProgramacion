@@ -23,17 +23,32 @@ void EnemigoFinal::init()
 	posY = 200;
 	
 	vel = 0.1;
+
+	width = 200;
+	height = 150;
+
+	estoyVivo = true;
 	
 
 }
 
 void EnemigoFinal::update()
 {
+	if (vidas == 0) {
+	
+		estoyVivo = false;
+	
+	}
+
 }
 
 void EnemigoFinal::render()
 {
-	mVideo->renderGraphic(idDelEnemigoFinal, posX, posY, 200, 150);
+	if (estoyVivo == true) {
+
+		mVideo->renderGraphic(idDelEnemigoFinal, posX, posY, width, height);
+
+	}
 }
 
 void EnemigoFinal::movEnemigo()

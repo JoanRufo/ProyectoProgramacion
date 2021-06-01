@@ -33,6 +33,8 @@ public:
 	void update();
 	void render();
 
+	bool detectarColisiones(float aX, float aY, float aW, float aH, float bX, float bY, float bW, float bH);
+
 	ResourceManager* mResourceManager = ResourceManager::getInstance();
 	Video* mVideo = Video::getInstance();
 
@@ -48,7 +50,7 @@ public:
 	HabitacionFinal* mHabitacionFinal = new HabitacionFinal();
 	Balas* mBala = new Balas();
 	
-	//Balas* balas = new Balas();
+	
 
 
 	std::vector<Balas>mVectorBalas;

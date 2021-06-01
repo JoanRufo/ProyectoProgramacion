@@ -59,7 +59,11 @@ void GameScene::update()
 {
 	
 	personaje->MovimientoPersonaje();
+	mEnemigo1->update();
 	mEnemigo2->update();
+	mEnemigo3->update();
+	mEnemigoFinal->update();
+
 
 
 	if (idHabitacion == 2) {
@@ -238,7 +242,7 @@ void GameScene::update()
 
 	if (mEnemigo1->vidas >= 0 && mEnemigo2->vidas1 >= 0 && mEnemigo2->vidas2 >= 0 && mEnemigo3->vidas >= 0 && mEnemigoFinal->vidas >= 0) {
 
-		if (personaje->Posx <= mEnemigo1->posX1 + 0.3 && personaje->Posx >= mEnemigo1->posX1 - 0.3 && personaje->Posy <= mEnemigo1->posY1 + 0.3 && personaje->Posy >= mEnemigo1->posY1 - 0.3 && idHabitacion == 2) {
+		if (detectarColisiones(personaje->Posx, personaje->Posy, personaje->width, personaje->height, mEnemigo1->posX1, mEnemigo1->posY1, mEnemigo1->width, mEnemigo1->height) == true && idHabitacion == 2) {
 
 
 			personaje->Posx = 600;
@@ -257,7 +261,7 @@ void GameScene::update()
 			SceneManager::getInstance()->changeScene(GAMEOVER);
 
 		}
-		if (personaje->Posx <= mEnemigo1->posX2 + 0.3 && personaje->Posx >= mEnemigo1->posX2 - 0.3 && personaje->Posy <= mEnemigo1->posY2 + 0.3 && personaje->Posy >= mEnemigo1->posY2 - 0.3 && idHabitacion == 2) {
+		if (detectarColisiones(personaje->Posx, personaje->Posy, personaje->width, personaje->height, mEnemigo1->posX2, mEnemigo1->posY2, mEnemigo1->width, mEnemigo1->height) == true && idHabitacion == 2) {
 
 
 			personaje->Posx = 600;
@@ -276,7 +280,7 @@ void GameScene::update()
 			SceneManager::getInstance()->changeScene(GAMEOVER);
 
 		}
-		if (personaje->Posx <= mEnemigo1->posX3 + 0.3 && personaje->Posx >= mEnemigo1->posX3 - 0.3 && personaje->Posy <= mEnemigo1->posY3 + 0.3 && personaje->Posy >= mEnemigo1->posY3 - 0.3 && idHabitacion == 2) {
+		if (detectarColisiones(personaje->Posx, personaje->Posy, personaje->width, personaje->height, mEnemigo1->posX3, mEnemigo1->posY3, mEnemigo1->width, mEnemigo1->height) == true && idHabitacion == 2) {
 
 
 			personaje->Posx = 600;
@@ -295,7 +299,7 @@ void GameScene::update()
 			SceneManager::getInstance()->changeScene(GAMEOVER);
 
 		}
-		if (personaje->Posx <= mEnemigo1->posX4 + 0.3 && personaje->Posx >= mEnemigo1->posX4 - 0.3 && personaje->Posy <= mEnemigo1->posY4 + 0.3 && personaje->Posy >= mEnemigo1->posY4 - 0.3 && idHabitacion == 2) {
+		if (detectarColisiones(personaje->Posx, personaje->Posy, personaje->width, personaje->height, mEnemigo1->posX4, mEnemigo1->posY4, mEnemigo1->width, mEnemigo1->height) == true && idHabitacion == 2) {
 
 
 			personaje->Posx = 600;
@@ -315,7 +319,7 @@ void GameScene::update()
 
 		}
 
-		else if (personaje->Posx <= mEnemigo2->posX + 0.3 && personaje->Posx >= mEnemigo2->posX - 0.3 && personaje->Posy <= mEnemigo2->posY + 0.3 && personaje->Posy >= mEnemigo2->posY - 0.3 && idHabitacion == 4) {
+		else if (detectarColisiones(personaje->Posx, personaje->Posy, personaje->width, personaje->height, mEnemigo2->posX, mEnemigo2->posY, mEnemigo2->width, mEnemigo2->height) == true && idHabitacion == 4) {
 
 
 			personaje->Posx = 600;
@@ -337,7 +341,7 @@ void GameScene::update()
 
 		}
 
-		else if (personaje->Posx <= mEnemigo2->posX2 + 0.3 && personaje->Posx >= mEnemigo2->posX2 - 0.3 && personaje->Posy <= mEnemigo2->posY2 + 0.3 && personaje->Posy >= mEnemigo2->posY2 - 0.3 && idHabitacion == 4) {
+		else if (detectarColisiones(personaje->Posx, personaje->Posy, personaje->width, personaje->height, mEnemigo2->posX2, mEnemigo2->posY2, mEnemigo2->width2, mEnemigo2->height2) == true && idHabitacion == 4) {
 
 
 			personaje->Posx = 600;
@@ -357,7 +361,7 @@ void GameScene::update()
 
 		}
 
-		else if (personaje->Posx <= mEnemigo3->posX + 0.3 && personaje->Posx >= mEnemigo3->posX - 0.3 && personaje->Posy <= mEnemigo3->posY + 0.3 && personaje->Posy >= mEnemigo3->posY - 0.3 && idHabitacion == 3) {
+		else if (detectarColisiones(personaje->Posx, personaje->Posy, personaje->width, personaje->height, mEnemigo3->posX, mEnemigo3->posY, mEnemigo3->width, mEnemigo3->height) == true && idHabitacion == 3) {
 
 
 			personaje->Posx = 600;
@@ -377,7 +381,7 @@ void GameScene::update()
 
 		}
 
-		else if (personaje->Posx <= mEnemigoFinal->posX + 0.3 && personaje->Posx >= mEnemigoFinal->posX - 0.3 && personaje->Posy <= mEnemigoFinal->posY + 0.3 && personaje->Posy >= mEnemigoFinal->posY - 0.3 && idHabitacion == 5) {
+		else if (detectarColisiones(personaje->Posx, personaje->Posy, personaje->width, personaje->height, mEnemigoFinal->posX, mEnemigoFinal->posY, mEnemigoFinal->width, mEnemigoFinal->height) == true && idHabitacion == 5) {
 
 
 			personaje->Posx = 600;
@@ -398,7 +402,7 @@ void GameScene::update()
 		}
 
 
-		if (mBala->balaX <= mEnemigo1->posX1 + 0.3 && mBala->balaX >= mEnemigo1->posX1 - 0.3 && mBala->balaY <= mEnemigo1->posY1 + 0.3 && mBala->balaY >= mEnemigo1->posY1 - 0.3) {
+		if (detectarColisiones(mBala->balaX, mBala->balaY, mBala->width, mBala->height, mEnemigo1->posX1, mEnemigo1->posY1, mEnemigo1->width, mEnemigo1->height) == true) {
 
 			mEnemigo1->vidas--;
 
@@ -409,7 +413,40 @@ void GameScene::update()
 			}
 		}
 
-		if (mBala->balaX <= mEnemigo2->posX + 0.3 && mBala->balaX >= mEnemigo2->posX - 0.3 && mBala->balaY <= mEnemigo2->posY + 0.3 && mBala->balaY >= mEnemigo2->posY - 0.3) {
+		if (detectarColisiones(mBala->balaX, mBala->balaY, mBala->width, mBala->height, mEnemigo1->posX2, mEnemigo1->posY2, mEnemigo1->width, mEnemigo1->height) == true) {
+
+			mEnemigo1->vidas2--;
+
+			if (mEnemigo1->vidas2 == 0) {
+
+				mEnemigo1->estoyVivo2 = false;
+
+			}
+		}
+
+		if (detectarColisiones(mBala->balaX, mBala->balaY, mBala->width, mBala->height, mEnemigo1->posX3, mEnemigo1->posY3, mEnemigo1->width, mEnemigo1->height) == true) {
+
+			mEnemigo1->vidas3--;
+
+			if (mEnemigo1->vidas3 == 0) {
+
+				mEnemigo1->estoyVivo3 = false;
+
+			}
+		}
+
+		if (detectarColisiones(mBala->balaX, mBala->balaY, mBala->width, mBala->height, mEnemigo1->posX4, mEnemigo1->posY4, mEnemigo1->width, mEnemigo1->height) == true) {
+
+			mEnemigo1->vidas4--;
+
+			if (mEnemigo1->vidas4 == 0) {
+
+				mEnemigo1->estoyVivo4 = false;
+
+			}
+		}
+
+		if (detectarColisiones(mBala->balaX, mBala->balaY, mBala->width, mBala->height, mEnemigo2->posX, mEnemigo2->posY, mEnemigo2->width, mEnemigo2->height) == true) {
 
 			mEnemigo2->vidas1--;
 
@@ -421,13 +458,38 @@ void GameScene::update()
 
 		}
 
-		if (mBala->balaX <= mEnemigo2->posX2 + 0.3 && mBala->balaX >= mEnemigo2->posX2 - 0.3 && mBala->balaY <= mEnemigo2->posY2 + 0.3 && mBala->balaY >= mEnemigo2->posY2 - 0.3) {
+
+		if (detectarColisiones(mBala->balaX, mBala->balaY, mBala->width, mBala->height, mEnemigo2->posX2, mEnemigo2->posY2, mEnemigo2->width2, mEnemigo2->height2) == true) {
 
 			mEnemigo2->vidas2--;
 
 			if (mEnemigo2->vidas2 == 0) {
 
 				mEnemigo2->estoyVivo2 = false;
+
+			}
+
+		}
+
+		if (detectarColisiones(mBala->balaX, mBala->balaY, mBala->width, mBala->height, mEnemigo3->posX, mEnemigo3->posY, mEnemigo3->width, mEnemigo3->height) == true) {
+
+			mEnemigo3->vidas--;
+
+			if (mEnemigo3->vidas == 0) {
+
+				mEnemigo3->estoyVivo = false;
+
+			}
+		}
+
+
+		if (detectarColisiones(mBala->balaX, mBala->balaY, mBala->width, mBala->height, mEnemigoFinal->posX, mEnemigoFinal->posY, mEnemigoFinal->width, mEnemigoFinal->height) == true) {
+
+			mEnemigoFinal->vidas--;
+
+			if (mEnemigoFinal->vidas == 0) {
+
+				mEnemigoFinal->estoyVivo = false;
 
 			}
 		}
@@ -495,6 +557,22 @@ void GameScene::render()
 	personaje->render();
 	
 	
+}
+
+bool GameScene::detectarColisiones(float aX, float aY, float aW, float aH, float bX, float bY, float bW, float bH)
+{
+
+	if (aX < bX + bW &&
+		aX + aW > bX &&
+		aY < bY + bH &&
+		aY + aH >bY) {
+	
+				
+		return true;
+	}
+
+	return false;
+
 }
 
 GameScene * GameScene::getInstance()

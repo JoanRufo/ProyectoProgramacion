@@ -11,6 +11,9 @@ void Personaje::init()
 
 	Posx = 600;
 	Posy = 300;
+
+	width = 50;
+	height = 70;
 	vel;
 
 	a = false;
@@ -26,7 +29,7 @@ void Personaje::update()
 
 void Personaje::render()
 {
-	mVideo->renderGraphic(idDelPersonaje, Posx, Posy, 50, 70);
+	mVideo->renderGraphic(idDelPersonaje, Posx, Posy, width, height);
 }
 
 void Personaje::MovimientoPersonaje()

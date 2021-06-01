@@ -36,6 +36,11 @@ public:
 	float posY;
 	float posX2;
 	float posY2;
+	float width;
+	float height;
+
+	float width2;
+	float height2;
 
 
 	bool estoyVivo;

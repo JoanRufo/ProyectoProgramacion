@@ -35,6 +35,9 @@ public:
 	int bala;
 	float balaX = 600;
 	float balaY = 300;
+
+	float width;
+	float height;
 	
 	int direccion;
 

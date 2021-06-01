@@ -16,16 +16,31 @@ void Enemigo3::init()
 	idDelEnemigo3 = mResourceManager->loadAndGetGraphicID("Imagenes/Enemigo1.png");
 	posX = 800;
 	posY = 300;
-	vel = 0.3;
+	vel = 0.2;
+
+	width = 120;
+	height = 100;
+
+	estoyVivo = true;
 }
 
 void Enemigo3::update()
 {
+	if (vidas == 0) {
+		estoyVivo = false;
+	
+	}
+
+
+
 }
 
 void Enemigo3::render()
 {
-	mVideo->renderGraphic(idDelEnemigo3, posX, posY, 120, 100);
+	if (estoyVivo = true) {
+		mVideo->renderGraphic(idDelEnemigo3, posX, posY, width, height);
+
+	}
 }
 
 void Enemigo3::movEnemigo()
