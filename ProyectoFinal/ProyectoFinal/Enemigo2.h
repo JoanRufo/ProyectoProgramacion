@@ -10,12 +10,12 @@
 class Enemigo2
 {
 	int idDelEnemigo2;
-	int idDelEnemigo22;
+	
 	
 
 
-	float vel;
-	float vel2;
+	
+	
 
 
 
@@ -34,17 +34,15 @@ public:
 
 	float posX;
 	float posY;
-	float posX2;
-	float posY2;
+
 	float width;
 	float height;
 
-	float width2;
-	float height2;
+	float vel;
 
 
 	bool estoyVivo;
-	bool estoyVivo2;
+	
 
 
 	int vidas1 = 2;

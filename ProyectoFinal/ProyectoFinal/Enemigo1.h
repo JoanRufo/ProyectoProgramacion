@@ -43,28 +43,19 @@ public:
 
 	float posX1;
 	float posY1;
-	float posX2;
-	float posY2;
-	float posX3;
-	float posY3;
-	float posX4;
-	float posY4;
+	
 
 	float width;
 	float height;
 
 
 	bool estoyVivo;
-	bool estoyVivo2;
-	bool estoyVivo3;
-	bool estoyVivo4;
+	
 
 
 
 	int vidas = 1;
-	int vidas2 = 1;
-	int vidas3 = 1;
-	int vidas4 = 1;
+	
 
 
 

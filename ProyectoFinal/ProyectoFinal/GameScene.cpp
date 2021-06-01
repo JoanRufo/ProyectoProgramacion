@@ -19,12 +19,43 @@ void GameScene::init()
 
 	mHabitacion1->init();
 	personaje->init();
+
 	mEnemigo1A->init();
+	mEnemigo1A->posX1 = 400;
+	mEnemigo1A->posY1 = 400;
+
+	
 	mEnemigo1B->init();
+	mEnemigo1B->posX1 = 300;
+	mEnemigo1B->posY1 = 200;
+
+	
 	mEnemigo1C->init();
+	mEnemigo1C->posX1 = 200;
+	mEnemigo1C->posY1 = 500;
+
+
 	mEnemigo1D->init();
+	mEnemigo1D->posX1 = 100;
+	mEnemigo1D->posY1 = 200;
+
 	mEnemigo2A->init();
+	mEnemigo2A->posX = 600;
+	mEnemigo2A->posY = 600;
+	mEnemigo2A->vel = 0.2;
+	mEnemigo2A->width = 120;
+	mEnemigo2A->height = 100;
+
+
 	mEnemigo2B->init();
+	mEnemigo2B->posX = 800;
+	mEnemigo2B->posY = 400;
+	mEnemigo2B->vel = 0.1;
+	mEnemigo2B->width = 200;
+	mEnemigo2B->height = 150;
+
+
+
 	mEnemigo3->init();
 	mEnemigoFinal->init();
 	
@@ -278,7 +309,7 @@ void GameScene::update()
 
 		}
 	}
-	if (mEnemigo1B->estoyVivo2 == true) {
+	if (mEnemigo1B->estoyVivo == true) {
 		if (detectarColisiones(personaje->Posx, personaje->Posy, personaje->width, personaje->height, mEnemigo1B->posX1, mEnemigo1B->posY1, mEnemigo1B->width, mEnemigo1B->height) == true && idHabitacion == 2) {
 
 
@@ -299,7 +330,7 @@ void GameScene::update()
 
 		}
 	}
-	if (mEnemigo1C->estoyVivo3 == true) {
+	if (mEnemigo1C->estoyVivo == true) {
 		if (detectarColisiones(personaje->Posx, personaje->Posy, personaje->width, personaje->height, mEnemigo1C->posX1, mEnemigo1C->posY1, mEnemigo1C->width, mEnemigo1C->height) == true && idHabitacion == 2) {
 
 
@@ -320,7 +351,7 @@ void GameScene::update()
 
 		}
 	}
-	if (mEnemigo1D->estoyVivo4 == true) {
+	if (mEnemigo1D->estoyVivo == true) {
 		if (detectarColisiones(personaje->Posx, personaje->Posy, personaje->width, personaje->height, mEnemigo1D->posX1, mEnemigo1D->posY1, mEnemigo1D->width, mEnemigo1D->height) == true && idHabitacion == 2) {
 
 
@@ -364,7 +395,7 @@ void GameScene::update()
 
 		}
 	}
-	if (mEnemigo2B->estoyVivo2 == true) {
+	if (mEnemigo2B->estoyVivo == true) {
 		if (detectarColisiones(personaje->Posx, personaje->Posy, personaje->width, personaje->height, mEnemigo2B->posX, mEnemigo2B->posY, mEnemigo2B->width, mEnemigo2B->height) == true && idHabitacion == 4) {
 
 
@@ -431,99 +462,160 @@ void GameScene::update()
 
 		for (size_t i = 0; i < mVectorBalas.size(); i++)
 		{
+			bool heChocado = false;
+
 			if (mVectorBalas.at(i).estoyViva == false) { break; }
 
-	
-			if (detectarColisiones(mVectorBalas.at(i).balaX, mVectorBalas.at(i).balaY, mVectorBalas.at(i).width, mVectorBalas.at(i).height, mEnemigo1A->posX1, mEnemigo1A->posY1, mEnemigo1A->width, mEnemigo1A->height) == true) {
 
-				mEnemigo1A->vidas--;
+			if (mEnemigo1A->estoyVivo == true) {
 
-				if (mEnemigo1A->vidas == 0) {
+				if (detectarColisiones(mVectorBalas.at(i).balaX, mVectorBalas.at(i).balaY, mVectorBalas.at(i).width, mVectorBalas.at(i).height, mEnemigo1A->posX1, mEnemigo1A->posY1, mEnemigo1A->width, mEnemigo1A->height) == true && idHabitacion == 2) {
 
-					mEnemigo1A->estoyVivo = false;
+					mEnemigo1A->vidas--;
 
-				}
-			}
+					heChocado = true;
 
-			if (detectarColisiones(mVectorBalas.at(i).balaX, mVectorBalas.at(i).balaY, mVectorBalas.at(i).width, mVectorBalas.at(i).height, mEnemigo1B->posX1, mEnemigo1B->posY1, mEnemigo1B->width, mEnemigo1B->height) == true) {
+					if (mEnemigo1A->vidas == 0) {
 
-				mEnemigo1B->vidas--;
+						mEnemigo1A->estoyVivo = false;
 
-				if (mEnemigo1B->vidas == 0) {
-
-					mEnemigo1B->estoyVivo = false;
-
-				}
-			}
-
-			if (detectarColisiones(mVectorBalas.at(i).balaX, mVectorBalas.at(i).balaY, mVectorBalas.at(i).width, mVectorBalas.at(i).height, mEnemigo1C->posX1, mEnemigo1C->posY1, mEnemigo1C->width, mEnemigo1C->height) == true) {
-
-				mEnemigo1C->vidas--;
-
-				if (mEnemigo1C->vidas == 0) {
-
-					mEnemigo1C->estoyVivo = false;
-
-				}
-			}
-
-			if (detectarColisiones(mVectorBalas.at(i).balaX, mVectorBalas.at(i).balaY, mVectorBalas.at(i).width, mVectorBalas.at(i).height, mEnemigo1D->posX1, mEnemigo1D->posY1, mEnemigo1D->width, mEnemigo1D->height) == true) {
-
-				mEnemigo1D->vidas--;
-
-				if (mEnemigo1D->vidas == 0) {
-
-					mEnemigo1D->estoyVivo = false;
-
-				}
-			}
-
-			if (detectarColisiones(mVectorBalas.at(i).balaX, mVectorBalas.at(i).balaY, mVectorBalas.at(i).width, mVectorBalas.at(i).height, mEnemigo2A->posX, mEnemigo2A->posY, mEnemigo2A->width, mEnemigo2A->height) == true) {
-
-				mEnemigo2A->vidas1--;
-
-				if (mEnemigo2A->vidas1 == 0) {
-
-					mEnemigo2A->estoyVivo = false;
-
+					}
 				}
 
 			}
 
+			if (mEnemigo1B->estoyVivo == true) {
 
-			if (detectarColisiones(mVectorBalas.at(i).balaX, mVectorBalas.at(i).balaY, mVectorBalas.at(i).width, mVectorBalas.at(i).height, mEnemigo2B->posX, mEnemigo2B->posY, mEnemigo2B->width, mEnemigo2B->height) == true) {
+				if (detectarColisiones(mVectorBalas.at(i).balaX, mVectorBalas.at(i).balaY, mVectorBalas.at(i).width, mVectorBalas.at(i).height, mEnemigo1B->posX1, mEnemigo1B->posY1, mEnemigo1B->width, mEnemigo1B->height) == true && idHabitacion == 2) {
 
-				mEnemigo2B->vidas1--;
+					mEnemigo1B->vidas--;
 
-				if (mEnemigo2B->vidas1 == 0) {
+					heChocado = true;
 
-					mEnemigo2B->estoyVivo = false;
+					if (mEnemigo1B->vidas == 0) {
+
+						mEnemigo1B->estoyVivo = false;
+
+					}
+				}
+
+			}
+
+			if (mEnemigo1C->estoyVivo == true) {
+
+				if (detectarColisiones(mVectorBalas.at(i).balaX, mVectorBalas.at(i).balaY, mVectorBalas.at(i).width, mVectorBalas.at(i).height, mEnemigo1C->posX1, mEnemigo1C->posY1, mEnemigo1C->width, mEnemigo1C->height) == true && idHabitacion == 2) {
+
+					mEnemigo1C->vidas--;
+
+					heChocado = true;
+
+					if (mEnemigo1C->vidas == 0) {
+
+						mEnemigo1C->estoyVivo = false;
+
+					}
+				}
+
+
+			}
+
+			if (mEnemigo1D->estoyVivo == true) {
+
+				if (detectarColisiones(mVectorBalas.at(i).balaX, mVectorBalas.at(i).balaY, mVectorBalas.at(i).width, mVectorBalas.at(i).height, mEnemigo1D->posX1, mEnemigo1D->posY1, mEnemigo1D->width, mEnemigo1D->height) == true && idHabitacion == 2) {
+
+					mEnemigo1D->vidas--;
+
+					heChocado = true;
+
+					if (mEnemigo1D->vidas == 0) {
+
+						mEnemigo1D->estoyVivo = false;
+
+					}
+				}
+
+			}
+
+			if (mEnemigo2A->estoyVivo == true) {
+
+				if (detectarColisiones(mVectorBalas.at(i).balaX, mVectorBalas.at(i).balaY, mVectorBalas.at(i).width, mVectorBalas.at(i).height, mEnemigo2A->posX, mEnemigo2A->posY, mEnemigo2A->width, mEnemigo2A->height) == true && idHabitacion == 4) {
+
+					mEnemigo2A->vidas1--;
+
+					heChocado = true;
+
+					if (mEnemigo2A->vidas1 == 0) {
+
+						mEnemigo2A->estoyVivo = false;
+
+					}
 
 				}
 
 			}
 
-			if (detectarColisiones(mVectorBalas.at(i).balaX, mVectorBalas.at(i).balaY, mVectorBalas.at(i).width, mVectorBalas.at(i).height, mEnemigo3->posX, mEnemigo3->posY, mEnemigo3->width, mEnemigo3->height) == true) {
+			if (mEnemigo2B->estoyVivo == true) {
 
-				mEnemigo3->vidas--;
 
-				if (mEnemigo3->vidas == 0) {
+				if (detectarColisiones(mVectorBalas.at(i).balaX, mVectorBalas.at(i).balaY, mVectorBalas.at(i).width, mVectorBalas.at(i).height, mEnemigo2B->posX, mEnemigo2B->posY, mEnemigo2B->width, mEnemigo2B->height) == true && idHabitacion == 4) {
 
-					mEnemigo3->estoyVivo = false;
+					mEnemigo2B->vidas1--;
+
+					heChocado = true;
+
+					if (mEnemigo2B->vidas1 == 0) {
+
+						mEnemigo2B->estoyVivo = false;
+
+					}
 
 				}
+
 			}
 
 
-			if (detectarColisiones(mVectorBalas.at(i).balaX, mVectorBalas.at(i).balaY, mVectorBalas.at(i).width, mVectorBalas.at(i).height, mEnemigoFinal->posX, mEnemigoFinal->posY, mEnemigoFinal->width, mEnemigoFinal->height) == true) {
+			if (mEnemigo3->estoyVivo == true) {
 
-				mEnemigoFinal->vidas--;
+				if (detectarColisiones(mVectorBalas.at(i).balaX, mVectorBalas.at(i).balaY, mVectorBalas.at(i).width, mVectorBalas.at(i).height, mEnemigo3->posX, mEnemigo3->posY, mEnemigo3->width, mEnemigo3->height) == true && idHabitacion == 3) {
 
-				if (mEnemigoFinal->vidas == 0) {
+					mEnemigo3->vidas--;
 
-					mEnemigoFinal->estoyVivo = false;
+					heChocado = true;
 
+					if (mEnemigo3->vidas == 0) {
+
+						mEnemigo3->estoyVivo = false;
+
+					}
 				}
+
+
+			}
+
+			if (mEnemigoFinal->estoyVivo == true) {
+
+
+				if (detectarColisiones(mVectorBalas.at(i).balaX, mVectorBalas.at(i).balaY, mVectorBalas.at(i).width, mVectorBalas.at(i).height, mEnemigoFinal->posX, mEnemigoFinal->posY, mEnemigoFinal->width, mEnemigoFinal->height) == true && idHabitacion == 5) {
+
+					mEnemigoFinal->vidas--;
+
+					heChocado = true;
+
+					if (mEnemigoFinal->vidas == 0) {
+
+						mEnemigoFinal->estoyVivo = false;
+
+					}
+				}
+
+			}
+
+
+			if (heChocado == true) {
+			
+				mVectorBalas.at(i).estoyViva = false;
+				
+			
 			}
 
 		}

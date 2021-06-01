@@ -15,7 +15,6 @@
 #include "Habitacion3.h"
 #include "Habitacion4.h"
 #include "HabitacionFinal.h"
-#include "Balas.h"
 #include "ObjetoFinal.h"
 #include "EnemigoFinal.h"
 
@@ -52,7 +51,7 @@ public:
 	Habitacion3* mHabitacion3 = new Habitacion3();
 	Habitacion4* mHabitacion4 = new Habitacion4();
 	HabitacionFinal* mHabitacionFinal = new HabitacionFinal();
-	Balas* mBala = new Balas();
+	
 	
 	
 

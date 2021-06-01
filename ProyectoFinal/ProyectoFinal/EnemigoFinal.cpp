@@ -28,6 +28,8 @@ void EnemigoFinal::init()
 	height = 150;
 
 	estoyVivo = true;
+
+	vidas = 15;
 	
 
 }

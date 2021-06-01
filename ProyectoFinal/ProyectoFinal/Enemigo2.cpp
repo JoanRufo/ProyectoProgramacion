@@ -17,23 +17,21 @@ void Enemigo2::init()
 	
 	idDelEnemigo2 = mResourceManager->loadAndGetGraphicID("Imagenes/Enemigo2.png");	
 	
-	posX = 800;
-	posY = 300;
-	posX2 = 700;
-	posY2 = 500;
-	vel = 0.1;
-	vel2 = 0.05;
+	posX;
+	posY;
+	
+	vel;
+	
 
-	width = 120;
-	height =  100;
+	width;
+	height;
 
 
-	width2 = 200;
-	height2 = 150;
+	
 
 	estoyVivo = true;
 
-	estoyVivo2 = true;
+	
 }
 
 void Enemigo2::update()
@@ -83,29 +81,5 @@ void Enemigo2::movEnemigo()
 
 	}
 
-	//SEGUNDO ENEMIGO
-	if (posX2 <= mPersonaje->Posx) {
-
-		posX2 = posX2 + 0.5 * vel2;
-
-	}
-
-	else if (posX2 >= mPersonaje->Posx) {
-
-		posX2 = posX2 - 0.5 * vel2;
-
-	}
-
-	if (posY2 <= mPersonaje->Posy) {
-
-		posY2 = posY2 + 0.5 * vel2;
-
-	}
-
-	else if (posY2 >= mPersonaje->Posy) {
-
-		posY2 = posY2 - 0.5 * vel2;
-
-
-	}
+	
 }
