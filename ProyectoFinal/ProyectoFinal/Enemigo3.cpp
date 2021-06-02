@@ -21,6 +21,8 @@ void Enemigo3::init()
 	width = 120;
 	height = 100;
 
+	vidas = 5;
+
 	estoyVivo = true;
 }
 

@@ -38,7 +38,7 @@ public:
 	bool estoyVivo;
 
 
-	int vidas = 5;
+	int vidas;
 
 
 	void setPersonaje(Personaje *data) {
