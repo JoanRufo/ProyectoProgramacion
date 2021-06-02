@@ -12,7 +12,6 @@ class Enemigo3
 
 
 
-	float vel;
 
 
 
@@ -37,7 +36,7 @@ public:
 
 	bool estoyVivo;
 
-
+	float vel;
 	int vidas;
 
 

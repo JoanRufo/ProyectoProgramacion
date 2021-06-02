@@ -76,7 +76,7 @@ void Enemigo1::movEnemigo()
 
 		posX1 = posX1 - 0.5 * vel1;
 	
-	}
+	 }
 
 	if (posY1 <= mPersonaje->Posy) {
 	
