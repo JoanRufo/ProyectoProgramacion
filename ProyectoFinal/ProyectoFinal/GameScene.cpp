@@ -640,6 +640,19 @@ void GameScene::update()
 						mEnemigoFinal->estoyVivo = false;
 						SceneManager::getInstance()->changeScene(WIN);
 
+						personaje->Posx = 600;
+						personaje->Posy = 300;
+
+
+						idHabitacion = 1;
+
+
+
+						mEnemigoFinal->posX = 600;
+						mEnemigoFinal->posY = 300;
+
+
+
 					}
 
 				}
