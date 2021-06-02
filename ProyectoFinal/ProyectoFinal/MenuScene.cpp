@@ -12,7 +12,7 @@ MenuScene::~MenuScene()
 
 void MenuScene::init()
 {
-	Background = mResourceManager->loadAndGetGraphicID("Imagenes/Menu2.png");
+	Background = mResourceManager->loadAndGetGraphicID("Imagenes/MenuInicialBueno.png");
 	Botones = mResourceManager->loadAndGetGraphicID("Imagenes/Botones.png");
 	Tip = mResourceManager->loadAndGetGraphicID("Imagenes/Tip.png");
 

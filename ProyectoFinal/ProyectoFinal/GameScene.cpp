@@ -679,9 +679,16 @@ void GameScene::render()
 	}
 
 
+
+	
+
 	for (size_t i = 0; i < mVectorBalas.size(); i++)
 	{
-		mVectorBalas.at(i).render();
+
+		if (mVectorBalas.at(i).estoyViva == true) {
+			mVectorBalas.at(i).render();
+
+		}
 
 	}
 	
