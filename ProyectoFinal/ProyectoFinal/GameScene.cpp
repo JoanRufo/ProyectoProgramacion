@@ -454,8 +454,8 @@ void GameScene::update()
 			mEnemigoFinal->posY = 300;
 
 
-
 			SceneManager::getInstance()->changeScene(GAMEOVER);
+
 
 		}
 	}
@@ -478,6 +478,7 @@ void GameScene::update()
 					if (mEnemigo1A->vidas == 0) {
 
 						mEnemigo1A->estoyVivo = false;
+					
 
 					}
 				}
@@ -606,7 +607,9 @@ void GameScene::update()
 						mEnemigoFinal->estoyVivo = false;
 
 					}
+
 				}
+				
 
 			}
 

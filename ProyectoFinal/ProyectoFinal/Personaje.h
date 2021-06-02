@@ -25,6 +25,9 @@ public:
 	float height;
 	float vel = 0.35;
 	int idDelPersonaje;
+	int idDelPersonaje2;
+	int idDelPersonaje3;
+	int idDelPersonaje4;
 
 
 	int PersonajeDerecha;
@@ -33,6 +36,7 @@ public:
 	int PersonajeArriba;
 
 	int idPersonaje;
+
 
 
 	int idDireccion;

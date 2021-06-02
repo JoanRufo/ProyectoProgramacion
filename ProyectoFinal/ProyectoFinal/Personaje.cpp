@@ -5,8 +5,10 @@
 
 void Personaje::init()
 {
-	idDelPersonaje = mResourceManager->loadAndGetGraphicID("Imagenes/Personaje.png");
-
+	idDelPersonaje = mResourceManager->loadAndGetGraphicID("Imagenes/PersonajeAbajo.png");
+	idDelPersonaje2 = mResourceManager->loadAndGetGraphicID("Imagenes/PersonajeArriba.png");
+	idDelPersonaje3 = mResourceManager->loadAndGetGraphicID("Imagenes/PersonajeIzquierda.png");
+	idDelPersonaje4 = mResourceManager->loadAndGetGraphicID("Imagenes/PersonajeDerecha.png");
 	
 
 	Posx = 600;
@@ -29,7 +31,27 @@ void Personaje::update()
 
 void Personaje::render()
 {
-	mVideo->renderGraphic(idDelPersonaje, Posx, Posy, width, height);
+	
+		mVideo->renderGraphic(idDelPersonaje, Posx, Posy, width, height);
+
+	
+
+		if (Controles::getInstance()->teclasPulsadas[0] == true) {
+			mVideo->renderGraphic(idDelPersonaje2, Posx, Posy, width, height);
+		}
+
+		if (Controles::getInstance()->teclasPulsadas[1] == true) {
+			mVideo->renderGraphic(idDelPersonaje3, Posx, Posy, width, height);
+		}
+
+		if (Controles::getInstance()->teclasPulsadas[2] == true) {
+			mVideo->renderGraphic(idDelPersonaje, Posx, Posy, width, height);
+		}
+
+		if (Controles::getInstance()->teclasPulsadas[3] == true) {
+			mVideo->renderGraphic(idDelPersonaje4, Posx, Posy, width, height);
+		}
+	
 }
 
 void Personaje::MovimientoPersonaje()
