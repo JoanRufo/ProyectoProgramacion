@@ -57,6 +57,19 @@ void GameScene::init()
 
 
 	mEnemigo3->init();
+	mEnemigo3->posX = 800;
+	mEnemigo3->posY = 300;
+	mEnemigo3->vel = 0.1;
+	mEnemigo3->width;
+	mEnemigo3->height;
+
+	mEnemigo3B->init();
+	mEnemigo3->posX = 400;
+	mEnemigo3->posY = 300;
+	mEnemigo3->vel = 0.1;
+	mEnemigo3->width;
+	mEnemigo3->height;
+
 	mEnemigoFinal->init();
 	
 	puertaAbajo->init();
@@ -77,6 +90,7 @@ void GameScene::init()
 	mEnemigo2A->setPersonaje(personaje);
 	mEnemigo2B->setPersonaje(personaje);
 	mEnemigo3->setPersonaje(personaje);
+	mEnemigo3B->setPersonaje(personaje);
 	mEnemigoFinal->setPersonaje(personaje);
 
 
@@ -105,6 +119,7 @@ void GameScene::update()
 	mEnemigo2A->update();
 	mEnemigo2B->update();
 	mEnemigo3->update();
+	mEnemigo3B->update();
 	mEnemigoFinal->update();
 
 
@@ -134,7 +149,7 @@ void GameScene::update()
 
 
 		mEnemigo3->movEnemigo();
-
+		mEnemigo3B->movEnemigo();
 
 
 	}
@@ -433,6 +448,28 @@ void GameScene::update()
 
 		}
 	}
+
+	if (mEnemigo3B->estoyVivo == true) {
+		if (detectarColisiones(personaje->Posx, personaje->Posy, personaje->width, personaje->height, mEnemigo3B->posX, mEnemigo3B->posY, mEnemigo3->width, mEnemigo3B->height) == true && idHabitacion == 3) {
+
+
+			personaje->Posx = 600;
+			personaje->Posy = 300;
+
+
+			idHabitacion = 1;
+
+
+
+			mEnemigo3B->posX = 400;
+			mEnemigo3B->posY = 300;
+
+
+
+			SceneManager::getInstance()->changeScene(GAMEOVER);
+
+		}
+	}
 	if (mEnemigoFinal->estoyVivo == true) {
 
 		if (detectarColisiones(personaje->Posx, personaje->Posy, personaje->width, personaje->height, mEnemigoFinal->posX, mEnemigoFinal->posY, mEnemigoFinal->width, mEnemigoFinal->height) == true && idHabitacion == 5) {
@@ -661,6 +698,7 @@ void GameScene::render()
 		puertaAbajo->render();
 		puertaArriba->render();
 		mEnemigo3->render();
+		mEnemigo3B->render();
 	}
 
 	else if (idHabitacion == 4) {
