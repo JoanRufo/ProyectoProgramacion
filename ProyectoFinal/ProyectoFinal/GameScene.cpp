@@ -60,15 +60,15 @@ void GameScene::init()
 	mEnemigo3->posX = 800;
 	mEnemigo3->posY = 300;
 	mEnemigo3->vel = 0.1;
-	mEnemigo3->width;
-	mEnemigo3->height;
+	mEnemigo3->width = 120;
+	mEnemigo3->height = 100;
 
 	mEnemigo3B->init();
-	mEnemigo3->posX = 400;
-	mEnemigo3->posY = 300;
-	mEnemigo3->vel = 0.1;
-	mEnemigo3->width;
-	mEnemigo3->height;
+	mEnemigo3B->posX = 400;
+	mEnemigo3B->posY = 300;
+	mEnemigo3B->vel = 0.1;
+	mEnemigo3B->width = 120;
+	mEnemigo3B->height = 100;
 
 	mEnemigoFinal->init();
 	

@@ -18,8 +18,8 @@ void Enemigo3::init()
 	posY = 200;
 	vel = 0.1;
 
-	width = 120;
-	height = 100;
+	width;
+	height;
 
 	vidas = 5;
 
@@ -30,7 +30,6 @@ void Enemigo3::update()
 {
 	if (vidas == 0) {
 		estoyVivo = false;
-	
 	}
 }
 
