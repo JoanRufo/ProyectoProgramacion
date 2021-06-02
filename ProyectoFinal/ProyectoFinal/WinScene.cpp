@@ -16,10 +16,10 @@ void WinScene::init()
 	win = mResourceManager->loadAndGetGraphicID("Imagenes/WinScene.png");
 }
 
-void WinScene::upadte()
+void WinScene::update()
 {
 
-	if (Controles::getInstance()->teclasPulsadas[7] == true)
+ 	if (Controles::getInstance()->teclasPulsadas[7] == true)
 	{
 
 		SceneManager::getInstance()->changeScene(MENU);

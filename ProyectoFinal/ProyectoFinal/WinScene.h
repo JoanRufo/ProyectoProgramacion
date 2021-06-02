@@ -21,7 +21,7 @@ public:
 	~WinScene();
 
 	void init();
-	void upadte();
+	void update();
 	void render();
 
 	ResourceManager* mResourceManager = ResourceManager::getInstance();
