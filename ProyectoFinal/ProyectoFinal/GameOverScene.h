@@ -6,8 +6,6 @@
 #include "ResourceManager.h"
 #include "Video.h"
 #include "Scene.h"
-#include "Personaje.h"
-#include "Enemigo1.h"
 #include "GameScene.h"
 
 
@@ -34,8 +32,7 @@ public:
 
 	
 
-	Personaje* personaje = new Personaje();
-	Enemigo1* mEnemigo1 = new Enemigo1();
+	
 
 
 };

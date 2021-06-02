@@ -601,6 +601,7 @@ void GameScene::update()
 					if (mEnemigoFinal->vidas == 0) {
 
 						mEnemigoFinal->estoyVivo = false;
+						SceneManager::getInstance()->changeScene(WIN);
 
 					}
 
