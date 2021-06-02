@@ -109,31 +109,7 @@ void Balas::update()
 		
 		break;
 
-	case DestruirBala:
-		//LIMITES PAREDES
-
-		if (bala >= 1180) {
-
-			estoyViva = false;
-
-		}
-		else if (bala <= 20) {
-
-			estoyViva = false;
-
-		}
-		else if (bala >= 630) {
-
-			estoyViva = false;
-
-		}
-		else if (bala <= 0) {
-
-			estoyViva = false;
-
-		}
-		
-		break;
+	
 
 	}
 

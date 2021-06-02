@@ -13,7 +13,7 @@ Enemigo3::~Enemigo3()
 
 void Enemigo3::init()
 {
-	idDelEnemigo3 = mResourceManager->loadAndGetGraphicID("Imagenes/Enemigo1.png");
+	idDelEnemigo3 = mResourceManager->loadAndGetGraphicID("Imagenes/Enemigo3.png");
 	posX = 1000;
 	posY = 200;
 	vel = 0.1;
@@ -32,9 +32,6 @@ void Enemigo3::update()
 		estoyVivo = false;
 	
 	}
-
-
-
 }
 
 void Enemigo3::render()

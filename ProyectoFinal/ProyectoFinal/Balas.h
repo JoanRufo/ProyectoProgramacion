@@ -12,7 +12,7 @@ class Balas
 
 
 public:
-	enum estadosBala { BalaGuardada, BalaInicio, BalaMovimiento, DestruirBala };
+	enum estadosBala { BalaGuardada, BalaInicio, BalaMovimiento };
 
 private:	
 	estadosBala estatActual;

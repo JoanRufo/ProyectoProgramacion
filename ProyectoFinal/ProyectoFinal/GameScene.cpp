@@ -660,6 +660,29 @@ void GameScene::update()
 
 			}
 
+			// DESTRUIR BALAS EN LOS LIMITES DE LAS HABITACIONES
+
+			if (mVectorBalas.at(i).balaX >= 1120) {
+
+				heChocado = true;
+
+			}
+			if (mVectorBalas.at(i).balaX <= 30) {
+
+				heChocado = true;
+
+			}
+			if (mVectorBalas.at(i).balaY >= 630) {
+
+				heChocado = true;
+
+			}
+			if (mVectorBalas.at(i).balaY <= 20) {
+
+				heChocado = true;
+
+			}
+
 
 			if (heChocado == true) {
 			
