@@ -153,11 +153,7 @@ void GameScene::update()
 	
 
 
-	/*if (balas->estoyViva == false) {
-
-		// ELIMINAR BALA?¿?¿?¿¿?¿?¿?¡
-
-	}*/
+	
 
 	//CAMBIAR DE HABITACIONES
 
@@ -622,6 +618,13 @@ void GameScene::update()
 			}
 
 		}
+
+
+
+
+		
+
+
 	}
 
 
@@ -686,6 +689,8 @@ void GameScene::render()
 	{
 
 		if (mVectorBalas.at(i).estoyViva == true) {
+
+
 			mVectorBalas.at(i).render();
 
 		}
