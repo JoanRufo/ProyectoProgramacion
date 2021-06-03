@@ -450,7 +450,7 @@ void GameScene::update()
 	}
 
 	if (mEnemigo3B->estoyVivo == true) {
-		if (detectarColisiones(personaje->Posx, personaje->Posy, personaje->width, personaje->height, mEnemigo3B->posX, mEnemigo3B->posY, mEnemigo3->width, mEnemigo3B->height) == true && idHabitacion == 3) {
+		if (detectarColisiones(personaje->Posx, personaje->Posy, personaje->width, personaje->height, mEnemigo3B->posX, mEnemigo3B->posY, mEnemigo3B->width, mEnemigo3B->height) == true && idHabitacion == 3) {
 
 
 			personaje->Posx = 600;
@@ -619,6 +619,24 @@ void GameScene::update()
 					if (mEnemigo3->vidas == 0) {
 
 						mEnemigo3->estoyVivo = false;
+
+					}
+				}
+
+
+			}
+
+			if (mEnemigo3B->estoyVivo == true) {
+
+				if (detectarColisiones(mVectorBalas.at(i).balaX, mVectorBalas.at(i).balaY, mVectorBalas.at(i).width, mVectorBalas.at(i).height, mEnemigo3B->posX, mEnemigo3->posY, mEnemigo3B->width, mEnemigo3B->height) == true && idHabitacion == 3) {
+
+					mEnemigo3B->vidas--;
+
+					heChocado = true;
+
+					if (mEnemigo3B->vidas == 0) {
+
+						mEnemigo3B->estoyVivo = false;
 
 					}
 				}

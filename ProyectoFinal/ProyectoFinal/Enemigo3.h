@@ -37,7 +37,7 @@ public:
 	bool estoyVivo;
 
 	float vel;
-	int vidas;
+	int vidas = 2;
 
 
 	void setPersonaje(Personaje *data) {

@@ -14,14 +14,14 @@ Enemigo3::~Enemigo3()
 void Enemigo3::init()
 {
 	idDelEnemigo3 = mResourceManager->loadAndGetGraphicID("Imagenes/Enemigo3.png");
-	posX = 1000;
-	posY = 200;
-	vel = 0.1;
+	posX;
+	posY;
+	vel;
 
 	width;
 	height;
 
-	vidas = 5;
+	vidas;
 
 	estoyVivo = true;
 }
