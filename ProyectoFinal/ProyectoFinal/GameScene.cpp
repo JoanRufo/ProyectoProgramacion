@@ -311,9 +311,9 @@ void GameScene::update()
 
 			SceneManager::getInstance()->changeScene(GAMEOVER);
 
-			mEnemigo1A->init();
+		
 			mEnemigo1A->estoyVivo = true;
-			
+			mEnemigo1A->vidas = 1;
 
 			mEnemigo1A->posX1 = 600;
 			mEnemigo1A->posY1 = 300;
@@ -488,7 +488,7 @@ void GameScene::update()
 
 			idHabitacion = 1;
 
-
+			
 			SceneManager::getInstance()->changeScene(GAMEOVER);
 
 			mEnemigoFinal->estoyVivo = true;
@@ -520,6 +520,7 @@ void GameScene::update()
 					if (mEnemigo1A->vidas == 0) {
 
 						mEnemigo1A->estoyVivo = false;
+
 					
 
 					}
