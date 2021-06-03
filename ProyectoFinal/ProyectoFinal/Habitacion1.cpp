@@ -14,7 +14,6 @@ Habitacion1::~Habitacion1()
 void Habitacion1::init()
 {
 	idDeHabitacion1 = mResourceManager->loadAndGetGraphicID("Imagenes/Room1.png");
-	printf("%d", idDeHabitacion1);
 	
 }
 

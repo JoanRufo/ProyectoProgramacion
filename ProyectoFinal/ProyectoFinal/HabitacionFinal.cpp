@@ -11,7 +11,6 @@ HabitacionFinal::~HabitacionFinal()
 void HabitacionFinal::init()
 {
 	idDeHabitacionFinal = mResourceManager->loadAndGetGraphicID("Imagenes/Room2.png");
-	printf("%d", idDeHabitacionFinal);
 }
 
 void HabitacionFinal::update()
