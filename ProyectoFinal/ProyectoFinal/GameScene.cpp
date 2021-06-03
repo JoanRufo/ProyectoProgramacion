@@ -309,14 +309,14 @@ void GameScene::update()
 
 			idHabitacion = 1;
 
+			SceneManager::getInstance()->changeScene(GAMEOVER);
 
+			mEnemigo1A->init();
+			mEnemigo1A->estoyVivo = true;
+			
 
 			mEnemigo1A->posX1 = 600;
 			mEnemigo1A->posY1 = 300;
-
-
-
-			SceneManager::getInstance()->changeScene(GAMEOVER);
 
 		}
 	}
@@ -330,14 +330,14 @@ void GameScene::update()
 
 			idHabitacion = 1;
 
+			SceneManager::getInstance()->changeScene(GAMEOVER);
+			
 
+			mEnemigo1B->estoyVivo = true;
+			mEnemigo1B->vidas = 1;
 
 			mEnemigo1B->posX1 = 500;
 			mEnemigo1B->posY1 = 300;
-
-
-
-			SceneManager::getInstance()->changeScene(GAMEOVER);
 
 		}
 	}
@@ -351,14 +351,14 @@ void GameScene::update()
 
 			idHabitacion = 1;
 
+			SceneManager::getInstance()->changeScene(GAMEOVER);
+			
 
+			mEnemigo1C->estoyVivo = true;
+			mEnemigo1C->vidas = 1;
 
 			mEnemigo1C->posX1 = 400;
 			mEnemigo1C->posY1 = 200;
-
-
-
-			SceneManager::getInstance()->changeScene(GAMEOVER);
 
 		}
 	}
@@ -372,14 +372,14 @@ void GameScene::update()
 
 			idHabitacion = 1;
 
-
+			
+			SceneManager::getInstance()->changeScene(GAMEOVER);
+			
+			mEnemigo1D->estoyVivo = true;
+			mEnemigo1D->vidas = 1;
 
 			mEnemigo1D->posX1 = 200;
 			mEnemigo1D->posY1 = 550;
-
-
-
-			SceneManager::getInstance()->changeScene(GAMEOVER);
 
 		}
 	}
@@ -394,13 +394,14 @@ void GameScene::update()
 			idHabitacion = 1;
 
 
+			SceneManager::getInstance()->changeScene(GAMEOVER);
+
+			mEnemigo2A->estoyVivo = true;
+			mEnemigo2A->vidas1 = 2;
 
 			mEnemigo2A->posX = 600;
 			mEnemigo2A->posY = 300;
 
-
-
-			SceneManager::getInstance()->changeScene(GAMEOVER);
 
 
 
@@ -415,15 +416,17 @@ void GameScene::update()
 
 
 			idHabitacion = 1;
+	
+
+			SceneManager::getInstance()->changeScene(GAMEOVER);
 
 
+			mEnemigo2B->estoyVivo = true;
+			mEnemigo2B->vidas1 = 2;
 
 			mEnemigo2B->posX = 400;
 			mEnemigo2B->posY = 500;
 
-
-
-			SceneManager::getInstance()->changeScene(GAMEOVER);
 
 		}
 	}
@@ -438,13 +441,14 @@ void GameScene::update()
 			idHabitacion = 1;
 
 
+			SceneManager::getInstance()->changeScene(GAMEOVER);
+
+			mEnemigo3->estoyVivo = true;
+			mEnemigo3->vidas = 2;
 
 			mEnemigo3->posX = 600;
 			mEnemigo3->posY = 300;
-
-
-
-			SceneManager::getInstance()->changeScene(GAMEOVER);
+			
 
 		}
 	}
@@ -461,12 +465,15 @@ void GameScene::update()
 
 
 
+		
+			SceneManager::getInstance()->changeScene(GAMEOVER);
+
+			mEnemigo3B->estoyVivo = true;
+			mEnemigo3B->vidas = 2;
+
 			mEnemigo3B->posX = 400;
 			mEnemigo3B->posY = 300;
-
-
-
-			SceneManager::getInstance()->changeScene(GAMEOVER);
+			
 
 		}
 	}
@@ -482,12 +489,14 @@ void GameScene::update()
 			idHabitacion = 1;
 
 
+			SceneManager::getInstance()->changeScene(GAMEOVER);
 
+			mEnemigoFinal->estoyVivo = true;
+		
+			mEnemigoFinal->vidas = 15;
 			mEnemigoFinal->posX = 600;
 			mEnemigoFinal->posY = 300;
-
-
-			SceneManager::getInstance()->changeScene(GAMEOVER);
+			
 
 
 		}
@@ -666,8 +675,64 @@ void GameScene::update()
 
 
 
+						mEnemigoFinal->estoyVivo = true;
+						mEnemigoFinal->vidas = 15;
+
 						mEnemigoFinal->posX = 600;
-						mEnemigoFinal->posY = 300;
+						mEnemigoFinal->posY = 200;
+
+
+						mEnemigo1A->estoyVivo = true;
+						mEnemigo1A->vidas = 1;
+
+						mEnemigo1B->estoyVivo = true;
+						mEnemigo1B->vidas = 1;
+
+						mEnemigo1C->estoyVivo = true;
+						mEnemigo1C->vidas = 1;
+
+						mEnemigo1D->estoyVivo = true;
+						mEnemigo1D->vidas = 1;
+
+						mEnemigo1A->posX1 = 400;
+						mEnemigo1A->posY1 = 400;
+
+						mEnemigo1B->posX1 = 300;
+						mEnemigo1B->posY1 = 200;
+
+						mEnemigo1C->posX1 = 200;
+						mEnemigo1C->posY1 = 500;
+
+						mEnemigo1D->posX1 = 100;
+						mEnemigo1D->posY1 = 200;
+
+
+						mEnemigo2A->estoyVivo = true;
+						mEnemigo2A->vidas1 = 2;
+
+						mEnemigo2B->estoyVivo = true;
+						mEnemigo2B->vidas1 = 2;
+
+
+						mEnemigo2A->posX = 600;
+						mEnemigo2A->posY = 600;
+
+						mEnemigo2B->posX = 800;
+						mEnemigo2B->posY = 400;
+
+
+						mEnemigo3->estoyVivo = true;
+						mEnemigo3->vidas = 2;
+
+						mEnemigo3B->estoyVivo = true;
+						mEnemigo3B->vidas = 2;
+
+
+						mEnemigo3->posX = 800;
+						mEnemigo3->posY = 300;
+
+						mEnemigo3B->posX = 400;
+						mEnemigo3B->posY = 300;
 
 
 
