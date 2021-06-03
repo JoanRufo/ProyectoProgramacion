@@ -553,7 +553,7 @@ void GameScene::update()
 
 			}
 
-			if (mEnemigo1D->estoyVivo == true) {
+ 			if (mEnemigo1D->estoyVivo == true) {
 
 				if (detectarColisiones(mVectorBalas.at(i).balaX, mVectorBalas.at(i).balaY, mVectorBalas.at(i).width, mVectorBalas.at(i).height, mEnemigo1D->posX1, mEnemigo1D->posY1, mEnemigo1D->width, mEnemigo1D->height) == true && idHabitacion == 2) {
 

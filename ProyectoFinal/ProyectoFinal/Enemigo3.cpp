@@ -35,7 +35,7 @@ void Enemigo3::update()
 
 void Enemigo3::render()
 {
-	if (estoyVivo = true) {
+	if (estoyVivo == true) {
 		mVideo->renderGraphic(idDelEnemigo3, posX, posY, width, height);
 
 	}
